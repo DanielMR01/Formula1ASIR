@@ -53,7 +53,7 @@
         .boton-sin-bordes:hover {
             background-color: firebrick;
         }
-        #miAlerta {
+        #miAlerta2 {
             display: none;
             position: fixed;
             left: 50%;
@@ -69,12 +69,12 @@
             width: auto;
             overflow: auto;
         }
-        #miAlerta img {
+        #miAlerta2 img {
             width: 200px;
             display: block;
             margin: 0 auto; 
         }
-        #miAlerta button {
+        #miAlerta2 button {
             margin-top: 15px;
             padding: 10px 20px;
             background-color: blue;
@@ -83,7 +83,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        #miOverlay {
+        #miOverlay2 {
             display: none;
             position: fixed;
             top: 0;
@@ -125,9 +125,9 @@
         desafían los límites de la velocidad y la habilidad.</p>
     <hr>
 
-    <div id="miOverlay"></div>
-<div id="miAlerta">
-    <img id="imagenAlerta" src="" alt="Imagen de alerta" style="width: 670px; height: 370px; display: none;">
+    <div id="miOverlay2"></div>
+<div id="miAlerta2">
+    <img id="imagenAlerta2" src="" alt="Imagen de alerta" style="width: 670px; height: 370px; display: none;">
     <p id="contenidoAlerta"></p>
     <button onclick="cerrarAlerta()">Cerrar</button>
 </div>
@@ -157,15 +157,15 @@
     <script>
         function mostrarAlertaFoto(mensaje, urlImagen) {
             document.getElementById('contenidoAlerta').innerText = mensaje;  // Actualiza el mensaje
-            var img = document.getElementById('imagenAlerta');  // Selecciona la imagen dentro de la alerta
+            var img = document.getElementById('imagenAlerta2');  // Selecciona la imagen dentro de la alerta
             img.src = urlImagen;  // Cambia la imagen por la URL pasada como parámetro
             img.style.display = 'block';  // Asegúrate de que la imagen esté visible
-            document.getElementById('miAlerta').style.display = 'block';  // Muestra la alerta
+            document.getElementById('miAlerta2').style.display = 'block';  // Muestra la alerta
             document.getElementById('miOverlay').style.display = 'block';  // Muestra el fondo de la alerta
         }       
         function cerrarAlerta() {
-            document.getElementById('miAlerta').style.display = 'none';
-            document.getElementById('miOverlay').style.display = 'none';
+            document.getElementById('miAlerta2').style.display = 'none';
+            document.getElementById('miOverlay2').style.display = 'none';
         }
     </script>
 </section>
