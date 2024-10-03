@@ -35,16 +35,44 @@
         .image-left {
             float: left;
             margin-left: 40px;
+            margin-top: 10px;
         }
         .image-right {
             float: right;
             margin-right: 55px;
-            margin-top: 20px;
+            margin-top: 10px;
+        }
+        .btn-grande {
+            font-size: 10px;        /* Aumenta el tamaño de la fuente */
+            padding: 2px 3px;    /* Aumenta el espacio interior (top-bottom, left-right) */
+            margin: 20px;          /* Margen alrededor del botón */
+            border: none;          /* Elimina el borde por defecto */
+            border-radius: 5px;    /* Esquinas redondeadas */
+            background-color: firebrick; /* Color de fondo */
+            color: white;           /* Color del texto */
+            cursor: pointer;        /* Cambia el cursor al pasar sobre el botón */
+            transition: background-color 0.3s; /* Suaviza el cambio de color */
+        }
+        .texto-con-borde {
+            border: 5px solid firebrick; 
+            padding: 1px;             
+            margin: 19px;           
+            border-radius: 5px;  
+            margin-left: 40xp;  
+            margin-right: 40xp;
+            font-size: 30px;  
+            font-weight: bold;
+        }
+        .texto-spam {
+            font-size: 13px;  
         }
     </style>
 </head>
 <body>
     <header>    
+        <img src="imagenes/formula1.png" alt="Logo formula 1" width="85" height="65" class="image-right">
+        <img src="imagenes/fia.png" alt="Logo FIA" width="85" height="65" class="image-left">
+        
         <div>
         <h1>Fórmula 1</h1><hr>
         <p>En la Fórmula 1, la velocidad se encuentra con la ingeniería de vanguardia, creando una experiencia emocionante y única. 
@@ -63,9 +91,8 @@
     </nav>
 
 <section id="inicio">
-    <img src="imagenes/fia.png" alt="Logo FIA" width="65" height="65" class="image-left">
-    <img src="imagenes/formula1.png" alt="Logo formula 1" width="85" height="30" class="image-right">
-    <br><br><br><p><b>EL MUNDO DE LA F1</b>, desde los equipos y pilotos hasta los circuitos más emocionantes 
+    
+    <p><b>EL MUNDO DE LA F1</b>, desde los equipos y pilotos hasta los circuitos más emocionantes 
             del mundo. La Fórmula 1 es el pináculo del automovilismo y una de las competiciones deportivas 
             más emocionantes y seguidas en el mundo. Con una rica historia que se remonta a 1950, este deporte 
             combina tecnología de vanguardia, ingeniería avanzada y un increíble nivel de habilidad y 
@@ -91,7 +118,20 @@
             La F1 también se destaca por su ambiente dinámico y emocionante, donde la estrategia, la habilidad 
             y la toma de decisiones en tiempo real son cruciales para el éxito. Con su historia rica y una
             base de fans apasionada, la Fórmula 1 sigue siendo un símbolo de innovación y excelencia en el
-            deporte del motor.</p>
+            deporte del motor.</p><hr>
+            
+        <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>NOTICIAS DE INTERÉS<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
+
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/its-been-a-battle-of-the-mind-hamilton-reveals-lessons-he-learned-during.30pf5nXH8mACcvMFFbagiF';"> <img src="imagenes/noticia1.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">“It has been a mental battle”: Hamilton's statements</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/bottas-confident-hes-driving-better-than-at-mercedes-as-he-aims-to-seal.5DnxmeFS4vTVpgulu5puS6';"><img src="imagenes/noticia2.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">Bottas confident he’s ‘driving better than at Mercedes’</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/horner-hopes-to-keep-brilliant-character-ricciardo-in-red-bull-family-as-he.35V3EQeLJzy5aYtsQHAEpA';"><img src="imagenes/noticia3.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">Horner hopes to keep ‘brilliant character’ Ricciardo in Red Bull family</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/from-fangio-to-hamilton-who-are-the-oldest-world-champions-in-the-history-of.5GOBodkkPk5NmobPhJXvzd';"><img src="imagenes/noticia4.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">Who are the oldest world champions in the history of Formula 1?</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/its-at-the-top-of-my-list-sainz-sets-out-final-goal-as-a-ferrari-driver.2wutS1xjAB19A7UyObDT9Y';"><img src="imagenes/noticia5.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">‘It’s at the top of my list’ – Sainz sets out final goal as a Ferrari driver</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/mick-schumacher-back-behind-the-wheel-of-an-f1-car-at-pirelli-tyre-test.4xrZ1DlFphcguA6lmabrIE';"><img src="imagenes/noticia6.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">Mick Schumacher back behind the wheel of an F1 car</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/from-march-to-red-bull-how-long-did-it-take-newey-to-make-an-impact-at-his.43RfJvEohosX9iwbgiMmbq';"><img src="imagenes/noticia7.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">How long did it take Newey to make an impact?</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/analysis-what-next-for-alpine-after-renault-announce-the-end-of-f1-works.5eyvaNFBO9qk70mbXuUMIE';"><img src="imagenes/noticia8.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">What next for Alpine after Renault announce?</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/f1-commission-rules-out-rookie-race-for-this-year-but-concept-will-be.1F5s28Ey1TtL7vxavXF1vc';"><img src="imagenes/noticia9.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">F1 Commission rules out ‘rookie race’ for this year</span></button>
+
 </section>
 <hr>
 <footer>
