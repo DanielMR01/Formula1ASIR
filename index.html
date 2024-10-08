@@ -100,37 +100,44 @@
             margin: 10px 0;
             position: relative;
         }
+        .bar2 {
+            width: 300px;
+            height: 15.4px;
+            background-color: #f3f3f3;
+            margin: 10px 0;
+            position: relative;
+        }
         .progress {
             height: 20px;
         }
-        #barAlpine .progress {
+        #barAlpine .progress , #barOcon .progress, #barGasly .progress{
             background-color: blue; 
         }
-        #barMercedes .progress {
+        #barMercedes .progress, #barHamilton .progress, #barRussell .progress {
             background-color: cyan; 
         }
-        #barWilliams .progress {
+        #barWilliams .progress, #barAlbon .progress, #barColapinto .progress {
             background-color: cornflowerblue;
         }
-        #barAston .progress {
+        #barAston .progress, #barFernando .progress, #barStroll .progress {
             background-color: rgb(46, 177, 90); 
         }
-        #barSauber .progress {
+        #barSauber .progress, #barBottas .progress, #barZhou .progress {
             background-color: green;
         }
-        #barRb .progress {
+        #barRb .progress, #barTsunoda .progress, #barRicciardo .progress {
             background-color: grey; 
         }
-        #barFerrari .progress {
+        #barFerrari .progress, #barLeclerc .progress, #barSainz .progress {
             background-color: red; 
         }
-        #barMclaren .progress {
+        #barMclaren .progress, #barNorris .progress, #barPiastri .progress {
             background-color: orangered; 
         }
-        #barHaas .progress {
+        #barHaas .progress, #barKevin .progress, #barNico .progress {
             background-color: black; 
         }
-        #barRedbull .progress {
+        #barRedbull .progress, #barVerstappen .progress, #barCheco .progress {
             background-color: rgb(53, 50, 85); 
         }
         .bar span {
@@ -145,7 +152,13 @@
             text-align: center; 
             margin-left: 10%;
             margin-right: 10%;
-            margin-top: 12%;
+            margin-top: 10%;
+        }
+        .tabla2 {
+            text-align: center; 
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 5%;
         }
         .botonVotar {            
             cursor: pointer;
@@ -219,6 +232,42 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 999;
         }
+        #miAlerta2 {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: 1000;
+            text-align: center;
+            height: 700px;
+            width: 700px;
+            overflow: auto;
+        }
+        #miAlerta2 button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #miOverlay2 {
+            margin-bottom: 2%;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
@@ -235,12 +284,12 @@
 
     <nav>
         <a href="index.html">Inicio</a>
-        <a href="calendario.html">Calendario</a>
-        <a href="equipos.html">Equipos</a>
-        <a href="pilotos.html">Pilotos</a>
-        <a href="jefe_equipo.html">Jefes de Equipo</a>
-        <a href="ingeniero_pista.html">Ingenieros de Pista</a>
-        <a href="clasificacion.html">Clasificacion</a>
+        <a href="calendario.html" target="_blank">Calendario</a>
+        <a href="equipos.html" target="_blank">Equipos</a>
+        <a href="pilotos.html" target="_blank">Pilotos</a>
+        <a href="jefe_equipo.html" target="_blank">Jefes de Equipo</a>
+        <a href="ingeniero_pista.html" target="_blank">Ingenieros de Pista</a>
+        <a href="clasificacion.html" target="_blank">Clasificacion</a>
     </nav>
 
 <section id="inicio">
@@ -273,13 +322,9 @@
             base de fans apasionada, la Fórmula 1 sigue siendo un símbolo de innovación y excelencia en el
             deporte del motor.</p>
 
-            <div id="miOverlay" style="display:none;"></div>
-            <div id="miAlerta" style="display:none;"> <div id="contenidoAlerta"></div> <button onclick="cerrarAlerta()">Cerrar</button> </div>
-
+<div id="miOverlay" style="display:none;"></div>
+<div id="miAlerta" style="display:none;"> <div id="contenidoAlerta"></div> <button onclick="cerrarAlerta()">Cerrar</button> </div>
 <button class="botonVotar" onclick="mostrarAlerta()">Vota Tu Equipo Favorito</button>
-<button class="botonVotar" >Vota Tu Piloto Favorito</button>
-
-
 <script>
     // Tabla en formato HTML
     var tablaHTML = `<table class="tabla" border="2">
@@ -294,17 +339,17 @@
                                     <label for="age">Edad:</label> <input type="number" id="age" min="0" required><br><br>
                                     <label for="team">Elige tu equipo favorito:</label><br>
                                     <select id="team" required>
-                                        <option value="">Selecciona un equipo</option>
+                                        <option value="">Selecciona un Equipo</option>
                                         <option value="Equipo A">Alpine</option>
                                         <option value="Equipo B">Haas</option>
                                         <option value="Equipo C">Mercedes</option>
-                                        <option value="Equipo D">Williams</option>
                                         <option value="Equipo E">Kick Sauber</option>
+                                        <option value="Equipo D">Williams</option>
                                         <option value="Equipo F">Aston Martin</option>
                                         <option value="Equipo G">RB</option>
                                         <option value="Equipo H">Ferrari</option>
-                                        <option value="Equipo I">Mclaren</option>
                                         <option value="Equipo J">Red Bull</option>
+                                        <option value="Equipo I">Mclaren</option>
                                     </select><br><br>
                                     <button type="submit" class="botonVotar">Votar</button>
                                 </form>
@@ -314,8 +359,8 @@
                                     <div class="bar" id="barAlpine" data-team="Equipo A">Alpine: <span class="percentage" id="percentageA">0%</span> <div class="progress" id="progressA" style="width: 0%;"></div></div>
                                     <div class="bar" id="barHaas" data-team="Equipo B">Haas: <span class="percentage" id="percentageB">0%</span><div class="progress" id="progressB" style="width: 0%;"></div></div>
                                     <div class="bar" id="barMercedes" data-team="Equipo C">Mercedes: <span class="percentage" id="percentageC">0%</span><div class="progress" id="progressC" style="width: 0%;"></div></div>
-                                    <div class="bar" id="barWilliams" data-team="Equipo D">Williams: <span class="percentage" id="percentageD">0%</span> <div class="progress" id="progressD" style="width: 0%;"></div></div>
                                     <div class="bar" id="barSauber" data-team="Equipo E">Kick Sauber: <span class="percentage" id="percentageE">0%</span><div class="progress" id="progressE" style="width: 0%;"></div></div>
+                                    <div class="bar" id="barWilliams" data-team="Equipo D">Williams: <span class="percentage" id="percentageD">0%</span> <div class="progress" id="progressD" style="width: 0%;"></div></div>
                                     <div class="bar" id="barAston" data-team="Equipo F">Aston Martin: <span class="percentage" id="percentageF">0%</span><div class="progress" id="progressF" style="width: 0%;"></div></div>
                                     <div class="bar" id="barRb" data-team="Equipo G">RB: <span class="percentage" id="percentageG">0%</span> <div class="progress" id="progressG" style="width: 0%;"></div></div>
                                     <div class="bar" id="barFerrari" data-team="Equipo H">Ferrari: <span class="percentage" id="percentageH">0%</span><div class="progress" id="progressH" style="width: 0%;"></div></div>
@@ -327,8 +372,7 @@
                     </table>`;
 
     const results = {
-        'Equipo A': 0, 'Equipo B': 0, 'Equipo C': 0, 'Equipo D': 0, 'Equipo E': 0, 
-        'Equipo F': 0, 'Equipo G': 0, 'Equipo H': 0, 'Equipo I': 0, 'Equipo J': 0
+        'Equipo A': 0, 'Equipo B': 0, 'Equipo C': 0, 'Equipo D': 0, 'Equipo E': 0, 'Equipo F': 0, 'Equipo G': 0, 'Equipo H': 0, 'Equipo I': 0, 'Equipo J': 0
     };
 
     // Método para mostrar la alerta con la tabla
@@ -336,7 +380,6 @@
         // Solo cargar la tabla la primera vez
         if (document.getElementById('contenidoAlerta').innerHTML === '') {
             document.getElementById('contenidoAlerta').innerHTML = tablaHTML;
-
             // Asegúrate de que el formulario se maneje correctamente al hacer clic en "Votar"
             const voteForm = document.getElementById('voteForm');
             voteForm.addEventListener('submit', function (event) {
@@ -377,6 +420,127 @@
             progress.style.width = percentage + '%'; // Actualiza el ancho de la barra
             document.getElementById('percentage' + team.split(' ')[1]).innerText = percentage + '%';
         }       
+    }
+</script>
+
+<div id="miOverlay2" style="display:none;"></div>
+<div id="miAlerta2" style="display:none;"> <div id="contenidoAlerta2"></div> <button onclick="cerrarAlerta2()">Cerrar</button> </div>
+<button class="botonVotar" onclick="mostrarAlerta2()">Vota Tu Piloto Favorito</button>
+<script>
+    var tablaHTML2 = `<table class="tabla" border="2">
+                        <tr>
+                            <th>
+                                <form id="voteForm2"><br>                         
+                                    <label for="firstName2">Nombre:</label><input type="text" id="firstName2" required><br><br>
+                                    <label for="lastName2">Apellidos:</label> <input type="text" id="lastName2" required><br><br>
+                                    <label for="email2">Correo:</label> <input type="email" id="email2" required><br><br>
+                                    <label><input type="radio" name="gender2" value="Hombre" required> Hombre</label>
+                                    <label><input type="radio" name="gender2" value="Mujer" required> Mujer</label><br><br>
+                                    <label for="age2">Edad:</label> <input type="number" id="age2" min="0" required><br><br>
+                                    <label for="team2">Elige tu piloto favorito:</label><br>
+                                    <select id="team2" required>
+                                        <option value="">Selecciona un Piloto</option>
+                                        <option value="Ocon">Ocon</option>
+                                        <option value="Gasly">Gasly</option>
+                                        <option value="Kevin">Kevin</option>
+                                        <option value="Nico">Nico</option>
+                                        <option value="Hamilton">Hamilton</option>
+                                        <option value="Russell">Russell</option>
+                                        <option value="Colapinto">Colapinto</option>
+                                        <option value="Albon">Albon</option>
+                                        <option value="Bottas">Bottas</option>
+                                        <option value="Zhou">Zhou</option>
+                                        <option value="Fernando">Fernando</option>
+                                        <option value="Stroll">Stroll</option>
+                                        <option value="Tsunoda">Tsunoda</option>
+                                        <option value="Ricciardo">Ricciardo</option>
+                                        <option value="Leclerc">Leclerc</option>
+                                        <option value="Sainz">Sainz</option>
+                                        <option value="Verstappen">Verstappen</option>
+                                        <option value="Checo">Checo</option>    
+                                        <option value="Norris">Norris</option>
+                                        <option value="Piastri">Piastri</option>
+                                    </select><br><br>
+                                    <button type="submit" class="botonVotar">Votar</button>
+                                </form>
+                            </th>
+                            <th>
+                                <div class="resultado" id="results2">
+                                <div class="bar2" id="barOcon">Ocon: <span class="percentage" id="percentageOcon">0%</span> <div class="progress" id="progressOcon" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barGasly">Gasly: <span class="percentage" id="percentageGasly">0%</span> <div class="progress" id="progressGasly" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barKevin">Kevin: <span class="percentage" id="percentageKevin">0%</span> <div class="progress" id="progressKevin" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barNico">Nico: <span class="percentage" id="percentageNico">0%</span> <div class="progress" id="progressNico" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barHamilton">Hamilton: <span class="percentage" id="percentageHamilton">0%</span> <div class="progress" id="progressHamilton" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barRussell">Russell: <span class="percentage" id="percentageRussell">0%</span> <div class="progress" id="progressRussell" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barColapinto">Colapinto: <span class="percentage" id="percentageColapinto">0%</span> <div class="progress" id="progressColapinto" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barAlbon">Albon: <span class="percentage" id="percentageAlbon">0%</span> <div class="progress" id="progressAlbon" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barBottas">Bottas: <span class="percentage" id="percentageBottas">0%</span> <div class="progress" id="progressBottas" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barZhou">Zhou: <span class="percentage" id="percentageZhou">0%</span> <div class="progress" id="progressZhou" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barFernando">Fernando: <span class="percentage" id="percentageFernando">0%</span> <div class="progress" id="progressFernando" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barStroll">Stroll: <span class="percentage" id="percentageStroll">0%</span> <div class="progress" id="progressStroll" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barTsunoda">Tsunoda: <span class="percentage" id="percentageTsunoda">0%</span> <div class="progress" id="progressTsunoda" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barRicciardo">Ricciardo: <span class="percentage" id="percentageRicciardo">0%</span> <div class="progress" id="progressRicciardo" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barLeclerc">Leclerc: <span class="percentage" id="percentageLeclerc">0%</span> <div class="progress" id="progressLeclerc" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barSainz">Sainz: <span class="percentage" id="percentageSainz">0%</span> <div class="progress" id="progressSainz" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barVerstappen">Verstappen: <span class="percentage" id="percentageVerstappen">0%</span> <div class="progress" id="progressVerstappen" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barCheco">Checo: <span class="percentage" id="percentageCheco">0%</span> <div class="progress" id="progressCheco" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barNorris">Norris: <span class="percentage" id="percentageNorris">0%</span> <div class="progress" id="progressNorris" style="width: 0%;"></div></div>
+                                <div class="bar2" id="barPiastri">Piastri: <span class="percentage" id="percentagePiastri">0%</span> <div class="progress" id="progressPiastri" style="width: 0%;"></div></div>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>`;
+
+    const results2 = {
+        'Ocon': 0, 'Gasly': 0, 'Kevin': 0, 'Nico': 0, 'Hamilton': 0, 'Russell': 0, 'Colapinto': 0, 'Albon': 0, 'Bottas': 0,
+        'Zhou': 0, 'Fernando': 0, 'Stroll': 0, 'Tsunoda': 0, 'Ricciardo': 0, 'Leclerc': 0, 'Sainz': 0, 'Verstappen': 0,
+        'Checo': 0, 'Norris': 0, 'Piastri': 0
+    };
+
+    function mostrarAlerta2() {
+        if (document.getElementById('contenidoAlerta2').innerHTML === '') {
+            document.getElementById('contenidoAlerta2').innerHTML = tablaHTML2;
+
+            const voteForm2 = document.getElementById('voteForm2');
+            voteForm2.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const selectedTeam2 = document.getElementById('team2').value;
+                if (selectedTeam2) {
+                    results2[selectedTeam2]++;
+                    updateResults2();
+                    resetForm2();
+                }
+            });
+        }
+        document.getElementById('miAlerta2').style.display = 'block';
+        document.getElementById('miOverlay2').style.display = 'block';
+    }
+
+    function cerrarAlerta2() {
+        document.getElementById('miAlerta2').style.display = 'none';
+        document.getElementById('miOverlay2').style.display = 'none';
+    }
+
+    function resetForm2() {
+        document.getElementById('firstName2').value = '';
+        document.getElementById('lastName2').value = '';
+        document.getElementById('email2').value = '';
+        document.getElementById('age2').value = '';
+        document.getElementById('team2').selectedIndex = 0;
+        const genderRadios2 = document.querySelectorAll('input[name="gender2"]');
+        genderRadios2.forEach(radio => radio.checked = false);
+    }
+
+    function updateResults2() {
+        const totalVotes2 = Object.values(results2).reduce((sum, votes) => sum + votes, 0);
+        for (const team2 in results2) {
+            const percentage = totalVotes2 > 0 ? (results2[team2] / totalVotes2 * 100).toFixed(2) : 0;
+            const progress = document.getElementById('progress' + team2);
+            if (progress) {
+                progress.style.width = percentage + '%';
+                document.getElementById('percentage' + team2).innerText = percentage + '%';
+            }
+        }
     }
 </script>
 
