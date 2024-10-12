@@ -1,49 +1,53 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imagenes/logo.png" type="image/png" />
     <title>Fórmula 1</title>
-    <style>
+    <style type="text/css">
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
-        header {
+        .header {
             background-color: firebrick;
             color: #fff;
             padding: 1px;
             text-align: center;
         }
-        nav {
-            background-color: #333;
-            padding: 10px;
+        h1 {
             text-align: center;
         }
         p {
             margin-left: 1%;
             margin-right: 1%;
         }
-        nav a {
+        .nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
         }
-        nav a:hover {
+        .nav a:hover {
             color: #ffcc00;
         }
         .image-left {
             float: left;
-            margin-right: 20px;
+            margin-left: 20px;
+            margin-top: 7px;
         }
         .image-right {
             float: right;
-            margin-left: 20px;
-            margin-top: 10px;
+            margin-right: 20px;
+            margin-top: 7px;
         }
         .boton-sin-bordes {
             background-color: transparent; 
@@ -98,31 +102,21 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 999;
         }
-        .image-left {
-            float: left;
-            margin-left: 40px;
-            margin-top: 10px;
-        }
-        .image-right {
-            float: right;
-            margin-right: 55px;
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="imagenes/formula1.png" alt="Logo formula 1" width="85" height="65" class="image-right">
-        <img src="imagenes/fia.png" alt="Logo FIA" width="85" height="65" class="image-left">
+    <div class="header">
+        <img src="imagenes/formula1.png" alt="Logo formula 1" width="85" height="65" class="image-right" />
+        <img src="imagenes/fia.png" alt="Logo FIA" width="85" height="65" class="image-left" />
          <div>
-        <h1>Fórmula 1</h1><hr>
+        <h1>Fórmula 1</h1><hr />
         <p>En la Fórmula 1, la velocidad se encuentra con la ingeniería de vanguardia, creando una experiencia emocionante y única. 
-            <br>Cada carrera es un testimonio de la destreza de los pilotos y la precisión de los equipos en la búsqueda de la perfección.</p>
+            <br />Cada carrera es un testimonio de la destreza de los pilotos y la precisión de los equipos en la búsqueda de la perfección.</p>
         </div>
-    </header>
+    </div>
 
-    <nav>
+    <div class="nav">
         <a href="index.html" onclick="window.open('', '_self').close();">Inicio</a>
         <a href="calendario.html">Calendario</a>
         <a href="equipos.html">Equipos</a>
@@ -130,10 +124,10 @@
         <a href="jefe_equipo.html">Jefes de Equipo</a>
         <a href="ingeniero_pista.html">Ingenieros de Pista</a>
         <a href="clasificacion.html">Clasificacion</a>
-    </nav>
+    </div>
 
-<section id="calendario"></section>
-    <p><b>LOS JEFES DE EQUIPO DE LA F1 </b> gestionan todos los aspectos de una escudería. 
+    <div>
+        <p><b>LOS JEFES DE EQUIPO DE LA F1 </b> gestionan todos los aspectos de una escudería. 
             Dirigen la estrategia de carrera, tomando decisiones sobre paradas en boxes, selección de 
             neumáticos y ajustando tácticas en tiempo real. Supervisan al personal, desde ingenieros 
             hasta pilotos, y aseguran que todos trabajen de manera coordinada. Mantienen una buena relación
@@ -142,46 +136,55 @@
             las relaciones con patrocinadores y medios, representando al equipo y asegurando su 
             atractivo para inversores. Supervisan el desarrollo del monoplaza durante la temporada para 
             asegurar que sea competitivo.</p>
-    <hr>
+        <hr />
+    </div>
 
-<div id="miOverlay"></div>
+    <div id="miOverlay"></div>
     <div id="miAlerta">
-    <img id="imagenAlerta" src="" alt="Imagen de alerta" style="width: 400px; height: 300px; display: none;">
-    <p id="contenidoAlerta"></p>
-    <button onclick="cerrarAlerta()">Cerrar</button>
-</div>
+        <img id="imagenAlerta" src="" alt="Imagen de alerta" style="width: 400px; height: 300px; display: none;" />
+        <p id="contenidoAlerta"></p>
+        <button onclick="cerrarAlerta()">Cerrar</button>
+    </div>
 
-    <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('OLIVER OAKES es un ex piloto británico de automovilismo y actual empresario. Tras una exitosa carrera en karting, donde ganó el Campeonato Mundial en 2005, compitió en categorías como la Fórmula BMW y Fórmula 3. Posteriormente, fundó el equipo Hitech GP en 2015, que ha competido en Fórmula 2, Fórmula 3 y otras categorías. Oakes ha sido clave en el desarrollo de jóvenes talentos en el automovilismo.', 'imagenes/alpinejefefoto.png')" ><img src="imagenes/alpinejefe.png" alt="Logo FIA" width="230" height="35"></button>
-    <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('TOTO WOLFF es un empresario y ex piloto austriaco, actualmente director ejecutivo y accionista del equipo Mercedes-AMG Petronas de Fórmula 1. Tras competir en automovilismo, se dedicó a los negocios y en 2013 asumió el liderazgo de Mercedes. Bajo su dirección, el equipo ha dominado la Fórmula 1, ganando múltiples campeonatos. Wolff es reconocido por su gestión exitosa y su enfoque en la excelencia.', 'imagenes/mercedesjefefoto.png')" ><img src="imagenes/mercedesjefe.png" alt="Logo FIA" width="230" height="35"></button>
-    <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('AYAO KOMATSU es un ingeniero japonés y actual director de rendimiento del equipo Haas F1 Team. Con una carrera en la Fórmula 1 que incluye trabajos en Renault y Lotus, Komatsu ha sido clave en el desarrollo técnico y estratégico de Haas desde su fundación en 2016. Es reconocido por su experiencia en aerodinámica y análisis de datos, así como por su habilidad para optimizar el rendimiento del equipo en la pista.', 'imagenes/haasjefefoto.png')" ><img src="imagenes/haasjefe.png" alt="Logo FIA" width="230" height="35"></button>
-    <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('JAMES VOWLES es un ingeniero británico y actual jefe de equipo de Williams Racing en Fórmula 1. Antes de unirse a Williams en 2023, fue estratega principal en Mercedes, donde ayudó a ganar varios campeonatos. Su objetivo en Williams es revitalizar el equipo y aplicar su experiencia en estrategia para mejorar su rendimiento.', 'imagenes/williamsjefefoto.png')" ><img src="imagenes/williamsjefe.png" alt="Logo FIA" width="230" height="35"></button>
-    <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('MIKE KRACK es un ingeniero luxemburgués y jefe del equipo Aston Martin en Fórmula 1 desde 2022. Con experiencia en BMW Motorsport y Sauber, Krack tiene un sólido historial en roles técnicos y de gestión. Su objetivo en Aston Martin es impulsar el equipo hacia un rendimiento competitivo en el campeonato.', 'imagenes/astonmartinjefefoto.png')" ><img src="imagenes/astonmartinjefe.png" alt="Logo FIA" width="230" height="35"></button>
-    <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('ALESSANDRO BRAVI es el director general del equipo Alfa Romeo F1 Team Stake, con una amplia experiencia en la gestión y representación en el automovilismo. Ha trabajado como asesor y representante de pilotos, y actualmente lidera la escudería en su transición hacia convertirse en parte del equipo Audi en 2026.', 'imagenes/sauberjefefoto.png')" ><img src="imagenes/sauberjefe.png" alt="Logo FIA" width="230" height="35"></button>
-    <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('LAURENT MEKIES es el director técnico de Scuderia Ferrari en Fórmula 1 desde 2022. Anteriormente, trabajó en Toro Rosso y se unió a Ferrari en 2018. Mekies es clave en el desarrollo del rendimiento del coche y la optimización de estrategias de carrera para el equipo.', 'imagenes/rbjefefoto.png')" ><img src="imagenes/rbjefe.png" alt="Logo FIA" width="230" height="35"></button>
-    <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('FRÉDÉRIC VASSEUR es un ingeniero francés y director de equipos en Fórmula 1, actualmente jefe de Ferrari desde 2023. Anteriormente, fue jefe de Alfa Romeo F1 y cofundador del equipo ART Grand Prix. Vasseur es conocido por su gestión de talento y su enfoque estratégico en el automovilismo.', 'imagenes/ferrarijefefoto.png')" ><img src="imagenes/ferrarijefe.png" alt="Logo FIA" width="230" height="35"></button>
-    <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('ANDREA STELLA es el jefe de equipo de McLaren Racing en Fórmula 1 desde 2023. Con experiencia en McLaren y Ferrari, ha trabajado en el desarrollo de vehículos y gestión de rendimiento. Su objetivo en McLaren es mejorar el rendimiento del equipo y desarrollar un coche competitivo.', 'imagenes/mclarenjefefoto.png')" ><img src="imagenes/mclarenjefe.png" alt="Logo FIA" width="230" height="35"></button>
-    <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('CHRISTIAN HORNER es el jefe del equipo Red Bull Racing en Fórmula 1 desde 2005. Bajo su liderazgo, el equipo ha ganado múltiples campeonatos de constructores y pilotos. Reconocido por su capacidad de gestión y decisiones estratégicas, Horner ha desempeñado un papel clave en establecer a Red Bull como un equipo dominante en el deporte.', 'imagenes/redbulljefefoto.png')" ><img src="imagenes/redbulljefe.png" alt="Logo FIA" width="230" height="35"></button>
+    <div>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('OLIVER OAKES es un ex piloto británico de automovilismo y actual empresario. Tras una exitosa carrera en karting, donde ganó el Campeonato Mundial en 2005, compitió en categorías como la Fórmula BMW y Fórmula 3. Posteriormente, fundó el equipo Hitech GP en 2015, que ha competido en Fórmula 2, Fórmula 3 y otras categorías. Oakes ha sido clave en el desarrollo de jóvenes talentos en el automovilismo.', 'imagenes/alpinejefefoto.png')" ><img src="imagenes/alpinejefe.png" alt="Logo FIA" width="230" height="35"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('TOTO WOLFF es un empresario y ex piloto austriaco, actualmente director ejecutivo y accionista del equipo Mercedes-AMG Petronas de Fórmula 1. Tras competir en automovilismo, se dedicó a los negocios y en 2013 asumió el liderazgo de Mercedes. Bajo su dirección, el equipo ha dominado la Fórmula 1, ganando múltiples campeonatos. Wolff es reconocido por su gestión exitosa y su enfoque en la excelencia.', 'imagenes/mercedesjefefoto.png')" ><img src="imagenes/mercedesjefe.png" alt="Logo FIA" width="230" height="35"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('AYAO KOMATSU es un ingeniero japonés y actual director de rendimiento del equipo Haas F1 Team. Con una carrera en la Fórmula 1 que incluye trabajos en Renault y Lotus, Komatsu ha sido clave en el desarrollo técnico y estratégico de Haas desde su fundación en 2016. Es reconocido por su experiencia en aerodinámica y análisis de datos, así como por su habilidad para optimizar el rendimiento del equipo en la pista.', 'imagenes/haasjefefoto.png')" ><img src="imagenes/haasjefe.png" alt="Logo FIA" width="230" height="35"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('JAMES VOWLES es un ingeniero británico y actual jefe de equipo de Williams Racing en Fórmula 1. Antes de unirse a Williams en 2023, fue estratega principal en Mercedes, donde ayudó a ganar varios campeonatos. Su objetivo en Williams es revitalizar el equipo y aplicar su experiencia en estrategia para mejorar su rendimiento.', 'imagenes/williamsjefefoto.png')" ><img src="imagenes/williamsjefe.png" alt="Logo FIA" width="230" height="35"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('MIKE KRACK es un ingeniero luxemburgués y jefe del equipo Aston Martin en Fórmula 1 desde 2022. Con experiencia en BMW Motorsport y Sauber, Krack tiene un sólido historial en roles técnicos y de gestión. Su objetivo en Aston Martin es impulsar el equipo hacia un rendimiento competitivo en el campeonato.', 'imagenes/astonmartinjefefoto.png')" ><img src="imagenes/astonmartinjefe.png" alt="Logo FIA" width="230" height="35"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('ALESSANDRO BRAVI es el director general del equipo Alfa Romeo F1 Team Stake, con una amplia experiencia en la gestión y representación en el automovilismo. Ha trabajado como asesor y representante de pilotos, y actualmente lidera la escudería en su transición hacia convertirse en parte del equipo Audi en 2026.', 'imagenes/sauberjefefoto.png')" ><img src="imagenes/sauberjefe.png" alt="Logo FIA" width="230" height="35"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('LAURENT MEKIES es el director técnico de Scuderia Ferrari en Fórmula 1 desde 2022. Anteriormente, trabajó en Toro Rosso y se unió a Ferrari en 2018. Mekies es clave en el desarrollo del rendimiento del coche y la optimización de estrategias de carrera para el equipo.', 'imagenes/rbjefefoto.png')" ><img src="imagenes/rbjefe.png" alt="Logo FIA" width="230" height="35"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('FRÉDÉRIC VASSEUR es un ingeniero francés y director de equipos en Fórmula 1, actualmente jefe de Ferrari desde 2023. Anteriormente, fue jefe de Alfa Romeo F1 y cofundador del equipo ART Grand Prix. Vasseur es conocido por su gestión de talento y su enfoque estratégico en el automovilismo.', 'imagenes/ferrarijefefoto.png')" ><img src="imagenes/ferrarijefe.png" alt="Logo FIA" width="230" height="35"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('ANDREA STELLA es el jefe de equipo de McLaren Racing en Fórmula 1 desde 2023. Con experiencia en McLaren y Ferrari, ha trabajado en el desarrollo de vehículos y gestión de rendimiento. Su objetivo en McLaren es mejorar el rendimiento del equipo y desarrollar un coche competitivo.', 'imagenes/mclarenjefefoto.png')" ><img src="imagenes/mclarenjefe.png" alt="Logo FIA" width="230" height="35"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('CHRISTIAN HORNER es el jefe del equipo Red Bull Racing en Fórmula 1 desde 2005. Bajo su liderazgo, el equipo ha ganado múltiples campeonatos de constructores y pilotos. Reconocido por su capacidad de gestión y decisiones estratégicas, Horner ha desempeñado un papel clave en establecer a Red Bull como un equipo dominante en el deporte.', 'imagenes/redbulljefefoto.png')" ><img src="imagenes/redbulljefe.png" alt="Logo FIA" width="230" height="35"/></button>
+    </div>
 
-<script>
-    function mostrarAlertaFoto(mensaje, urlImagen) {
-        document.getElementById('contenidoAlerta').innerText = mensaje;  // Actualiza el mensaje
-        var img = document.getElementById('imagenAlerta');  // Selecciona la imagen dentro de la alerta
-        img.src = urlImagen;  // Cambia la imagen por la URL pasada como parámetro
-        img.style.display = 'block';  // Asegúrate de que la imagen esté visible
-        document.getElementById('miAlerta').style.display = 'block';  // Muestra la alerta
-        document.getElementById('miOverlay').style.display = 'block';  // Muestra el fondo de la alerta
-    }       
-    function cerrarAlerta() {
-        document.getElementById('miAlerta').style.display = 'none';
-        document.getElementById('miOverlay').style.display = 'none';
-    }
-</script>
+    <script type="text/javascript">
+        function mostrarAlertaFoto(mensaje, imagenUrl) {
+            var miAlerta = document.getElementById("miAlerta");
+            var miOverlay = document.getElementById("miOverlay");
+            var imagenAlerta = document.getElementById("imagenAlerta");
+            var contenidoAlerta = document.getElementById("contenidoAlerta");
 
-</section>
-<hr>
-<footer>
-    <p>&copy; 2024 Fórmula 1. Todos los derechos reservados.</p>
-</footer>
+            contenidoAlerta.innerHTML = mensaje;
+            imagenAlerta.src = imagenUrl;
+            imagenAlerta.style.display = "block";
 
+            miAlerta.style.display = "block";
+            miOverlay.style.display = "block";
+        }
+
+        function cerrarAlerta() {
+            var miAlerta = document.getElementById("miAlerta");
+            var miOverlay = document.getElementById("miOverlay");
+
+            miAlerta.style.display = "none";
+            miOverlay.style.display = "none";
+        }
+    </script>
+    <hr />
+    <div>
+        <p>&copy; 2024 Fórmula 1. Todos los derechos reservados.</p>
+    </div>
 </body>
 </html>

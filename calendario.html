@@ -1,75 +1,69 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imagenes/logo.png" type="image/png" />
     <title>Fórmula 1</title>
-    <style>
+    <style type="text/css">
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
-        header {
+        .header {
             background-color: firebrick;
             color: #fff;
             padding: 1px;
+            text-align: center;
+        }
+        h1 {
             text-align: center;
         }
         p {
             margin-left: 1%;
             margin-right: 1%;
         }
-        nav {
+        .nav {
             background-color: #333;
             padding: 10px;
             text-align: center;
         }
-        nav a {
+        .nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
         }
-        nav a:hover {
+        .nav a:hover {
             color: #ffcc00;
         }
         .image-left {
             float: left;
-            margin-right: 20px;
-        }
-        .image-right {
-            float: right;
             margin-left: 20px;
-            margin-top: 10px;
-        }
-        .image-left {
-            float: left;
-            margin-left: 40px;
-            margin-top: 10px;
+            margin-top: 7px;
         }
         .image-right {
             float: right;
-            margin-right: 55px;
-            margin-top: 10px;
+            margin-right: 20px;
+            margin-top: 7px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="imagenes/formula1.png" alt="Logo formula 1" width="85" height="65" class="image-right">
-        <img src="imagenes/fia.png" alt="Logo FIA" width="85" height="65" class="image-left">
-         <div>
-        <h1>Fórmula 1</h1><hr>
-        <p>En la Fórmula 1, la velocidad se encuentra con la ingeniería de vanguardia, creando una experiencia emocionante y única. 
-            <br>Cada carrera es un testimonio de la destreza de los pilotos y la precisión de los equipos en la búsqueda de la perfección.</p>
+    <div class="header">
+        <img src="imagenes/formula1.png" alt="Logo formula 1" width="85" height="65" class="image-right" />
+        <img src="imagenes/fia.png" alt="Logo FIA" width="85" height="65" class="image-left" />
+        <div>
+            <h1>Fórmula 1</h1><hr />
+            <p>En la Fórmula 1, la velocidad se encuentra con la ingeniería de vanguardia, creando una experiencia emocionante y única. 
+                <br />Cada carrera es un testimonio de la destreza de los pilotos y la precisión de los equipos en la búsqueda de la perfección.</p>
         </div>
-    </header>
+    </div>
 
-    <nav>
+    <div class="nav">
         <a href="index.html" onclick="window.open('', '_self').close();">Inicio</a>
         <a href="calendario.html">Calendario</a>
         <a href="equipos.html">Equipos</a>
@@ -77,22 +71,23 @@
         <a href="jefe_equipo.html">Jefes de Equipo</a>
         <a href="ingeniero_pista.html">Ingenieros de Pista</a>
         <a href="clasificacion.html">Clasificacion</a>
-    </nav>
+    </div>
 
-<section id="calendario"></section>
-    <p><b>EL CALENDARIO DE F1 </b> es una emocionante serie de carreras que lleva a equipos y pilotos a
-        competir en algunos de los circuitos más icónicos del mundo. Con 17 Grandes Premios
-        por temporada, cada evento representa una oportunidad para sumar puntos en el campeonato.
-        Desde desafiantes pistas permanentes hasta vibrantes circuitos urbanos, cada carrera 
-        presenta sus propios desafíos y emociones. La temporada culmina en una intensa batalla 
-        por el título mundial, atrayendo la atención de millones de aficionados y celebrando la 
-        cultura única de cada país anfitrión. Acompáñanos en este apasionante recorrido por la velocidad 
-        y la competencia en la Fórmula 1.</p>
-</section>
-<hr>
-<footer>
-    <p>&copy; 2024 Fórmula 1. Todos los derechos reservados.</p>
-</footer>
+    <div>
+        <p><b>EL CALENDARIO DE F1 </b> es una emocionante serie de carreras que lleva a equipos y pilotos a
+            competir en algunos de los circuitos más icónicos del mundo. Con 17 Grandes Premios
+            por temporada, cada evento representa una oportunidad para sumar puntos en el campeonato.
+            Desde desafiantes pistas permanentes hasta vibrantes circuitos urbanos, cada carrera 
+            presenta sus propios desafíos y emociones. La temporada culmina en una intensa batalla 
+            por el título mundial, atrayendo la atención de millones de aficionados y celebrando la 
+            cultura única de cada país anfitrión. Acompáñanos en este apasionante recorrido por la velocidad 
+            y la competencia en la Fórmula 1.</p>
+    </div>
+    
+    <hr />
+    <div>
+        <p>&copy; 2024 Fórmula 1. Todos los derechos reservados.</p>
+    </div>
 
 </body>
 </html>

@@ -1,66 +1,64 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imagenes/logo.png" type="image/png" />
     <title>Fórmula 1</title>
-    <style>
+    <style type="text/css">
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
-        h2 {
-            text-align: center;
-        }
-        div {
-            text-align: center;
-        }
-        header {
+        .header {
             background-color: firebrick;
             color: #fff;
             padding: 1px;
+            text-align: center;
+        }
+        h1 {
             text-align: center;
         }
         p {
             margin-left: 1%;
             margin-right: 1%;
         }
-        nav {
+        .nav {
             background-color: #333;
             padding: 10px;
             text-align: center;
         }
-        nav a {
+        .nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
         }
-        nav a:hover {
+        .nav a:hover {
             color: #ffcc00;
         }
         .image-left {
             float: left;
-            margin-left: 40px;
-            margin-top: 10px;
+            margin-left: 20px;
+            margin-top: 7px;
         }
         .image-right {
             float: right;
-            margin-right: 55px;
-            margin-top: 10px;
+            margin-right: 20px;
+            margin-top: 7px;
         }
         .btn-grande {
-            font-size: 10px;        /* Aumenta el tamaño de la fuente */
-            padding: 2px 3px;    /* Aumenta el espacio interior (top-bottom, left-right) */
-            margin: 20px;          /* Margen alrededor del botón */
-            border: none;          /* Elimina el borde por defecto */
-            border-radius: 5px;    /* Esquinas redondeadas */
+            font-size: 10px; /* Aumenta el tamaño de la fuente */
+            padding: 2px 3px; /* Aumenta el espacio interior (top-bottom, left-right) */
+            margin: 20px; /* Margen alrededor del botón */
+            border: none; /* Elimina el borde por defecto */
+            border-radius: 5px; /* Esquinas redondeadas */
             background-color: firebrick; /* Color de fondo */
-            color: white;           /* Color del texto */
-            cursor: pointer;        /* Cambia el cursor al pasar sobre el botón */
+            color: white; /* Color del texto */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
             transition: background-color 0.3s; /* Suaviza el cambio de color */
         }
         .texto-con-borde {
@@ -68,8 +66,8 @@
             padding: 1px;             
             margin: 19px;           
             border-radius: 5px;  
-            margin-left: 40xp;  
-            margin-right: 40xp;
+            margin-left: 1.5%;  
+            margin-right: 1.5%;
             font-size: 30px;  
             font-weight: bold;
         }
@@ -80,37 +78,31 @@
             margin-bottom: 20px;
             text-align: center;
         }
-        input[type="text"], input[type="email"]{
+        input[type="text"], input[type="email"] {
             width: 200px; /* Ajusta el ancho según tus preferencias */
             padding: 8px; /* Espaciado interno */
             margin: 5px 0; /* Margen superior e inferior */
             border: 1px solid #ccc; /* Borde */
             border-radius: 4px; /* Bordes redondeados */
-        }
-        input[type="number"] {
-            width: 50px; /* Ajusta el ancho según tus preferencias */
-            padding: 8px; /* Espaciado interno */
-            margin: 5px 0; /* Margen superior e inferior */
-            border: 1px solid #ccc; /* Borde */
-            border-radius: 4px; /* Bordes redondeados */
+            text-align: center;
         }
         .bar {
             width: 300px;
             background-color: #f3f3f3;
-            margin: 10px 0;
+            margin: 15px 0;
             position: relative;
         }
         .bar2 {
             width: 300px;
-            height: 15.4px;
+            height: 16.1px;
             background-color: #f3f3f3;
-            margin: 10px 0;
+            margin: 11px 0;
             position: relative;
         }
         .progress {
             height: 20px;
         }
-        #barAlpine .progress , #barOcon .progress, #barGasly .progress{
+        #barAlpine .progress, #barOcon .progress, #barGasly .progress {
             background-color: blue; 
         }
         #barMercedes .progress, #barHamilton .progress, #barRussell .progress {
@@ -119,7 +111,7 @@
         #barWilliams .progress, #barAlbon .progress, #barColapinto .progress {
             background-color: cornflowerblue;
         }
-        #barAston .progress, #barFernando .progress, #barStroll .progress {
+        #barAstonMartin .progress, #barFernando .progress, #barStroll .progress {
             background-color: rgb(46, 177, 90); 
         }
         #barSauber .progress, #barBottas .progress, #barZhou .progress {
@@ -140,7 +132,7 @@
         #barRedbull .progress, #barVerstappen .progress, #barCheco .progress {
             background-color: rgb(53, 50, 85); 
         }
-        .bar span {
+        .bar span, .bar2 span {
             position: absolute;
             right: 10px;
             top: 5px;
@@ -148,17 +140,10 @@
         .resultado {
             text-align: center;
         }
+
         .tabla {
             text-align: center; 
-            margin-left: 10%;
-            margin-right: 10%;
-            margin-top: 10%;
-        }
-        .tabla2 {
-            text-align: center; 
-            margin-left: 5%;
-            margin-right: 5%;
-            margin-top: 5%;
+            margin: auto;
         }
         .botonVotar {            
             cursor: pointer;
@@ -197,104 +182,34 @@
         .boton:hover {
             background-color: firebrick;
         }
-        #miAlerta {
-            display: none;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            z-index: 1000;
-            text-align: center;
-            height: 700px;
-            width: 700px;
-            overflow: auto;
-        }
-        #miAlerta button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: blue;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #miOverlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-        #miAlerta2 {
-            display: none;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            z-index: 1000;
-            text-align: center;
-            height: 700px;
-            width: 700px;
-            overflow: auto;
-        }
-        #miAlerta2 button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: blue;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #miOverlay2 {
-            margin-bottom: 2%;
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
+       
     </style>
 </head>
 <body>
-    <header>    
-        <img src="imagenes/formula1.png" alt="Logo formula 1" width="85" height="65" class="image-right">
-        <img src="imagenes/fia.png" alt="Logo FIA" width="85" height="65" class="image-left">
+    <div class="header">    
+        <img src="imagenes/formula1.png" alt="Logo formula 1" width="85" height="65" class="image-right" />
+        <img src="imagenes/fia.png" alt="Logo FIA" width="85" height="65" class="image-left" />
         
         <div>
-        <h1>Fórmula 1</h1><hr>
+        <h1>Fórmula 1</h1><hr />
         <p>En la Fórmula 1, la velocidad se encuentra con la ingeniería de vanguardia, creando una experiencia emocionante y única. 
-            <br>Cada carrera es un testimonio de la destreza de los pilotos y la precisión de los equipos en la búsqueda de la perfección.</p>
+            <br />Cada carrera es un testimonio de la destreza de los pilotos y la precisión de los equipos en la búsqueda de la perfección.</p>
         </div>
-    </header>
+    </div>
 
-    <nav>
+    <div class="nav">
         <a href="index.html">Inicio</a>
         <a href="calendario.html" target="_blank">Calendario</a>
         <a href="equipos.html" target="_blank">Equipos</a>
         <a href="pilotos.html" target="_blank">Pilotos</a>
         <a href="jefe_equipo.html" target="_blank">Jefes de Equipo</a>
         <a href="ingeniero_pista.html" target="_blank">Ingenieros de Pista</a>
-        <a href="clasificacion.html" target="_blank">Clasificacion</a>
-    </nav>
+        <a href="clasificacion.html" target="_blank">Clasificación</a>
+    </div>
 
-<section id="inicio">
-    
-    <p><b>EL MUNDO DE LA F1</b>, desde los equipos y pilotos hasta los circuitos más emocionantes 
+    <div class="id">
+        
+        <p><b>EL MUNDO DE LA F1</b>, desde los equipos y pilotos hasta los circuitos más emocionantes 
             del mundo. La Fórmula 1 es el pináculo del automovilismo y una de las competiciones deportivas 
             más emocionantes y seguidas en el mundo. Con una rica historia que se remonta a 1950, este deporte 
             combina tecnología de vanguardia, ingeniería avanzada y un increíble nivel de habilidad y 
@@ -308,7 +223,7 @@
             innovaciones que impulsan la industria automotriz. La pasión de los aficionados, la rivalidad entre 
             equipos y la búsqueda constante de la perfección hacen de la Fórmula 1 un espectáculo incomparable. 
             Sumérgete en el mundo de la F1 y descubre la emoción, la adrenalina y la historia detrás de este 
-            apasionante deporte.<br>La Fórmula 1 es la categoría más alta de automovilismo de monoplazas a nivel mundial, 
+            apasionante deporte.<br />La Fórmula 1 es la categoría más alta de automovilismo de monoplazas a nivel mundial, 
             conocida por su combinación de velocidad, tecnología avanzada y competencia feroz. 
             Fundada en 1950, la F1 se ha convertido en un espectáculo global que atrae a millones de 
             aficionados en todo el mundo. Los equipos de F1 desarrollan vehículos extremadamente sofisticados,
@@ -322,246 +237,185 @@
             base de fans apasionada, la Fórmula 1 sigue siendo un símbolo de innovación y excelencia en el
             deporte del motor.</p>
 
-<div id="miOverlay" style="display:none;"></div>
-<div id="miAlerta" style="display:none;"> <div id="contenidoAlerta"></div> <button onclick="cerrarAlerta()">Cerrar</button> </div>
-<button class="botonVotar" onclick="mostrarAlerta()">Vota Tu Equipo Favorito</button>
-<script>
-    // Tabla en formato HTML
-    var tablaHTML = `<table class="tabla" border="2">
-                        <tr>
-                            <th>
-                                <form id="voteForm"><br>                         
-                                    <label for="firstName">Nombre:</label><input type="text" id="firstName" required><br><br>
-                                    <label for="lastName">Apellidos:</label> <input type="text" id="lastName" required><br><br>
-                                    <label for="email">Correo:</label> <input type="email" id="email" required><br><br>
-                                    <label><input type="radio" name="gender" value="Hombre" required> Hombre</label>
-                                    <label><input type="radio" name="gender" value="Mujer" required> Mujer</label><br><br>
-                                    <label for="age">Edad:</label> <input type="number" id="age" min="0" required><br><br>
-                                    <label for="team">Elige tu equipo favorito:</label><br>
-                                    <select id="team" required>
-                                        <option value="">Selecciona un Equipo</option>
-                                        <option value="Equipo A">Alpine</option>
-                                        <option value="Equipo B">Haas</option>
-                                        <option value="Equipo C">Mercedes</option>
-                                        <option value="Equipo E">Kick Sauber</option>
-                                        <option value="Equipo D">Williams</option>
-                                        <option value="Equipo F">Aston Martin</option>
-                                        <option value="Equipo G">RB</option>
-                                        <option value="Equipo H">Ferrari</option>
-                                        <option value="Equipo J">Red Bull</option>
-                                        <option value="Equipo I">Mclaren</option>
-                                    </select><br><br>
-                                    <button type="submit" class="botonVotar">Votar</button>
-                                </form>
-                            </th>
-                            <th>
-                                <div class="resultado" id="results">
-                                    <div class="bar" id="barAlpine" data-team="Equipo A">Alpine: <span class="percentage" id="percentageA">0%</span> <div class="progress" id="progressA" style="width: 0%;"></div></div>
-                                    <div class="bar" id="barHaas" data-team="Equipo B">Haas: <span class="percentage" id="percentageB">0%</span><div class="progress" id="progressB" style="width: 0%;"></div></div>
-                                    <div class="bar" id="barMercedes" data-team="Equipo C">Mercedes: <span class="percentage" id="percentageC">0%</span><div class="progress" id="progressC" style="width: 0%;"></div></div>
-                                    <div class="bar" id="barSauber" data-team="Equipo E">Kick Sauber: <span class="percentage" id="percentageE">0%</span><div class="progress" id="progressE" style="width: 0%;"></div></div>
-                                    <div class="bar" id="barWilliams" data-team="Equipo D">Williams: <span class="percentage" id="percentageD">0%</span> <div class="progress" id="progressD" style="width: 0%;"></div></div>
-                                    <div class="bar" id="barAston" data-team="Equipo F">Aston Martin: <span class="percentage" id="percentageF">0%</span><div class="progress" id="progressF" style="width: 0%;"></div></div>
-                                    <div class="bar" id="barRb" data-team="Equipo G">RB: <span class="percentage" id="percentageG">0%</span> <div class="progress" id="progressG" style="width: 0%;"></div></div>
-                                    <div class="bar" id="barFerrari" data-team="Equipo H">Ferrari: <span class="percentage" id="percentageH">0%</span><div class="progress" id="progressH" style="width: 0%;"></div></div>
-                                    <div class="bar" id="barRedbull" data-team="Equipo J">Red Bull: <span class="percentage" id="percentageJ">0%</span> <div class="progress" id="progressJ" style="width: 0%;"></div></div>
-                                    <div class="bar" id="barMclaren" data-team="Equipo I">Mclaren: <span class="percentage" id="percentageI">0%</span><div class="progress" id="progressI" style="width: 0%;"></div></div>
-                                </div>
-                            </th>
-                        </tr>
-                    </table>`;
-
-    const results = {
-        'Equipo A': 0, 'Equipo B': 0, 'Equipo C': 0, 'Equipo D': 0, 'Equipo E': 0, 'Equipo F': 0, 'Equipo G': 0, 'Equipo H': 0, 'Equipo I': 0, 'Equipo J': 0
-    };
-
-    // Método para mostrar la alerta con la tabla
-    function mostrarAlerta() {
-        // Solo cargar la tabla la primera vez
-        if (document.getElementById('contenidoAlerta').innerHTML === '') {
-            document.getElementById('contenidoAlerta').innerHTML = tablaHTML;
-            // Asegúrate de que el formulario se maneje correctamente al hacer clic en "Votar"
-            const voteForm = document.getElementById('voteForm');
-            voteForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-                const selectedTeam = document.getElementById('team').value;
-                if (selectedTeam) {
-                    results[selectedTeam]++;
-                    updateResults();
-                    resetForm();
-                }
-            });
-        }
-        // Método para limpiar el formulario
-        function resetForm() {
-            document.getElementById('firstName').value = '';
-            document.getElementById('lastName').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('age').value = '';
-            document.getElementById('team').selectedIndex = 0; // Resetea el select a la opción por defecto
-            const genderRadios = document.querySelectorAll('input[name="gender"]');
-            genderRadios.forEach(radio => radio.checked = false); // Desmarca los radios
-        }
-        // Mostrar la alerta
-        document.getElementById('miAlerta').style.display = 'block';
-        document.getElementById('miOverlay').style.display = 'block';
-    }
-    // Método para cerrar la alerta
-    function cerrarAlerta() {
-        document.getElementById('miAlerta').style.display = 'none';
-        document.getElementById('miOverlay').style.display = 'none';
-    }
-    // Función para actualizar los resultados
-    function updateResults() {
-        const totalVotes = Object.values(results).reduce((sum, votes) => sum + votes, 0);
-        for (const team in results) {
-            const percentage = totalVotes > 0 ? (results[team] / totalVotes * 100).toFixed(2) : 0;
-            const progress = document.getElementById('progress' + team.split(' ')[1]);
-            progress.style.width = percentage + '%'; // Actualiza el ancho de la barra
-            document.getElementById('percentage' + team.split(' ')[1]).innerText = percentage + '%';
-        }       
-    }
-</script>
-
-<div id="miOverlay2" style="display:none;"></div>
-<div id="miAlerta2" style="display:none;"> <div id="contenidoAlerta2"></div> <button onclick="cerrarAlerta2()">Cerrar</button> </div>
-<button class="botonVotar" onclick="mostrarAlerta2()">Vota Tu Piloto Favorito</button>
-<script>
-    var tablaHTML2 = `<table class="tabla" border="2">
-                        <tr>
-                            <th>
-                                <form id="voteForm2"><br>                         
-                                    <label for="firstName2">Nombre:</label><input type="text" id="firstName2" required><br><br>
-                                    <label for="lastName2">Apellidos:</label> <input type="text" id="lastName2" required><br><br>
-                                    <label for="email2">Correo:</label> <input type="email" id="email2" required><br><br>
-                                    <label><input type="radio" name="gender2" value="Hombre" required> Hombre</label>
-                                    <label><input type="radio" name="gender2" value="Mujer" required> Mujer</label><br><br>
-                                    <label for="age2">Edad:</label> <input type="number" id="age2" min="0" required><br><br>
-                                    <label for="team2">Elige tu piloto favorito:</label><br>
-                                    <select id="team2" required>
-                                        <option value="">Selecciona un Piloto</option>
-                                        <option value="Ocon">Ocon</option>
-                                        <option value="Gasly">Gasly</option>
-                                        <option value="Kevin">Kevin</option>
-                                        <option value="Nico">Nico</option>
-                                        <option value="Hamilton">Hamilton</option>
-                                        <option value="Russell">Russell</option>
-                                        <option value="Colapinto">Colapinto</option>
-                                        <option value="Albon">Albon</option>
-                                        <option value="Bottas">Bottas</option>
-                                        <option value="Zhou">Zhou</option>
-                                        <option value="Fernando">Fernando</option>
-                                        <option value="Stroll">Stroll</option>
-                                        <option value="Tsunoda">Tsunoda</option>
-                                        <option value="Ricciardo">Ricciardo</option>
-                                        <option value="Leclerc">Leclerc</option>
-                                        <option value="Sainz">Sainz</option>
-                                        <option value="Verstappen">Verstappen</option>
-                                        <option value="Checo">Checo</option>    
-                                        <option value="Norris">Norris</option>
-                                        <option value="Piastri">Piastri</option>
-                                    </select><br><br>
-                                    <button type="submit" class="botonVotar">Votar</button>
-                                </form>
-                            </th>
-                            <th>
-                                <div class="resultado" id="results2">
-                                <div class="bar2" id="barOcon">Ocon: <span class="percentage" id="percentageOcon">0%</span> <div class="progress" id="progressOcon" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barGasly">Gasly: <span class="percentage" id="percentageGasly">0%</span> <div class="progress" id="progressGasly" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barKevin">Kevin: <span class="percentage" id="percentageKevin">0%</span> <div class="progress" id="progressKevin" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barNico">Nico: <span class="percentage" id="percentageNico">0%</span> <div class="progress" id="progressNico" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barHamilton">Hamilton: <span class="percentage" id="percentageHamilton">0%</span> <div class="progress" id="progressHamilton" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barRussell">Russell: <span class="percentage" id="percentageRussell">0%</span> <div class="progress" id="progressRussell" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barColapinto">Colapinto: <span class="percentage" id="percentageColapinto">0%</span> <div class="progress" id="progressColapinto" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barAlbon">Albon: <span class="percentage" id="percentageAlbon">0%</span> <div class="progress" id="progressAlbon" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barBottas">Bottas: <span class="percentage" id="percentageBottas">0%</span> <div class="progress" id="progressBottas" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barZhou">Zhou: <span class="percentage" id="percentageZhou">0%</span> <div class="progress" id="progressZhou" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barFernando">Fernando: <span class="percentage" id="percentageFernando">0%</span> <div class="progress" id="progressFernando" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barStroll">Stroll: <span class="percentage" id="percentageStroll">0%</span> <div class="progress" id="progressStroll" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barTsunoda">Tsunoda: <span class="percentage" id="percentageTsunoda">0%</span> <div class="progress" id="progressTsunoda" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barRicciardo">Ricciardo: <span class="percentage" id="percentageRicciardo">0%</span> <div class="progress" id="progressRicciardo" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barLeclerc">Leclerc: <span class="percentage" id="percentageLeclerc">0%</span> <div class="progress" id="progressLeclerc" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barSainz">Sainz: <span class="percentage" id="percentageSainz">0%</span> <div class="progress" id="progressSainz" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barVerstappen">Verstappen: <span class="percentage" id="percentageVerstappen">0%</span> <div class="progress" id="progressVerstappen" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barCheco">Checo: <span class="percentage" id="percentageCheco">0%</span> <div class="progress" id="progressCheco" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barNorris">Norris: <span class="percentage" id="percentageNorris">0%</span> <div class="progress" id="progressNorris" style="width: 0%;"></div></div>
-                                <div class="bar2" id="barPiastri">Piastri: <span class="percentage" id="percentagePiastri">0%</span> <div class="progress" id="progressPiastri" style="width: 0%;"></div></div>
-                                </div>
-                            </th>
-                        </tr>
-                    </table>`;
-
-    const results2 = {
-        'Ocon': 0, 'Gasly': 0, 'Kevin': 0, 'Nico': 0, 'Hamilton': 0, 'Russell': 0, 'Colapinto': 0, 'Albon': 0, 'Bottas': 0,
-        'Zhou': 0, 'Fernando': 0, 'Stroll': 0, 'Tsunoda': 0, 'Ricciardo': 0, 'Leclerc': 0, 'Sainz': 0, 'Verstappen': 0,
-        'Checo': 0, 'Norris': 0, 'Piastri': 0
-    };
-
-    function mostrarAlerta2() {
-        if (document.getElementById('contenidoAlerta2').innerHTML === '') {
-            document.getElementById('contenidoAlerta2').innerHTML = tablaHTML2;
-
-            const voteForm2 = document.getElementById('voteForm2');
-            voteForm2.addEventListener('submit', function (event) {
-                event.preventDefault();
-                const selectedTeam2 = document.getElementById('team2').value;
-                if (selectedTeam2) {
-                    results2[selectedTeam2]++;
-                    updateResults2();
-                    resetForm2();
-                }
-            });
-        }
-        document.getElementById('miAlerta2').style.display = 'block';
-        document.getElementById('miOverlay2').style.display = 'block';
-    }
-
-    function cerrarAlerta2() {
-        document.getElementById('miAlerta2').style.display = 'none';
-        document.getElementById('miOverlay2').style.display = 'none';
-    }
-
-    function resetForm2() {
-        document.getElementById('firstName2').value = '';
-        document.getElementById('lastName2').value = '';
-        document.getElementById('email2').value = '';
-        document.getElementById('age2').value = '';
-        document.getElementById('team2').selectedIndex = 0;
-        const genderRadios2 = document.querySelectorAll('input[name="gender2"]');
-        genderRadios2.forEach(radio => radio.checked = false);
-    }
-
-    function updateResults2() {
-        const totalVotes2 = Object.values(results2).reduce((sum, votes) => sum + votes, 0);
-        for (const team2 in results2) {
-            const percentage = totalVotes2 > 0 ? (results2[team2] / totalVotes2 * 100).toFixed(2) : 0;
-            const progress = document.getElementById('progress' + team2);
-            if (progress) {
-                progress.style.width = percentage + '%';
-                document.getElementById('percentage' + team2).innerText = percentage + '%';
-            }
-        }
-    }
-</script>
-
-        <hr>
+        <hr />
         <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>NOTICIAS DE INTERÉS<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/its-been-a-battle-of-the-mind-hamilton-reveals-lessons-he-learned-during.30pf5nXH8mACcvMFFbagiF';"> <img src="imagenes/noticia1.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">“It has been a mental battle”: Hamilton's statements</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/bottas-confident-hes-driving-better-than-at-mercedes-as-he-aims-to-seal.5DnxmeFS4vTVpgulu5puS6';"><img src="imagenes/noticia2.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">Bottas confident he’s ‘driving better than at Mercedes’</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/horner-hopes-to-keep-brilliant-character-ricciardo-in-red-bull-family-as-he.35V3EQeLJzy5aYtsQHAEpA';"><img src="imagenes/noticia3.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">Horner hopes to keep ‘brilliant character’ Ricciardo in Red Bull family</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/from-fangio-to-hamilton-who-are-the-oldest-world-champions-in-the-history-of.5GOBodkkPk5NmobPhJXvzd';"><img src="imagenes/noticia4.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">Who are the oldest world champions in the history of Formula 1?</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/its-at-the-top-of-my-list-sainz-sets-out-final-goal-as-a-ferrari-driver.2wutS1xjAB19A7UyObDT9Y';"><img src="imagenes/noticia5.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">‘It’s at the top of my list’ – Sainz sets out final goal as a Ferrari driver</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/mick-schumacher-back-behind-the-wheel-of-an-f1-car-at-pirelli-tyre-test.4xrZ1DlFphcguA6lmabrIE';"><img src="imagenes/noticia6.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">Mick Schumacher back behind the wheel of an F1 car</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/from-march-to-red-bull-how-long-did-it-take-newey-to-make-an-impact-at-his.43RfJvEohosX9iwbgiMmbq';"><img src="imagenes/noticia7.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">How long did it take Newey to make an impact?</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/analysis-what-next-for-alpine-after-renault-announce-the-end-of-f1-works.5eyvaNFBO9qk70mbXuUMIE';"><img src="imagenes/noticia8.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">What next for Alpine after Renault announce?</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/f1-commission-rules-out-rookie-race-for-this-year-but-concept-will-be.1F5s28Ey1TtL7vxavXF1vc';"><img src="imagenes/noticia9.png" alt="Descripción de la imagen" width="400" height="250"/><br><span class="texto-spam">F1 Commission rules out ‘rookie race’ for this year</span></button>
-
-</section>
-<hr>
-<footer>
-    <p>&copy; 2024 Fórmula 1. Todos los derechos reservados.</p>
-    
-</footer>
-
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/its-been-a-battle-of-the-mind-hamilton-reveals-lessons-he-learned-during.30pf5nXH8mACcvMFFbagiF';"> <img src="imagenes/noticia1.png" alt="Descripción de la imagen" width="400" height="250"/><br /><span class="texto-spam">“It has been a mental battle”: Hamilton's statements</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/bottas-confident-hes-driving-better-than-at-mercedes-as-he-aims-to-seal.5DnxmeFS4vTVpgulu5puS6';"><img src="imagenes/noticia2.png" alt="Descripción de la imagen" width="400" height="250"/><br /><span class="texto-spam">Bottas confident he’s ‘driving better than at Mercedes’</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/horner-hopes-to-keep-brilliant-character-ricciardo-in-red-bull-family-as-he.35V3EQeLJzy5aYtsQHAEpA';"><img src="imagenes/noticia3.png" alt="Descripción de la imagen" width="400" height="250"/><br /><span class="texto-spam">Horner hopes to keep ‘brilliant character’ Ricciardo in Red Bull family</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/from-fangio-to-hamilton-who-are-the-oldest-world-champions-in-the-history-of.5GOBodkkPk5NmobPhJXvzd';"><img src="imagenes/noticia4.png" alt="Descripción de la imagen" width="400" height="250"/><br /><span class="texto-spam">Who are the oldest world champions in the history of Formula 1?</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/its-at-the-top-of-my-list-sainz-sets-out-final-goal-as-a-ferrari-driver.2wutS1xjAB19A7UyObDT9Y';"><img src="imagenes/noticia5.png" alt="Descripción de la imagen" width="400" height="250"/><br /><span class="texto-spam">‘It’s at the top of my list’ – Sainz sets out final goal as a Ferrari driver</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/mick-schumacher-back-behind-the-wheel-of-an-f1-car-at-pirelli-tyre-test.4xrZ1DlFphcguA6lmabrIE';"><img src="imagenes/noticia6.png" alt="Descripción de la imagen" width="400" height="250"/><br /><span class="texto-spam">Mick Schumacher back behind the wheel of an F1 car</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/from-march-to-red-bull-how-long-did-it-take-newey-to-make-an-impact-at-his.43RfJvEohosX9iwbgiMmbq';"><img src="imagenes/noticia7.png" alt="Descripción de la imagen" width="400" height="250"/><br /><span class="texto-spam">How long did it take Newey to make an impact?</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/analysis-what-next-for-alpine-after-renault-announce-the-end-of-f1-works.5eyvaNFBO9qk70mbXuUMIE';"><img src="imagenes/noticia8.png" alt="Descripción de la imagen" width="400" height="250"/><br /><span class="texto-spam">What next for Alpine after Renault announce?</span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/f1-commission-rules-out-rookie-race-for-this-year-but-concept-will-be.1F5s28Ey1TtL7vxavXF1vc';"><img src="imagenes/noticia9.png" alt="Descripción de la imagen" width="400" height="250"/><br /><span class="texto-spam">F1 Commission rules out ‘rookie race’ for this year</span></button>
+    </div>
+    <hr />
+    <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>DÉJANOS TU OPINIÓN<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
+    <table class="tabla" border="3">
+        <tr>
+            <th>
+                <div class="resultado" id="results">
+                    <div class="bar" id="barAlpine">Alpine: <span class="percentage" id="percentageAlpine">0%</span> <div class="progress" id="progressAlpine" style="width: 0%;"></div></div>
+                    <div class="bar" id="barHaas">Haas: <span class="percentage" id="percentageHaas">0%</span> <div class="progress" id="progressHaas" style="width: 0%;"></div></div>
+                    <div class="bar" id="barMercedes">Mercedes: <span class="percentage" id="percentageMercedes">0%</span> <div class="progress" id="progressMercedes" style="width: 0%;"></div></div>
+                    <div class="bar" id="barWilliams">Williams: <span class="percentage" id="percentageWilliams">0%</span> <div class="progress" id="progressWilliams" style="width: 0%;"></div></div>
+                    <div class="bar" id="barAstonMartin">Aston Martin: <span class="percentage" id="percentageAstonMartin">0%</span> <div class="progress" id="progressAstonMartin" style="width: 0%;"></div></div>
+                    <div class="bar" id="barSauber">Sauber: <span class="percentage" id="percentageSauber">0%</span> <div class="progress" id="progressSauber" style="width: 0%;"></div></div>
+                    <div class="bar" id="barRb">RB: <span class="percentage" id="percentageRB">0%</span> <div class="progress" id="progressRB" style="width: 0%;"></div></div>
+                    <div class="bar" id="barFerrari">Ferrari: <span class="percentage" id="percentageFerrari">0%</span> <div class="progress" id="progressFerrari" style="width: 0%;"></div></div>
+                    <div class="bar" id="barRedbull">Red Bull: <span class="percentage" id="percentageRedBull">100%</span> <div class="progress" id="progressRedBull" style="width: 100%;"></div></div>
+                    <div class="bar" id="barMclaren">Mclaren: <span class="percentage" id="percentageMclaren">0%</span> <div class="progress" id="progressMclaren" style="width: 0%;"></div></div>
+                </div>
+                
+                <form id="voteForm" action="">
+                    <label for="team">Elige tu equipo favorito:<br /></label>
+                    <select id="team">
+                        <option value="">Selecciona un Equipo</option>
+                        <option value="Alpine">Alpine</option>
+                        <option value="Haas">Haas</option>
+                        <option value="Mercedes">Mercedes</option>
+                        <option value="Williams">Williams</option>
+                        <option value="Aston Martin">Aston Martin</option>
+                        <option value="Sauber">Sauber</option>
+                        <option value="RB">RB</option>
+                        <option value="Ferrari">Ferrari</option>
+                        <option value="Red Bull">Red Bull</option>
+                        <option value="Mclaren">Mclaren</option>
+                    </select>
+                    <button type="submit" class="botonVotar">Votar</button>
+                </form>
+                
+                <script type="text/javascript">
+                    // Inicializa los resultados con 1 voto para Red Bull
+                    const results = {
+                        Alpine: 0, Haas: 0, Mercedes: 0, Williams: 0, "Aston Martin": 0, 
+                        Sauber: 0, RB: 0, Ferrari: 0, "Red Bull": 1, Mclaren: 0
+                    };
+                
+                    const voteForm = document.getElementById('voteForm');
+                    voteForm.addEventListener('submit', function (event) {
+                        event.preventDefault();
+                        const selectedTeam = document.getElementById('team').value;
+                        if (selectedTeam) {
+                            results[selectedTeam]++;
+                            updateResults();
+                            document.getElementById('team').selectedIndex = 0;
+                        }
+                    });
+                
+                    function updateResults() {
+                        const totalVotes = Object.values(results).reduce((sum, votes) => sum + votes, 0);
+                        for (const team in results) {
+                            const teamFormatted = team.replace(/\s+/g, ''); // Cambiar espacios a vacío para el ID
+                            const percentage = totalVotes > 0 ? (results[team] / totalVotes * 100).toFixed(2) : 0;
+                            const progress = document.getElementById('progress' + teamFormatted);
+                            if (progress) {
+                                progress.style.width = percentage + '%';
+                                document.getElementById('percentage' + teamFormatted).innerText = percentage + '%';
+                            }
+                        }
+                    }
+                
+                    // Inicializa la barra con 100% para Red Bull al cargar la página
+                    updateResults();
+                </script>
+            </th>
+            <th>
+                <div class="resultado" id="results2">
+                    <div class="bar2" id="barOcon">Ocon: <span class="percentage" id="percentageOcon">0%</span> <div class="progress" id="progressOcon" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barGasly">Gasly: <span class="percentage" id="percentageGasly">0%</span> <div class="progress" id="progressGasly" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barKevin">Kevin: <span class="percentage" id="percentageKevin">0%</span> <div class="progress" id="progressKevin" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barNico">Nico: <span class="percentage" id="percentageNico">0%</span> <div class="progress" id="progressNico" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barHamilton">Hamilton: <span class="percentage" id="percentageHamilton">0%</span> <div class="progress" id="progressHamilton" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barRussell">Russell: <span class="percentage" id="percentageRussell">0%</span> <div class="progress" id="progressRussell" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barColapinto">Colapinto: <span class="percentage" id="percentageColapinto">0%</span> <div class="progress" id="progressColapinto" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barAlbon">Albon: <span class="percentage" id="percentageAlbon">0%</span> <div class="progress" id="progressAlbon" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barBottas">Bottas: <span class="percentage" id="percentageBottas">0%</span> <div class="progress" id="progressBottas" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barZhou">Zhou: <span class="percentage" id="percentageZhou">0%</span> <div class="progress" id="progressZhou" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barFernando">Fernando: <span class="percentage" id="percentageFernando">100%</span> <div class="progress" id="progressFernando" style="width: 100%;"></div></div>
+                    <div class="bar2" id="barStroll">Stroll: <span class="percentage" id="percentageStroll">0%</span> <div class="progress" id="progressStroll" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barTsunoda">Tsunoda: <span class="percentage" id="percentageTsunoda">0%</span> <div class="progress" id="progressTsunoda" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barRicciardo">Ricciardo: <span class="percentage" id="percentageRicciardo">0%</span> <div class="progress" id="progressRicciardo" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barLeclerc">Leclerc: <span class="percentage" id="percentageLeclerc">0%</span> <div class="progress" id="progressLeclerc" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barSainz">Sainz: <span class="percentage" id="percentageSainz">0%</span> <div class="progress" id="progressSainz" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barVerstappen">Verstappen: <span class="percentage" id="percentageVerstappen">0%</span> <div class="progress" id="progressVerstappen" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barCheco">Checo: <span class="percentage" id="percentageCheco">0%</span> <div class="progress" id="progressCheco" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barNorris">Norris: <span class="percentage" id="percentageNorris">0%</span> <div class="progress" id="progressNorris" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barPiastri">Piastri: <span class="percentage" id="percentagePiastri">0%</span> <div class="progress" id="progressPiastri" style="width: 0%;"></div></div>
+                    <div class="bar2"></div>              
+                </div>
+                <form id="voteForm2" action="">
+                    <label for="pilot">Elige tu piloto favorito:<br /></label>
+                    <select id="team2">
+                        <option value="">Selecciona un Piloto</option>
+                        <option value="Ocon">Ocon</option>
+                        <option value="Gasly">Gasly</option>
+                        <option value="Kevin">Kevin Magnussen</option>
+                        <option value="Nico">Nico Hülkenberg</option>
+                        <option value="Hamilton">Lewis Hamilton</option>
+                        <option value="Russell">George Russell</option>
+                        <option value="Colapinto">Franco Colapinto</option>
+                        <option value="Albon">Alexander Albon</option>
+                        <option value="Bottas">Valtteri Bottas</option>
+                        <option value="Zhou">Guanyu Zhou</option>
+                        <option value="Fernando">Fernando Alonso</option>
+                        <option value="Stroll">Lance Stroll</option>
+                        <option value="Tsunoda">Yuki Tsunoda</option>
+                        <option value="Ricciardo">Daniel Ricciardo</option>
+                        <option value="Leclerc">Charles Leclerc</option>
+                        <option value="Sainz">Carlos Sainz</option>
+                        <option value="Verstappen">Max Verstappen</option>
+                        <option value="Checo">Sergio Pérez</option>
+                        <option value="Norris">Lando Norris</option>
+                        <option value="Piastri">Oscar Piastri</option>
+                    </select>
+                    <button type="submit" class="botonVotar">Votar</button>
+                </form>
+                
+                <script type="text/javascript">
+                    // Inicializa los resultados con 1 voto para Fernando
+                    const results2 = {
+                        Ocon: 0, Gasly: 0, Kevin: 0, Nico: 0, Hamilton: 0, Russell: 0, 
+                        Colapinto: 0, Albon: 0, Bottas: 0, Zhou: 0, Fernando: 1, 
+                        Stroll: 0, Tsunoda: 0, Ricciardo: 0, Leclerc: 0, Sainz: 1, 
+                        Verstappen: 0, Checo: 0, Norris: 0, Piastri: 0
+                    };
+                
+                    const voteForm2 = document.getElementById('voteForm2');
+                    voteForm2.addEventListener('submit', function (event) {
+                        event.preventDefault();
+                        const selectedPilot = document.getElementById('team2').value;
+                        if (selectedPilot) {
+                            results2[selectedPilot]++;
+                            updateResults2();
+                            document.getElementById('team2').selectedIndex = 0;
+                        }
+                    });
+                
+                    function updateResults2() {
+                        const totalVotes2 = Object.values(results2).reduce((sum, votes) => sum + votes, 0);
+                        for (const pilot in results2) {
+                            const pilotFormatted = pilot.replace(/\s+/g, ''); // Cambiar espacios a vacío para el ID
+                            const percentage2 = totalVotes2 > 0 ? (results2[pilot] / totalVotes2 * 100).toFixed(2) : 0;
+                            const progress = document.getElementById('progress' + pilotFormatted);
+                            if (progress) {
+                                progress.style.width = percentage2 + '%';
+                                document.getElementById('percentage' + pilotFormatted).innerText = percentage2 + '%';
+                            }
+                        }
+                    }
+                
+                    // Inicializa la barra con 100% para Fernando al cargar la página
+                    updateResults2();
+                </script>
+                
+            </th>
+        </tr>
+    </table>
+    <hr />
+    <div>
+        <p>&copy; 2024 Fórmula 1. Todos los derechos reservados.</p>
+    </div>
 </body>
 </html>
+

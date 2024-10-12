@@ -1,49 +1,54 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imagenes/logo.png" type="image/png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imagenes/logo.png" type="image/png" />
     <title>Fórmula 1</title>
-    <style>
+    <style type="text/css">
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
+        h1 {
+            text-align: center;
+        }
         p {
             margin-left: 1%;
             margin-right: 1%;
         }
-        header {
+        div.header {
             background-color: firebrick;
             color: #fff;
             padding: 1px;
             text-align: center;
         }
-        nav {
+        div.nav {
             background-color: #333;
             padding: 10px;
             text-align: center;
         }
-        nav a {
+        div.nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
         }
-        nav a:hover {
+        div.nav a:hover {
             color: #ffcc00;
         }
         .image-left {
             float: left;
-            margin-right: 20px;
+            margin-left: 20px;
+            margin-top: 7px;
         }
         .image-right {
             float: right;
-            margin-left: 20px;
-            margin-top: 10px;
+            margin-right: 20px;
+            margin-top: 7px;
         }
         .boton-sin-bordes {
             background-color: transparent; 
@@ -98,41 +103,31 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 999;
         }
-        .image-left {
-            float: left;
-            margin-left: 40px;
-            margin-top: 10px;
-        }
-        .image-right {
-            float: right;
-            margin-right: 55px;
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="imagenes/formula1.png" alt="Logo formula 1" width="85" height="65" class="image-right">
-        <img src="imagenes/fia.png" alt="Logo FIA" width="85" height="65" class="image-left">
+    <div class="header">
+        <img src="imagenes/formula1.png" alt="Logo formula 1" width="85" height="65" class="image-right" />
+        <img src="imagenes/fia.png" alt="Logo FIA" width="85" height="65" class="image-left" />
         <div>
-        <h1>Fórmula 1</h1><hr>
+        <h1>Fórmula 1</h1><hr />
         <p>En la Fórmula 1, la velocidad se encuentra con la ingeniería de vanguardia, creando una experiencia emocionante y única. 
-            <br>Cada carrera es un testimonio de la destreza de los pilotos y la precisión de los equipos en la búsqueda de la perfección.</p>
+            <br />Cada carrera es un testimonio de la destreza de los pilotos y la precisión de los equipos en la búsqueda de la perfección.</p>
         </div>
-    </header>
+    </div>
 
-    <nav>
+    <div class="nav">
         <a href="index.html" onclick="window.open('', '_self').close();">Inicio</a>
         <a href="calendario.html">Calendario</a>
         <a href="equipos.html">Equipos</a>
         <a href="pilotos.html">Pilotos</a>
         <a href="jefe_equipo.html">Jefes de Equipo</a>
         <a href="ingeniero_pista.html">Ingenieros de Pista</a>
-        <a href="clasificacion.html">Clasificacion</a>
-    </nav>
+        <a href="clasificacion.html">Clasificación</a>
+    </div>
 
-<section id="equipos">
+<div id="equipos">
     <p><b>LOS EQUIPOS DE FORMULA 1</b> son el núcleo de la competencia, cada uno compuesto por ingenieros, 
         mecánicos y pilotos que trabajan en conjunto para alcanzar la victoria. Con una mezcla de 
         historia y modernidad, cada equipo tiene su propia identidad, colores y enfoque estratégico.
@@ -141,15 +136,14 @@
         La innovación tecnológica, la estrategia en carrera y la habilidad del piloto son clave para el 
         éxito. Acompáñanos a explorar los equipos que hacen de la Fórmula 1 un espectáculo único y 
         emocionante.</p>
-        <hr>
+        <hr />
 
 <div id="miOverlay"></div>
 <div id="miAlerta">
-    <img id="imagenAlerta" src="" alt="Imagen de alerta" style="width: 700px; height: 400px; display: none;">
+    <img id="imagenAlerta" src="" alt="Imagen de alerta" style="width: 700px; height: 400px; display: none;" />
     <p id="contenidoAlerta"></p>
     <button onclick="cerrarAlerta()">Cerrar</button>
 </div>
-
 <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('ALPINE F1 TEAM es una escudería de Fórmula 1 con sede en Enstone, Inglaterra. Se estableció como una marca en 2021, aunque sus raíces se remontan a la histórica escudería Renault, que ha competido en la Fórmula 1 desde la década de 1970. Alpine es una división de Renault que representa la marca deportiva de automóviles de lujo de la compañía.', 'imagenes/alpinelogo.png')" ><img src="imagenes/alpine.png" alt="Logo FIA" width="250" height="70"></button>
 <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('HAAS F1 TEAM es una escudería de Fórmula 1 estadounidense que debutó en la temporada 2016. Fundada por Gene Haas, un empresario y propietario de Haas Automation, el equipo se estableció con el objetivo de llevar la ingeniería y el espíritu competitivo de Estados Unidos al deporte.','imagenes/haaslogo.png')"><img src="imagenes/haas.png" alt="Logo FIA" width="250" height="70"></button>
 <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('MERCEDES-AMG PETRONAS F1 TEAM es una escudería de Fórmula 1 con sede en Brackley, Inglaterra. Fundada en 2010 como un equipo de fábrica de Mercedes-Benz, ha ganado una notable reputación y éxito en el deporte, convirtiéndose en uno de los equipos más dominantes de la era moderna de la Fórmula 1.', 'imagenes/mercedeslogo.png')" ><img src="imagenes/mercedes.png" alt="Logo FIA" width="250" height="70"></button>
@@ -160,28 +154,35 @@
 <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('SCUDERIA FERRARI es la escudería de Fórmula 1 más antigua y emblemática, fundada en 1929 por Enzo Ferrari. Con sede en Maranello, Italia, Ferrari es un símbolo del automovilismo y la innovación, y ha dejado una huella imborrable en la historia de la Fórmula 1. Scuderia Ferrari es un ícono del automovilismo y la Fórmula 1, con una historia rica en éxitos, rivalidades y pasión.', 'imagenes/ferrarilogo.png')"><img src="imagenes/ferrari.png" alt="Logo FIA" width="250" height="70"></button>
 <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('MCLAREN RACING es una de las escuderías más exitosas y reconocidas en la historia de la Fórmula 1, fundada en 1963 por el piloto neozelandés Bruce McLaren. Con sede en Woking, Inglaterra, McLaren ha sido sinónimo de innovación, velocidad y un enfoque inquebrantable en la competición. McLaren Racing es un pilar del automovilismo y un símbolo de innovación y competitividad en la Fórmula 1.', 'imagenes/mclarenlogo.png')" ><img src="imagenes/mclaren.png" alt="Logo FIA" width="250" height="70"></button>
 <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('RED BULL RACING es una escudería de Fórmula 1 con sede en Milton Keynes, Inglaterra, que ha tenido un impacto significativo en el deporte desde su entrada en 2305. Fundada por la bebida energética Red Bull, la escudería ha sido reconocida por su innovación, rendimiento y enfoque audaz en el automovilismo.', 'imagenes/redbulllogo.png')"><img src="imagenes/redbull.png" alt="Logo FIA" width="250" height="70"></button>
-<hr>
+</div>
 
-<script>
-    function mostrarAlertaFoto(mensaje, urlImagen) {
-    document.getElementById('contenidoAlerta').innerText = mensaje;  // Actualiza el mensaje
-    var img = document.getElementById('imagenAlerta');  // Selecciona la imagen dentro de la alerta
-    img.src = urlImagen;  // Cambia la imagen por la URL pasada como parámetro
-    img.style.display = 'block';  // Asegúrate de que la imagen esté visible
-    document.getElementById('miAlerta').style.display = 'block';  // Muestra la alerta
-    document.getElementById('miOverlay').style.display = 'block';  // Muestra el fondo de la alerta
+<script type="text/javascript">
+    function mostrarAlertaFoto(mensaje, rutaImagen) {
+        var alerta = document.getElementById('miAlerta');
+        var overlay = document.getElementById('miOverlay');
+        var contenidoAlerta = document.getElementById('contenidoAlerta');
+        var imagenAlerta = document.getElementById('imagenAlerta');
+
+        contenidoAlerta.innerText = mensaje;
+        imagenAlerta.src = rutaImagen;
+        imagenAlerta.style.display = 'block'; // Asegúrate de mostrar la imagen
+
+        alerta.style.display = 'block';
+        overlay.style.display = 'block';
     }
+
     function cerrarAlerta() {
-        document.getElementById('miAlerta').style.display = 'none';  // Cierra la alerta
-        document.getElementById('miOverlay').style.display = 'none';  // Oculta el fondo
+        var alerta = document.getElementById('miAlerta');
+        var overlay = document.getElementById('miOverlay');
+
+        alerta.style.display = 'none';
+        overlay.style.display = 'none';
+        document.getElementById('imagenAlerta').style.display = 'none'; // Oculta la imagen al cerrar
     }
 </script>
-    </section>
-
-
-<footer>
-    <p>&copy; 2024 Fórmula 1. Todos los derechos reservados.</p>
-</footer>
-
+    <hr />
+    <div>
+        <p>&copy; 2024 Fórmula 1. Todos los derechos reservados.</p>
+    </div>
 </body>
 </html>
