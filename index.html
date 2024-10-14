@@ -50,6 +50,9 @@
             margin-right: 20px;
             margin-top: 7px;
         }
+        .img-centro {
+            text-align: center;
+        }
         .btn-grande {
             font-size: 10px; /* Aumenta el tamaño de la fuente */
             padding: 2px 3px; /* Aumenta el espacio interior (top-bottom, left-right) */
@@ -182,7 +185,41 @@
         .boton:hover {
             background-color: firebrick;
         }
-       
+        #miAlerta {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: 1000;
+            text-align: center;
+            height: auto;
+            width: auto;
+            overflow: auto;
+        }
+        #miAlerta button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #miOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
@@ -238,7 +275,54 @@
             y la toma de decisiones en tiempo real son cruciales para el éxito. Con su historia rica y una
             base de fans apasionada, la Fórmula 1 sigue siendo un símbolo de innovación y excelencia en el
             deporte del motor.</p>
-
+            <div class="img-centro">
+                <div id="miOverlay"></div>
+                <div id="miAlerta">
+                    <img id="imagenAlerta" src="" alt="Imagen de alerta" style="width: 700px; height: 400px; display: none;" />
+                    <p id="contenidoAlerta"></p>
+                    <button onclick="cerrarAlerta()">Cerrar</button>
+                </div>
+                <p>Pincha en las Partes del Coche para mas información:</p>
+                <img src="imagenes/cochef1.png" alt="Mapa de Imagen Coche F1 " usemap="#mapa-ejemplo" />
+                <map name="mapa-ejemplo">
+                    <area target="" alt="Rear Wing Endplate" title="Rear Wing Endplate" coords="73,260,106,243" shape="rect" href="javascript:void(0);"  onclick="mostrarAlertaFoto('Los Rear Wing Endplates (placas laterales del alerón trasero) en Fórmula 1 son componentes ubicados a ambos lados del alerón trasero. Su función principal es mejorar la aerodinámica del monoplaza al gestionar el flujo de aire de manera eficiente. Contribuyen a reducir la resistencia aerodinámica y optimizar la carga aerodinámica (downforce) generada por el alerón trasero, lo cual mejora la estabilidad y agarre del vehículo, especialmente en curvas rápidas. Además, las endplates ayudan a minimizar la turbulencia creada por las ruedas traseras y dirigen el aire de manera que las vórtices generadas sean menos perjudiciales para el desempeño aerodinámico del coche. En resumen, su diseño y posición son esenciales para maximizar la eficiencia aerodinámica del auto y el rendimiento general del vehículo en pista.')"/>
+                    <area target="" alt="Rear Crash" title="Rear Crash" coords="59,182,114,153" shape="rect" href="javascript:void(0);"  onclick="mostrarAlertaFoto('Las Rear Crash Structures en Fórmula 1 son componentes de seguridad ubicados en la parte trasera del monoplaza. Su función principal es absorber el impacto en caso de colisiones por detrás, reduciendo la fuerza transmitida al piloto. Están diseñadas para cumplir con las estrictas normativas de seguridad de la FIA, garantizando la integridad del chasis y la protección del piloto. Su diseño es crucial para mejorar la seguridad en la competición.')"/>
+                    <area target="" alt="Rear Wing Flap" title="Rear Wing Flap" coords="136,86,172,251" shape="rect"  href="javascript:void(0);"  onclick="mostrarAlertaFoto('El Rear Wing Flap en Fórmula 1 es la sección ajustable del alerón trasero que juega un papel crucial en la aerodinámica del monoplaza. Su función principal es generar carga aerodinámica (downforce), lo que mejora la estabilidad y el agarre en las curvas. El ángulo del flap se puede ajustar, permitiendo modificar la cantidad de downforce según las condiciones de la pista y la estrategia del piloto. Durante las rectas, el flap puede ser configurado para disminuir la carga aerodinámica, lo que aumenta la velocidad máxima del coche. Un diseño eficiente del rear wing flap es esencial para el rendimiento en pista, impactando tanto la velocidad en curvas como la estabilidad general del vehículo.')"/>
+                    <area target="" alt="Rear Wing Main Element" title="Rear Wing Main Element" coords="116,82,130,252" shape="0"  href="javascript:void(0);"  onclick="mostrarAlertaFoto('El Rear Wing Main Element en Fórmula 1 es la parte principal del alerón trasero, diseñada específicamente para generar carga aerodinámica (downforce) y proporcionar estabilidad al monoplaza. Su forma y ángulo son cruciales, ya que permiten crear un flujo de aire que aumenta la presión en la parte superior y reduce la presión en la parte inferior, resultando en una mayor carga aerodinámica. Un diseño efectivo del main element optimiza el rendimiento del coche, mejorando la velocidad en curvas y la estabilidad general. Además, su ajuste puede influir en la configuración aerodinámica del vehículo, adaptándose a diferentes condiciones de pista y estrategias de carrera.')"/>
+                    <area target="" alt="Rollhoop Wing" title="Rollhoop Wing" coords="347,110,369,218" shape="0"  href="javascript:void(0);"  onclick="mostrarAlertaFoto('El Rollhoop Wing en Fórmula 1 es un componente aerodinámico ubicado en la parte superior del rollhoop, que es la estructura diseñada para proteger al piloto en caso de vuelcos. Este ala adicional ayuda a gestionar el flujo de aire que rodea la parte trasera del monoplaza, contribuyendo a la generación de carga aerodinámica (downforce) y mejorando la estabilidad del vehículo. Su diseño es crucial para optimizar el rendimiento aerodinámico del coche, ya que puede influir en la forma en que el aire se comporta alrededor del alerón trasero y otras partes del monoplaza. Además, el rollhoop wing puede ser ajustado para adaptarse a diferentes condiciones de pista y estrategias de carrera, destacando su importancia en la configuración general del vehículo')"/>
+                    <area target="" alt="Cooling Chimney" title="Cooling Chimney" coords="427,291,355,262" shape="0"  href="javascript:void(0);"  onclick="mostrarAlertaFoto('El Cooling Chimney en Fórmula 1 es un componente diseñado para mejorar el enfriamiento del monoplaza, especialmente del motor y otros sistemas críticos. Este sistema actúa como una chimenea que permite la salida del aire caliente generado por el motor y otros componentes, ayudando a mantener temperaturas óptimas durante la carrera. El diseño del cooling chimney está estratégicamente ubicado para maximizar el flujo de aire y minimizar la resistencia aerodinámica, lo que contribuye al rendimiento general del vehículo. Además, su eficacia es fundamental en la gestión térmica del coche, ya que un sobrecalentamiento puede afectar negativamente el rendimiento y la fiabilidad.')"/>
+                    <area target="" alt="Sidepod" title="Sidepod" coords="447,291,490,229" shape="0"  href="javascript:void(0);"  onclick="mostrarAlertaFoto('Los Sidepods en Fórmula 1 son estructuras ubicadas a los lados del monoplaza, diseñadas principalmente para mejorar la aerodinámica y el enfriamiento del motor y otros componentes. Su forma y diseño son cruciales para gestionar el flujo de aire que rodea el coche, permitiendo que el aire fresco entre y el aire caliente salga, lo que ayuda a mantener las temperaturas óptimas de funcionamiento. Además, los sidepods son responsables de canalizar el aire hacia el alerón trasero y otros elementos aerodinámicos, contribuyendo así a la generación de carga aerodinámica. El diseño de los sidepods ha evolucionado con el tiempo, y cada equipo busca optimizar su forma para mejorar el rendimiento en pista.')"/>
+                    <area target="" alt="Sidepod Floor Extension" title="Sidepod Floor Extension" coords="507,289,544,237" shape="0"  href="javascript:void(0);"  onclick="mostrarAlertaFoto('La Sidepod Floor Extension en Fórmula 1 es una parte del diseño aerodinámico que se extiende desde los sidepods hacia el suelo del monoplaza. Su principal función es mejorar el flujo de aire bajo el coche, lo que ayuda a generar carga aerodinámica adicional y reducir la resistencia. Al optimizar el flujo de aire a través de esta extensión, se puede aumentar la estabilidad del vehículo a altas velocidades y mejorar su rendimiento en curvas. Este componente también puede influir en cómo se canaliza el aire hacia el difusor y el alerón trasero, lo que es esencial para maximizar la eficiencia aerodinámica del coche. La evolución y el diseño de la sidepod floor extension son críticos para adaptarse a las regulaciones cambiantes y las condiciones de carrera.')"/>
+                    <area target="" alt="Front Barge Board" title="Front Barge Board" coords="686,194,720,261" shape="0"  href="javascript:void(0);"  onclick="mostrarAlertaFoto('Los Front Barge Boards en Fórmula 1 son componentes aerodinámicos situados en los laterales del monoplaza, justo delante de los sidepods. Su función principal es dirigir el flujo de aire de manera más eficiente hacia las ruedas delanteras y el alerón delantero, mejorando la carga aerodinámica y la estabilidad del coche. Al canalizar el aire, los barge boards ayudan a minimizar la turbulencia y optimizar el rendimiento aerodinámico, lo que es crucial para mantener el equilibrio del monoplaza en curvas. Su diseño puede variar según el equipo y las regulaciones de la FIA, y su evolución refleja los avances en la aerodinámica y la ingeniería del automovilismo.')"/>
+                    <area target="" alt="Front Suspension" title="Front Suspension" coords="665,68,727,138" shape="0"  href="javascript:void(0);"  onclick="mostrarAlertaFoto('La Front Suspension en Fórmula 1 es un componente crítico del sistema de suspensión del monoplaza, que conecta las ruedas delanteras con el chasis. Su principal función es gestionar las fuerzas generadas durante la conducción, lo que incluye la absorción de impactos de la pista y la mejora del manejo del vehículo. La suspensión delantera no solo proporciona soporte estructural, sino que también influye en la geometría de la dirección, afectando la respuesta y el agarre del coche en curvas. Los diseños modernos de suspensión delantera suelen incluir configuraciones complejas, como la suspensión tipo double wishbone, que permite un control más preciso sobre la alineación de las ruedas y la dinámica del vehículo. La efectividad de la suspensión delantera es fundamental para el rendimiento general del monoplaza, especialmente en términos de estabilidad y tracción a altas velocidades.')"/>
+                    <area target="" alt="Front Wing Endplate" title="Front Wing Endplate" coords="780,256,875,293" shape="0"  href="javascript:void(0);"  onclick="mostrarAlertaFoto('El Front Wing Endplate en Fórmula 1 es un componente crucial que se encuentra en los extremos del alerón delantero. Su principal función es mejorar la aerodinámica del monoplaza al dirigir el flujo de aire de manera más eficiente, minimizando la turbulencia que se genera a los lados del coche. Al optimizar el flujo de aire hacia el resto del vehículo, los endplates ayudan a aumentar la carga aerodinámica y el agarre en las curvas. Además, su diseño puede influir en la forma en que el aire se canaliza hacia las ruedas delanteras y el suelo del coche, lo que es esencial para el rendimiento en pista. La evolución de los front wing endplates refleja los avances en ingeniería y aerodinámica en el automovilismo, y cada equipo busca maximizar su eficacia para obtener una ventaja competitiva.')"/>
+                    <area target="" alt="Front Nose Canards" title="Front Nose Canards" coords="726,186,766,210" shape="0"  href="javascript:void(0);"  onclick="mostrarAlertaFoto('Los Front Nose Canards en Fórmula 1 son pequeñas alas o aletas ubicadas en la parte frontal del monoplaza, generalmente en el área del morro. Su función principal es mejorar la aerodinámica del vehículo al generar carga aerodinámica adicional y ayudar a dirigir el flujo de aire hacia las partes inferiores del coche y el alerón delantero. Esto contribuye a aumentar el agarre en las curvas y a reducir la resistencia, lo que puede mejorar la velocidad y la estabilidad del monoplaza. Además, los canards también ayudan a equilibrar el flujo de aire, minimizando la turbulencia y optimizando el rendimiento aerodinámico general. Su diseño y posición son fundamentales para maximizar la eficacia del sistema aerodinámico del coche, y su evolución ha sido influenciada por las regulaciones de la FIA y los avances en ingeniería aerodinámica. ')"/>
+                    <area target="" alt="Front Wing Flap" title="Front Wing Flap" coords="797,75,828,145" shape="0"  href="javascript:void(0);"  onclick="mostrarAlertaFoto('El Front Wing Flap en Fórmula 1 es la sección ajustable del alerón delantero que juega un papel crucial en la aerodinámica del monoplaza. Su función principal es generar carga aerodinámica (downforce), lo que mejora la estabilidad y el agarre del coche durante las curvas. Los ingenieros pueden modificar el ángulo del flap para ajustar la cantidad de downforce generada, dependiendo de las condiciones de la pista y la estrategia de carrera. Además, un diseño eficiente del front wing flap puede reducir la resistencia, permitiendo al monoplaza alcanzar mayores velocidades en rectas. La optimización de este componente es vital para el rendimiento general del vehículo, y su evolución ha sido impulsada por los avances en aerodinámica y las regulaciones de la FIA.')"/>
+                    <area target="" alt="Front Wing Main Element" title="Front Wing Main Element" coords="839,64,871,153" shape="0"  href="javascript:void(0);"  onclick="mostrarAlertaFoto('El Front Wing Main Element en Fórmula 1 es la parte principal del alerón delantero, diseñada para maximizar la carga aerodinámica (downforce) y mejorar el rendimiento del monoplaza. Su forma y ángulo son cruciales, ya que permiten manipular el flujo de aire que pasa sobre y alrededor del coche. Al aumentar la presión en la parte superior y disminuirla en la parte inferior, el main element contribuye significativamente a la estabilidad y el agarre del vehículo, especialmente en curvas. La optimización de este componente es fundamental para el rendimiento general del coche, y los ingenieros de cada equipo trabajan constantemente para ajustar su diseño y alinearlo con las condiciones específicas de la pista. La evolución del front wing main element refleja los avances en la aerodinámica y la ingeniería dentro del deporte.')"/>
+                </map>
+                <script type="text/javascript">
+                    function mostrarAlertaFoto(mensaje) {
+                        var alerta = document.getElementById('miAlerta');
+                        var overlay = document.getElementById('miOverlay');
+                        var contenidoAlerta = document.getElementById('contenidoAlerta');
+                        var imagenAlerta = document.getElementById('imagenAlerta');
+                
+                        contenidoAlerta.innerText = mensaje;
+                
+                        alerta.style.display = 'block';
+                        overlay.style.display = 'block';
+                    }
+                
+                    function cerrarAlerta() {
+                        var alerta = document.getElementById('miAlerta');
+                        var overlay = document.getElementById('miOverlay');
+                
+                        alerta.style.display = 'none';
+                        overlay.style.display = 'none';
+                        document.getElementById('imagenAlerta').style.display = 'none'; // Oculta la imagen al cerrar
+                    }
+                </script>
+            </div>
         <hr />
         <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>NOTICIAS DE INTERÉS<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
         <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/its-been-a-battle-of-the-mind-hamilton-reveals-lessons-he-learned-during.30pf5nXH8mACcvMFFbagiF';"> <img src="imagenes/noticia1.png" alt="Descripción de la imagen" width="400" height="250"/><br /><span class="texto-spam">“It has been a mental battle”: Hamilton's statements</span></button>
@@ -379,7 +463,7 @@
                     const results2 = {
                         Ocon: 0, Gasly: 0, Kevin: 0, Nico: 0, Hamilton: 0, Russell: 0, 
                         Colapinto: 0, Albon: 0, Bottas: 0, Zhou: 0, Fernando: 1, 
-                        Stroll: 0, Tsunoda: 0, Ricciardo: 0, Leclerc: 0, Sainz: 1, 
+                        Stroll: 0, Tsunoda: 0, Ricciardo: 0, Leclerc: 0, Sainz: 0, 
                         Verstappen: 0, Checo: 0, Norris: 0, Piastri: 0
                     };
                 
