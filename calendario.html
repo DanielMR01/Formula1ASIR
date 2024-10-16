@@ -49,6 +49,63 @@
             margin-right: 20px;
             margin-top: 7px;
         }
+        .boton-sin-bordes {
+            background-color: transparent; 
+            border: none;
+            cursor: pointer;
+            text-align: center; 
+            margin-left: 2.5%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            width: 400px; /* Ancho del botón */
+            height: 400px;
+        }
+        .boton-sin-bordes:hover {
+            background-color: firebrick;
+        }
+        #miAlerta {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: 1000;
+            text-align: center;
+            height: 490px;
+            width: 350px;
+        }
+        #miAlerta img {
+            text-align: center;
+            max-height: 100%; 
+            max-width: 100%;   
+            display: block;
+            /*object-fit: contain; /* Mantener las proporciones de la imagen */
+            height: 100vh;
+        }
+        #miAlerta button {
+            margin-top: 5px;
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #miOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
@@ -83,6 +140,52 @@
             por el título mundial, atrayendo la atención de millones de aficionados y celebrando la 
             cultura única de cada país anfitrión. Acompáñanos en este apasionante recorrido por la velocidad 
             y la competencia en la Fórmula 1.</p>
+            <hr>
+            <div id="miOverlay"></div>
+                <div id="miAlerta">
+                <img id="imagenAlerta" src="" alt="Imagen de alerta" style="width: 700px; height: 400px; display: none;" />
+                <p id="contenidoAlerta"></p>
+                <button onclick="cerrarAlerta()">Cerrar</button>
+            </div>
+            <p>Pincha en los Circuitos para más información:</p>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/bareinexpl.png')" ><img src="imagenes/barein.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/australiaexpl.png')" ><img src="imagenes/australia.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/japonexpl.png')" ><img src="imagenes/japon.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/chinaexpl.png')" ><img src="imagenes/china.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/miamiexpl.png')" ><img src="imagenes/miami.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/imolaexpl.png')" ><img src="imagenes/imola.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/monacoexpl.png')" ><img src="imagenes/monaco.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/canadaexpl.png')" ><img src="imagenes/canada.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/españaexpl.png')" ><img src="imagenes/españa.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/austriaexpl.png')" ><img src="imagenes/austria.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/hungriaexpl.png')" ><img src="imagenes/hungria.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/belgicaexpl.png')" ><img src="imagenes/belgica.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/holandaexpl.png')" ><img src="imagenes/holanda.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/italiaexpl.png')" ><img src="imagenes/italia.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/mexicoexpl.png')" ><img src="imagenes/mexico.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/catarexpl.png')" ><img src="imagenes/catar.png" alt="Logo FIA" width="385" height="385"></button>
+            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/eeuuexpl.png')" ><img src="imagenes/eeuu.png" alt="Logo FIA" width="385" height="385"></button>
+            <script type="text/javascript">
+                function mostrarAlertaFoto(rutaImagen) {
+                    var alerta = document.getElementById('miAlerta');
+                    var overlay = document.getElementById('miOverlay');
+                    var imagenAlerta = document.getElementById('imagenAlerta');
+            
+                    imagenAlerta.src = rutaImagen;
+                    imagenAlerta.style.display = 'block'; // Asegúrate de mostrar la imagen
+            
+                    alerta.style.display = 'block';
+                    overlay.style.display = 'block';
+                }          
+                function cerrarAlerta() {
+                    var alerta = document.getElementById('miAlerta');
+                    var overlay = document.getElementById('miOverlay');
+            
+                    alerta.style.display = 'none';
+                    overlay.style.display = 'none';
+                    document.getElementById('imagenAlerta').style.display = 'none'; // Oculta la imagen al cerrar
+                }
+            </script>
     </div>
     
     <hr />
