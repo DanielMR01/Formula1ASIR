@@ -359,7 +359,6 @@
                 <form id="voteForm" action="">
                     <label for="team">Elige tu equipo favorito:<br /></label>
                     <select id="team">
-                        <option value="">Selecciona un Equipo</option>
                         <option value="Alpine">Alpine</option>
                         <option value="Haas">Haas</option>
                         <option value="Mercedes">Mercedes</option>
@@ -369,16 +368,16 @@
                         <option value="RB">RB</option>
                         <option value="Ferrari">Ferrari</option>
                         <option value="Red Bull">Red Bull</option>
-                        <option value="Mclaren">Mclaren</option>
+                        <option value="Mclaren" selected="selected">Mclaren</option>
                     </select>
-                    <button type="submit" class="botonVotar">Votar</button>
+                </br><button type="submit" class="botonVotar">Votar</button>
                 </form>
                 
                 <script type="text/javascript">
                     // Inicializa los resultados con 1 voto para Red Bull
                     const results = {
                         Alpine: 0, Haas: 0, Mercedes: 0, Williams: 0, "Aston Martin": 0, 
-                        Sauber: 0, RB: 0, Ferrari: 0, "Red Bull": 1, Mclaren: 0
+                        Sauber: 0, RB: 0, Ferrari: 0, "Red Bull": 0, Mclaren: 1
                     };
                 
                     const voteForm = document.getElementById('voteForm');
@@ -436,7 +435,6 @@
                 <form id="voteForm2" action="">
                     <label for="pilot">Elige tu piloto favorito:<br /></label>
                     <select id="pilot">
-                        <option value="">Selecciona un Piloto</option>
                         <option value="Ocon">Ocon</option>
                         <option value="Gasly">Gasly</option>
                         <option value="Kevin">Kevin Magnussen</option>
@@ -447,7 +445,7 @@
                         <option value="Albon">Alexander Albon</option>
                         <option value="Bottas">Valtteri Bottas</option>
                         <option value="Zhou">Guanyu Zhou</option>
-                        <option value="Fernando">Fernando Alonso</option>
+                        <option value="Fernando" selected="selected">Fernando Alonso</option>
                         <option value="Stroll">Lance Stroll</option>
                         <option value="Tsunoda">Yuki Tsunoda</option>
                         <option value="Ricciardo">Daniel Ricciardo</option>
@@ -458,7 +456,7 @@
                         <option value="Norris">Lando Norris</option>
                         <option value="Piastri">Oscar Piastri</option>
                     </select>
-                    <button type="submit" class="botonVotar">Votar</button>
+                </br><button type="submit" class="botonVotar">Votar</button>
                 </form>
                 
                 <script type="text/javascript">
@@ -473,11 +471,11 @@
                     const voteForm2 = document.getElementById('voteForm2');
                     voteForm2.addEventListener('submit', function (event) {
                         event.preventDefault();
-                        const selectedPilot = document.getElementById('team2').value;
+                        const selectedPilot = document.getElementById('pilot').value;
                         if (selectedPilot) {
                             results2[selectedPilot]++;
                             updateResults2();
-                            document.getElementById('team2').selectedIndex = 0;
+                            document.getElementById('pilot').selectedIndex = 0;
                         }
                     });
                 
