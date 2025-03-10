@@ -134,11 +134,14 @@
     <form action="" method="post">
         <h2>Rellena el Formulario</h2>
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" />
+        <input type="text" id="nombre" name="nombre"/>
 
         <label for="apellidos">Apellidos:</label>
-        <input type="text" id="apellidos" name="apellidos" />
+        <input type="text" id="apellidos" name="apellidos"/>
 
+        <label for="localidad">Localidad:</label>
+        <input type="text" id="localidad" name="localidad"/>
+        
         <label for="genero">Género:</label>
         <select id="genero" name="genero">
             <option value="masculino">Masculino</option>
@@ -146,15 +149,37 @@
         </select>
 
         <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-        <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" />
+        <input type="text" id="fecha_nacimiento" name="fecha_nacimiento"/>
 
-        <label for="correo">Correo Electrónico:</label>
-        <input type="text" id="correo" name="correo" />
+        <label for="correo">Correo Electrónico:</label><input type="text" id="correo" name="correo" />
+        <span id="correo-error" style="color: red; display: none;">El correo debe tener @gmail o @hotmail</span>
+        <span id="correo-ok" style="color: green; display: none;">OK</span>
+
+
+        <label for="contraseña">Contraseña:</label> 
+        <input type="password" id="contraseña" name="contraseña" style="width: 489px; height: 30px;"/><br></br><br></br>
 
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
 
-        <input type="submit" value="Enviar" />
+        <label>¿Cómo puntuarías esta web?</label>
+        <div style="text-align: center;">
+            <label style="display: inline;"><input type="radio" name="puntuacion" value="0" onchange="mostrarEmoticono()"/> 0</label>
+            <label style="display: inline;"><input type="radio" name="puntuacion" value="1" onchange="mostrarEmoticono()"/> 1</label>
+            <label style="display: inline;"><input type="radio" name="puntuacion" value="2" onchange="mostrarEmoticono()"/> 2</label>
+            <label style="display: inline;"><input type="radio" name="puntuacion" value="3" onchange="mostrarEmoticono()"/> 3</label>
+            <label style="display: inline;"><input type="radio" name="puntuacion" value="4" onchange="mostrarEmoticono()"/> 4</label>
+            <label style="display: inline;"><input type="radio" name="puntuacion" value="5" checked="checked" onchange="mostrarEmoticono()"/> 5</label>
+            <label style="display: inline;"><input type="radio" name="puntuacion" value="6" onchange="mostrarEmoticono()"/> 6</label>
+            <label style="display: inline;"><input type="radio" name="puntuacion" value="7" onchange="mostrarEmoticono()"/> 7</label>
+            <label style="display: inline;"><input type="radio" name="puntuacion" value="8" onchange="mostrarEmoticono()"/> 8</label>
+            <label style="display: inline;"><input type="radio" name="puntuacion" value="9" onchange="mostrarEmoticono()"/> 9</label>
+            <label style="display: inline;"><input type="radio" name="puntuacion" value="10" onchange="mostrarEmoticono()"/> 10</label><br></br>
+            <!-- Aquí se coloca el emoticono de reaccion a nuestra pagina -->
+            <div id="emoticono" style="display: inline-block; margin-left: 10px; font-size: 30px;"></div>
+        </div><br></br><br></br>
+
+        <input type="submit" id="enviar" value="Enviar" disabled="disabled" />
     </form>
     <hr />
     <h2 class="centered">Nuestras Oficinas:</h2>
@@ -188,6 +213,68 @@
                 yearRange: "1900:2024" // Rango de años
             });
         });
+    </script>
+
+    <script type="text/javascript">
+        function mostrarEmoticono() {
+            // Obtener la puntuación seleccionada
+            var puntuacion = document.querySelector('input[name="puntuacion"]:checked');  
+            // Establecer el emoticono en función de la puntuación seleccionada
+            var emoticono = "";
+            if (puntuacion) {
+                var valor = parseInt(puntuacion.value);
+                if (valor === 0) {
+                    emoticono = "😭"; 
+                } else if (valor === 1) {
+                    emoticono = "😢"; 
+                } else if (valor === 2) {
+                    emoticono = "😢"; 
+                } else if (valor === 3) {
+                    emoticono = "😢"; 
+                } else if (valor === 4) {
+                    emoticono = "😢"; 
+                } else if (valor === 5) {
+                    emoticono = "😐"; 
+                } else if (valor === 6) {
+                    emoticono = "🙂"; 
+                } else if (valor === 7) {
+                    emoticono = "😊"; 
+                } else if (valor === 8) {
+                    emoticono = "😄"; 
+                } else if (valor === 9) {
+                    emoticono = "😁"; 
+                } else if (valor === 10) {
+                    emoticono = "😍"; 
+                }
+            }
+            // Mostrar el emoticono
+            document.getElementById("emoticono").innerHTML = emoticono;
+        }
+    </script>
+
+<script type="text/javascript">
+    document.getElementById('correo').addEventListener('input', function() {validarCorreo();});
+    function validarCorreo() {
+        var correo = document.getElementById('correo').value;
+        var error = document.getElementById('correo-error');
+        var ok = document.getElementById('correo-ok');
+        var enviar = document.getElementById('enviar');
+        // Validar si el correo contiene el "@" y mostrar el error si no
+        if (!correo.includes('@gmail') ) {
+            error.style.display = 'inline';
+            enviar.disabled = true;        // Deshabilitar el botón
+            ok.style.display = 'none';     // Deshabilitar el botón
+        }else if (!correo.includes('@hotmail')) {
+            error.style.display = 'inline';
+            enviar.disabled = true;        // Deshabilitar el botón
+            ok.style.display = 'none';     // Deshabilitar el botón
+        }else {
+            ok.style.display = 'inline';
+            ok.style.display = true;
+            error.style.display = 'none';  // Ocultar mensaje de error
+            enviar.disabled = false;       // Habilitar el botón
+        }
+    }
     </script>
 
     <p class="centered">C/ Escultor Peresejo, 68 BIS 28023 – Madrid </p>
