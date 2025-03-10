@@ -152,7 +152,7 @@
         <input type="text" id="fecha_nacimiento" name="fecha_nacimiento"/>
 
         <label for="correo">Correo Electrónico:</label><input type="text" id="correo" name="correo" />
-        <span id="correo-error" style="color: red; display: none;">El correo debe tener @gmail o @hotmail</span>
+        <span id="correo-error" style="color: red; display: none;">El correo debe tener @gmail</span>
         <span id="correo-ok" style="color: green; display: none;">OK</span>
 
 
@@ -260,11 +260,7 @@
         var ok = document.getElementById('correo-ok');
         var enviar = document.getElementById('enviar');
         // Validar si el correo contiene el "@" y mostrar el error si no
-        if (!correo.includes('@gmail') ) {
-            error.style.display = 'inline';
-            enviar.disabled = true;        // Deshabilitar el botón
-            ok.style.display = 'none';     // Deshabilitar el botón
-        }else if (!correo.includes('@hotmail')) {
+        if (!correo.includes('@gmail')) {
             error.style.display = 'inline';
             enviar.disabled = true;        // Deshabilitar el botón
             ok.style.display = 'none';     // Deshabilitar el botón
