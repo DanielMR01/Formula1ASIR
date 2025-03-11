@@ -268,16 +268,22 @@
         var error = document.getElementById('correo-error');
         var ok = document.getElementById('correo-ok');
         var enviar = document.getElementById('enviar');
-        if (!correo.includes('@gmail')) {
-            error.style.display = 'inline';
-            enviar.disabled = true;        // Deshabilitar el botón
-            ok.style.display = 'none';     // Deshabilitar el botón
-        }else {
-            ok.style.display = 'inline';
-            ok.style.display = true;
-            error.style.display = 'none';  // Ocultar mensaje de error
-            enviar.disabled = false;       // Habilitar el botón
-        }
+        if (correo === "") {
+                ok.style.display = 'none';     // Ocultar el indicador de éxito
+                error.style.display = 'none';  // Ocultar el mensaje de error
+                enviar.disabled = true;        // Deshabilitar el botón
+            }else{
+                if (!correo.includes('@gmail')) {
+                    error.style.display = 'inline';
+                    enviar.disabled = true;        // Deshabilitar el botón
+                    ok.style.display = 'none';     // Deshabilitar el botón
+                }else {
+                    ok.style.display = 'inline';
+                    ok.style.display = true;
+                    error.style.display = 'none';  // Ocultar mensaje de error
+                    enviar.disabled = false;       // Habilitar el botón
+                }
+            }  
     }
     </script>
 
@@ -289,16 +295,23 @@
             var ok = document.getElementById('nombre-ok');
             var enviar = document.getElementById('enviar');
             var contieneNumeros = /\d/.test(nombre);
-            if (contieneNumeros) {
+            if (nombre === "") {
+                ok.style.display = 'none';     // Ocultar el indicador de éxito
+                error.style.display = 'none';  // Ocultar el mensaje de error
+                enviar.disabled = true;        // Deshabilitar el botón
+            }else{
+                if (contieneNumeros) {
                 error.style.display = 'inline';
                 enviar.disabled = true;        // Deshabilitar el botón
                 ok.style.display = 'none';     // Deshabilitar el botón
-            }else {
-                ok.style.display = 'inline';
-                ok.style.display = true;
-                error.style.display = 'none';  // Ocultar mensaje de error
-                enviar.disabled = false;       // Habilitar el botón
+                }else {
+                    ok.style.display = 'inline';
+                    ok.style.display = true;
+                    error.style.display = 'none';  // Ocultar mensaje de error
+                    enviar.disabled = false;       // Habilitar el botón
+                }
             }
+            
         }
     </script>
 
@@ -310,15 +323,21 @@
             var ok = document.getElementById('apellidos-ok');
             var enviar = document.getElementById('enviar');
             var contieneNumeros = /\d/.test(apellidos);
-            if (contieneNumeros) {
+            if (apellidos === "") {
+                ok.style.display = 'none';     // Ocultar el indicador de éxito
+                error.style.display = 'none';  // Ocultar el mensaje de error
+                enviar.disabled = true;        // Deshabilitar el botón
+            }else{
+                if (contieneNumeros) {
                 error.style.display = 'inline';
                 enviar.disabled = true;        // Deshabilitar el botón
                 ok.style.display = 'none';     // Deshabilitar el botón
-            }else {
-                ok.style.display = 'inline';
-                ok.style.display = true;
-                error.style.display = 'none';  // Ocultar mensaje de error
-                enviar.disabled = false;       // Habilitar el botón
+                }else {
+                    ok.style.display = 'inline';
+                    ok.style.display = true;
+                    error.style.display = 'none';  // Ocultar mensaje de error
+                    enviar.disabled = false;       // Habilitar el botón
+                }
             }
         }
     </script>
@@ -331,16 +350,23 @@
             var ok = document.getElementById('localidad-ok');
             var enviar = document.getElementById('enviar');
             var contieneNumeros = /\d/.test(localidad);
-            if (contieneNumeros) {
+            if (localidad === "") {
+                ok.style.display = 'none';     // Ocultar el indicador de éxito
+                error.style.display = 'none';  // Ocultar el mensaje de error
+                enviar.disabled = true;        // Deshabilitar el botón
+            }else{
+                if (contieneNumeros) {
                 error.style.display = 'inline';
                 enviar.disabled = true;        // Deshabilitar el botón
                 ok.style.display = 'none';     // Deshabilitar el botón
-            }else {
-                ok.style.display = 'inline';
-                ok.style.display = true;
-                error.style.display = 'none';  // Ocultar mensaje de error
-                enviar.disabled = false;       // Habilitar el botón
+                }else {
+                    ok.style.display = 'inline';
+                    ok.style.display = true;
+                    error.style.display = 'none';  // Ocultar mensaje de error
+                    enviar.disabled = false;       // Habilitar el botón
+                }
             }
+            
         }
     </script>
 
@@ -351,16 +377,22 @@
             var contraseña = document.getElementById('contraseña').value;
             var error = document.getElementById('contraseña-error');
             var ok = document.getElementById('contraseña-ok');
-
-            if (Math.min(contraseña.length, 6) === 6) {
+            if (contraseña === "") {
+                ok.style.display = 'none';     // Ocultar el indicador de éxito
+                error.style.display = 'none';  // Ocultar el mensaje de error
+                enviar.disabled = true;        // Deshabilitar el botón
+            }else{
+                if (Math.min(contraseña.length, 6) === 6) {
                 ok.style.display = 'inline';
                 error.style.display = 'none';  // Ocultar el mensaje de error
                 enviar.disabled = false;       // Habilitar el botón
-            } else {
-                error.style.display = 'inline';
-                enviar.disabled = true;        // Deshabilitar el botón
-                ok.style.display = 'none';     // Ocultar el indicador de éxito
+                } else {
+                    error.style.display = 'inline';
+                    enviar.disabled = true;        // Deshabilitar el botón
+                    ok.style.display = 'none';     // Ocultar el indicador de éxito
+                }
             }
+            
         }
     </script>
 
