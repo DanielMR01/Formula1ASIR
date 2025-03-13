@@ -157,7 +157,7 @@
         <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
         <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" readonly="readonly"/>
 
-        <label for="correo">Correo Electrónico:</label><input type="text" id="correo" name="correo" />
+        <label for="correo">Correo Electrónico:</label><input type="text" id="correo" name="correo" onkeyup="convertirMinusculas(this)"/>
         <span id="correo-error" style="color: red; display: none;">El correo debe tener @gmail</span>
         <span id="correo-ok" style="color: green; display: none;">OK</span>
 
@@ -190,40 +190,6 @@
 
         <input type="submit" id="enviar" value="Enviar" disabled="disabled" />
     </form>
-    <hr />
-    <h2 class="centered">Nuestras Oficinas:</h2>
-    <div id="map"></div>
-    <script type="text/javascript" src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            // Crear un mapa centrado en la ubicación del Instituto Gregorio Prieto
-            var map = L.map('map').setView([40.4539601, -3.7922764], 15); // Coordenadas del Instituto
-
-            // Añadir una capa de CartoDB para un estilo de calles más detallado
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-                maxZoom: 19,
-                attribution: 'Datos de OpenStreetMap y CARTO'
-            }).addTo(map);
-
-            // Añadir un marcador en la ubicación del Instituto
-            var marker = L.marker([40.4539601, -3.7922764]).addTo(map)
-                .bindPopup('Federación Internacional de Automobilismo')
-                .openPopup();
-        });
-    </script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#fecha_nacimiento").datepicker({
-                dateFormat: 'dd-mm-yy', // Formato de fecha para XHTML
-                changeMonth: true,
-                changeYear: true,
-                yearRange: "1900:2024" // Rango de años
-            });
-        });
-    </script>
-
     <script type="text/javascript">
         function mostrarEmoticono() {
             // Obtener la puntuación seleccionada
@@ -395,6 +361,18 @@
             
         }
     </script>
+    
+    <script type="text/javascript">
+        function convertirMinusculas() {
+            var emailInput = document.getElementById('correo');
+            var email = emailInput.value;
+            
+            var partes = email.split("@"); // Dividir en nombre y dominio
+            if (partes.length > 1) {
+                emailInput.value = partes[0] + "@" + partes[1].toLowerCase(); // Convertir solo el dominio a minúsculas
+            }
+        }
+    </script>
 
 <script type="text/javascript">
     function validarMensaje() {
@@ -413,9 +391,44 @@
                 enviar.disabled = false;       // Habilitar el botón
         }
     }
-
     document.getElementById('mensaje').addEventListener('input', validarMensaje);
-</script>
+    </script>
+
+    <hr />
+    <h2 class="centered">Nuestras Oficinas:</h2>
+    <div id="map"></div>
+    <script type="text/javascript" src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Crear un mapa centrado en la ubicación del Instituto Gregorio Prieto
+            var map = L.map('map').setView([40.4539601, -3.7922764], 15); // Coordenadas del Instituto
+
+            // Añadir una capa de CartoDB para un estilo de calles más detallado
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                maxZoom: 19,
+                attribution: 'Datos de OpenStreetMap y CARTO'
+            }).addTo(map);
+
+            // Añadir un marcador en la ubicación del Instituto
+            var marker = L.marker([40.4539601, -3.7922764]).addTo(map)
+                .bindPopup('Federación Internacional de Automobilismo')
+                .openPopup();
+        });
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#fecha_nacimiento").datepicker({
+                dateFormat: 'dd-mm-yy', // Formato de fecha para XHTML
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "1900:2025" // Rango de años
+            });
+        });
+    </script>
+
+    
 
     <p class="centered">C/ Escultor Peresejo, 68 BIS 28023 – Madrid </p>
     
