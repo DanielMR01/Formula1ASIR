@@ -1,6 +1,6 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <!--  Información básica del feed  -->
-    <title>Últimas Noticias de Fórmula 1</title>
+    <title>Últimas Noticias de Fórmula 1 -ATOM-</title>
     <subtitle>Descubre las últimas noticias, actualizaciones y análisis sobre el mundo de la Fórmula 1, incluyendo resultados de carreras, fichajes y más.</subtitle>
     <link href="https://danielmr01.github.io/Formula1ASIR/"/>
     <updated>2025-03-13T10:00:00Z</updated>
