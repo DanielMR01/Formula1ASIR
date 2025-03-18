@@ -1,46 +1,56 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <!--  Información básica del feed  -->
-<title>Farmacia Online - SniiFeErns</title>
-<subtitle>Tu farmacia en línea confiable: medicamentos, productos de salud y bienestar.</subtitle>
-<link href="https://sniifeerns.github.io/farmacia/atom.xml" rel="self"/>
-<link href="https://sniifeerns.github.io/farmacia/"/>
-<updated>2023-10-25T10:00:00Z</updated>
-<id>https://sniifeerns.github.io/farmacia/</id>
+<title>Últimas Noticias de Fórmula 1</title>
+<subtitle>Descubre las últimas noticias, actualizaciones y análisis sobre el mundo de la Fórmula 1, incluyendo resultados de carreras, fichajes y más.</subtitle>
+<link href="https://www.formula1.com/en/latest/article/racing-bulls-announce-technical-team-changes-ahead-of-2025-f1-season.3pIvvHQdsaQkiwDAANe8il" rel="self"/>
+<link href="https://www.formula1.com"/>
+<updated>2025-03-13T10:00:00Z</updated>
+<id>https://www.formula1.com</id>
 <author>
-<name>SniiFeErns Farmacia</name>
-<email>contacto@sniifeerns.github.io</email>
+<name>Daniel M.R</name>
 </author>
-<!--  Entrada 1: Promoción de productos  -->
+<!--  Entrada 1: Racing Bulls announce technical team changes ahead of 2025 F1 season  -->
 <entry>
-<title>Promoción Especial: 20% de descuento en vitaminas</title>
-<link href="https://sniifeerns.github.io/farmacia/"/>
-<id>https://sniifeerns.github.io/farmacia/</id>
-<updated>2023-10-25T09:00:00Z</updated>
-<summary>¡Aprovecha nuestra promoción especial! Obtén un 20% de descuento en todas las vitaminas disponibles en nuestra tienda en línea.</summary>
+<title>Racing Bulls announce technical team changes ahead of 2025 F1 season</title>
+<link href="https://www.formula1.com/en/latest/article/racing-bulls-announce-technical-team-changes-ahead-of-2025-f1-season.3pIvvHQdsaQkiwDAANe8il"/>
+<id>https://www.formula1.com/en/latest/article/racing-bulls-announce-technical-team-changes-ahead-of-2025-f1-season.3pIvvHQdsaQkiwDAANe8il</id>
+<updated>2025-03-10T11:00:00Z</updated>
+<summary>Racing Bulls have announced that their Technical Director, Jody Egginton, will be leaving the team after more than 10 years as part of the operation.</summary>
 <content type="html">
-<![CDATA[ <p>En SniiFeErns Farmacia, queremos ayudarte a mantener tu salud en óptimas condiciones. Por tiempo limitado, ofrecemos un <strong>20% de descuento</strong> en todas nuestras vitaminas.</p> <p><a href="https://sniifeerns.github.io/farmacia/">¡Compra ahora!</a></p> ]]>
+<![CDATA[ <p>Racing Bulls have announced that their Technical Director, Jody Egginton, will be leaving the team after more than 10 years as part of the operation.</p> ]]>
 </content>
 </entry>
-<!--  Entrada 2: Nuevo producto disponible  -->
+<!--  Entrada 2: Hulkenberg praises 'fast as hell' rookie team mate Bortoleto  -->
 <entry>
-<title>Nuevo producto: Crema hidratante para piel sensible</title>
-<link href="https://sniifeerns.github.io/farmacia/productos"/>
-<id>https://sniifeerns.github.io/farmacia/productos</id>
-<updated>2023-10-24T15:00:00Z</updated>
-<summary>Descubre nuestra nueva crema hidratante especialmente formulada para pieles sensibles.</summary>
+<title>Hulkenberg praises 'fast as hell' rookie team mate Bortoleto as he assesses Kick Sauber's pre-season</title>
+<link href="https://www.formula1.com/en/latest/article/hulkenberg-praises-fast-as-hell-rookie-team-mate-bortoleto-as-he-assesses.6XjGMlFX034K4sBZ2bXoje"/>
+<id>https://www.formula1.com/en/latest/article/hulkenberg-praises-fast-as-hell-rookie-team-mate-bortoleto-as-he-assesses.6XjGMlFX034K4sBZ2bXoje</id>
+<updated>2025-03-11T12:00:00Z</updated>
+<summary>Nico Hulkenberg has shared some words of praise for new team mate Gabriel Bortoleto following pre-season testing, with the German stating that the rookie is “fast as hell” as they begin working together at Kick Sauber.</summary>
 <content type="html">
-<![CDATA[ <p>Estamos emocionados de presentar nuestra nueva <strong>Crema Hidratante para Piel Sensible</strong>, diseñada para proporcionar hidratación profunda sin irritar la piel.</p> <p><a href="https://sniifeerns.github.io/farmacia/productos">Más información aquí</a>.</p> ]]>
+<![CDATA[ <p>Nico Hulkenberg has shared some words of praise for new team mate Gabriel Bortoleto following pre-season testing, with the German stating that the rookie is “fast as hell” as they begin working together at Kick Sauber.</p> ]]>
 </content>
 </entry>
-<!--  Entrada 3: Consejos de salud  -->
+<!--  Entrada 3: IN NUMBERS: The incredible figures behind seven seasons of Drive to Survive  -->
 <entry>
-<title>Consejo de salud: Cómo cuidar tu sistema inmunológico</title>
-<link href="https://sniifeerns.github.io/farmacia/"/>
-<id>https://sniifeerns.github.io/farmacia/</id>
-<updated>2023-10-23T12:00:00Z</updated>
-<summary>Aprende cómo fortalecer tu sistema inmunológico con hábitos saludables y suplementos adecuados.</summary>
+<title>IN NUMBERS: The incredible figures behind seven seasons of Drive to Survive</title>
+<link href="https://www.sprudge.com/sustainable-coffee-shops.html"/>
+<id>https://www.sprudge.com/sustainable-coffee-shops.html</id>
+<updated>2025-03-12T11:00:00Z</updated>
+<summary>Formula 1 fans get to enjoy a post-testing treat this week as the seventh season of Drive to Survive lands on Netflix. But just how much goes into producing a show that follows all 10 teams and 20 drivers around the world year in, year out? With help from the talented team at production company Box To Box, F1.com runs through some key numbers…</summary>
 <content type="html">
-<![CDATA[ <p>Un sistema inmunológico fuerte es clave para prevenir enfermedades. En nuestro blog, compartimos consejos prácticos sobre cómo cuidar tu salud.</p> <p><a href="https://sniifeerns.github.io/farmacia/">Lee el artículo completo aquí</a>.</p> ]]>
+<![CDATA[ <p>Formula 1 fans get to enjoy a post-testing treat this week as the seventh season of Drive to Survive lands on Netflix. But just how much goes into producing a show that follows all 10 teams and 20 drivers around the world year in, year out? With help from the talented team at production company Box To Box, F1.com runs through some key numbers…</p> ]]>
+</content>
+</entry>
+<!--  Entrada 4: ‘We had one shot to get it right’ – Susie Wolff on the ‘F1 ACADEMY effect’ and the crucial next steps for the future  -->
+<entry>
+<title>‘We had one shot to get it right’ – Susie Wolff on the ‘F1 ACADEMY effect’ and the crucial next steps for the future</title>
+<link href="https://www.formula1.com/en/latest/article/we-had-one-shot-to-get-it-right-susie-wolff-on-the-f1-academy-effect-and-the.7zkKBr5hx6joEAPLvYPapF"/>
+<id>https://www.formula1.com/en/latest/article/we-had-one-shot-to-get-it-right-susie-wolff-on-the-f1-academy-effect-and-the.7zkKBr5hx6joEAPLvYPapF</id>
+<updated>2025-03-13T10:00:00Z</updated>
+<summary>Changing perceptions of a woman’s place in motorsport and funnelling the next generation of female talent towards Formula 1 was never going to be an overnight fix.</summary>
+<content type="html">
+<![CDATA[ <p>Changing perceptions of a woman’s place in motorsport and funnelling the next generation of female talent towards Formula 1 was never going to be an overnight fix.</p> ]]>
 </content>
 </entry>
 </feed>
