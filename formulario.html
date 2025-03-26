@@ -158,7 +158,7 @@
         <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" readonly="readonly"/>
 
         <label for="correo">Correo Electrónico:</label><input type="text" id="correo" name="correo" onkeyup="convertirMinusculas(this)"/>
-        <span id="correo-error" style="color: red; display: none;">El correo debe tener @gmail</span>
+        <span id="correo-error" style="color: red; display: none;">El correo debe tener @gmail.com o @gmail.es</span>
         <span id="correo-ok" style="color: green; display: none;">OK</span>
 
         <label for="contraseña">Contraseña:</label> 
@@ -190,6 +190,8 @@
 
         <input type="submit" id="enviar" value="Enviar" disabled="disabled" />
     </form>
+
+    </script>
     <script type="text/javascript">
         function mostrarEmoticono() {
             // Obtener la puntuación seleccionada
@@ -239,11 +241,18 @@
                 error.style.display = 'none';  // Ocultar el mensaje de error
                 enviar.disabled = true;        // Deshabilitar el botón
             }else{
-                if (!correo.includes('@gmail')) {
+                if (!correo.endsWith('@gmail.com')) {
+                    if (!correo.endsWith('@gmail.es')) {
                     error.style.display = 'inline';
                     enviar.disabled = true;        // Deshabilitar el botón
                     ok.style.display = 'none';     // Deshabilitar el botón
-                }else {
+                    }else{
+                        ok.style.display = 'inline';
+                        ok.style.display = true;
+                        error.style.display = 'none';  // Ocultar mensaje de error
+                        enviar.disabled = false;       // Habilitar el botón
+                    } 
+                }else{
                     ok.style.display = 'inline';
                     ok.style.display = true;
                     error.style.display = 'none';  // Ocultar mensaje de error
