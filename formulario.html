@@ -136,17 +136,20 @@
         <h2>Rellena el Formulario</h2>
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre"/>
+        <span id="nombre-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Campo obligatorio*</span>
         <span id="nombre-error" style="color: red; display: none;">El Nombre no debe tener números</span>
         <span id="nombre-ok" style="color: green; display: none;">OK</span>
 
         <label for="apellidos">Apellidos:</label>
         <input type="text" id="apellidos" name="apellidos"/>
         <span id="apellidos-error" style="color: red; display: none;">El Apellido no debe tener números</span>
+        <span id="apellidos-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Campo obligatorio*</span>
         <span id="apellidos-ok" style="color: green; display: none;">OK</span>
 
         <label for="localidad">Localidad:</label>
         <input type="text" id="localidad" name="localidad"/>
-        <span id="localidad-error" style="color: red; display: none;">La Localidad no debe tener números</span>
+        <span id="localidad-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Campo obligatorio*</span>
+        <span id="localidad-error" style="color: red; display: none; text-align: left;">La Localidad no debe tener números</span>
         <span id="localidad-ok" style="color: green; display: none;">OK</span>
 
         <label for="genero">Género:</label>
@@ -157,20 +160,25 @@
 
         <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
         <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" readonly="readonly"/>
+        <span id="fecha_nacimiento-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Campo obligatorio*</span>
+        <span id="fecha_nacimiento-ok" style="color: green; display: none;">OK</span>
 
         <label for="correo">Correo Electrónico:</label><input type="text" id="correo" name="correo" onkeyup="convertirMinusculas(this)"/>
         <span id="correo-error" style="color: red; display: none;">El correo debe tener @gmail.com o @gmail.es</span>
         <span id="correo-ok" style="color: green; display: none;">OK</span>
+        <span id="correo-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Campo obligatorio*</span>
 
         <label for="contraseña">Contraseña:</label> 
         <input type="password" id="contraseña" name="contraseña" style="width: 489px; height: 30px;"/><br></br>
         <span id="contraseña-error" style="color: red; display: none;">Debe contener minimo 6 caracteres</span>
         <span id="contraseña-ok" style="color: green; display: none;">OK</span>
+        <span id="contraseña-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Campo obligatorio*</span>
 
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
         <span id="mensaje-error" style="color: red; display: none;">El Mensaje no debe estar vacio</span>
         <span id="mensaje-ok" style="color: green; display: none;">OK</span>
+        <span id="mensaje-nulo" style="color: black; font-size: 75%; float: right; margin-right: 1%;">*Campo obligatorio*</span>
 
         <label>¿Cómo puntuarías esta web?</label>
         <div style="text-align: center;">
@@ -190,9 +198,8 @@
         </div><br></br>
 
         <input type="submit" id="enviar" value="Enviar" disabled="disabled" />
-    </form>
+    </form>    
 
-    </script>
     <script type="text/javascript">
         function mostrarEmoticono() {
             // Obtener la puntuación seleccionada
@@ -236,26 +243,28 @@
         var correo = document.getElementById('correo').value;
         var error = document.getElementById('correo-error');
         var ok = document.getElementById('correo-ok');
+        var nulo = document.getElementById('correo-nulo');
         var enviar = document.getElementById('enviar');
         if (correo === "") {
                 ok.style.display = 'none';     // Ocultar el indicador de éxito
                 error.style.display = 'none';  // Ocultar el mensaje de error
                 enviar.disabled = true;        // Deshabilitar el botón
+                nulo.style.display = 'inline';    
             }else{
                 if (!correo.endsWith('@gmail.com')) {
                     if (!correo.endsWith('@gmail.es')) {
                     error.style.display = 'inline';
+                    nulo.style.display = 'none';    
                     enviar.disabled = true;        // Deshabilitar el botón
                     ok.style.display = 'none';     // Deshabilitar el botón
                     }else{
                         ok.style.display = 'inline';
-                        ok.style.display = true;
+                        nulo.style.display = 'none';     // Ocultar el indicador de éxito
                         error.style.display = 'none';  // Ocultar mensaje de error
                         enviar.disabled = false;       // Habilitar el botón
                     } 
                 }else{
                     ok.style.display = 'inline';
-                    ok.style.display = true;
                     error.style.display = 'none';  // Ocultar mensaje de error
                     enviar.disabled = false;       // Habilitar el botón
                 }
@@ -269,20 +278,24 @@
             var nombre = document.getElementById('nombre').value;
             var error = document.getElementById('nombre-error');
             var ok = document.getElementById('nombre-ok');
+            var nulo = document.getElementById('nombre-nulo');
             var enviar = document.getElementById('enviar');
             var contieneNumeros = /\d/.test(nombre);
+            nulo.disabled=true;
             if (nombre === "") {
                 ok.style.display = 'none';     // Ocultar el indicador de éxito
                 error.style.display = 'none';  // Ocultar el mensaje de error
                 enviar.disabled = true;        // Deshabilitar el botón
+                nulo.style.display = 'inline';    
             }else{
                 if (contieneNumeros) {
                 error.style.display = 'inline';
+                nulo.style.display = 'none';    
                 enviar.disabled = true;        // Deshabilitar el botón
                 ok.style.display = 'none';     // Deshabilitar el botón
                 }else {
                     ok.style.display = 'inline';
-                    ok.style.display = true;
+                    nulo.style.display = 'none';    
                     error.style.display = 'none';  // Ocultar mensaje de error
                     enviar.disabled = false;       // Habilitar el botón
                 }
@@ -297,22 +310,25 @@
             var apellidos = document.getElementById('apellidos').value;
             var error = document.getElementById('apellidos-error');
             var ok = document.getElementById('apellidos-ok');
+            var nulo = document.getElementById('apellidos-nulo');
             var enviar = document.getElementById('enviar');
             var contieneNumeros = /\d/.test(apellidos);
             if (apellidos === "") {
                 ok.style.display = 'none';     // Ocultar el indicador de éxito
                 error.style.display = 'none';  // Ocultar el mensaje de error
                 enviar.disabled = true;        // Deshabilitar el botón
+                nulo.style.display = 'inline';    
             }else{
                 if (contieneNumeros) {
                 error.style.display = 'inline';
                 enviar.disabled = true;        // Deshabilitar el botón
                 ok.style.display = 'none';     // Deshabilitar el botón
+                nulo.style.display = 'none';    
                 }else {
                     ok.style.display = 'inline';
-                    ok.style.display = true;
                     error.style.display = 'none';  // Ocultar mensaje de error
                     enviar.disabled = false;       // Habilitar el botón
+                    nulo.style.display = 'none';    
                 }
             }
         }
@@ -325,21 +341,25 @@
             var error = document.getElementById('localidad-error');
             var ok = document.getElementById('localidad-ok');
             var enviar = document.getElementById('enviar');
+            var nulo = document.getElementById('localidad-nulo');
             var contieneNumeros = /\d/.test(localidad);
             if (localidad === "") {
                 ok.style.display = 'none';     // Ocultar el indicador de éxito
                 error.style.display = 'none';  // Ocultar el mensaje de error
                 enviar.disabled = true;        // Deshabilitar el botón
+                nulo.style.display = 'inline';    
             }else{
                 if (contieneNumeros) {
                 error.style.display = 'inline';
                 enviar.disabled = true;        // Deshabilitar el botón
                 ok.style.display = 'none';     // Deshabilitar el botón
+                nulo.style.display = 'none';    
                 }else {
                     ok.style.display = 'inline';
                     ok.style.display = true;
                     error.style.display = 'none';  // Ocultar mensaje de error
                     enviar.disabled = false;       // Habilitar el botón
+                    nulo.style.display = 'none';    
                 }
             }
             
@@ -348,24 +368,27 @@
 
     <script type="text/javascript">
         document.getElementById('contraseña').addEventListener('input', function() {validarContraseña();});
-
         function validarContraseña() {
             var contraseña = document.getElementById('contraseña').value;
             var error = document.getElementById('contraseña-error');
             var ok = document.getElementById('contraseña-ok');
+            var nulo = document.getElementById('contraseña-nulo');
             if (contraseña === "") {
                 ok.style.display = 'none';     // Ocultar el indicador de éxito
                 error.style.display = 'none';  // Ocultar el mensaje de error
                 enviar.disabled = true;        // Deshabilitar el botón
+                nulo.style.display = 'inline';    
             }else{
                 if (Math.min(contraseña.length, 6) === 6) {
                 ok.style.display = 'inline';
                 error.style.display = 'none';  // Ocultar el mensaje de error
                 enviar.disabled = false;       // Habilitar el botón
+                nulo.style.display = 'none';    
                 } else {
                     error.style.display = 'inline';
                     enviar.disabled = true;        // Deshabilitar el botón
                     ok.style.display = 'none';     // Ocultar el indicador de éxito
+                    nulo.style.display = 'none';    
                 }
             }
             
@@ -376,7 +399,6 @@
         function convertirMinusculas() {
             var emailInput = document.getElementById('correo');
             var email = emailInput.value;
-            
             var partes = email.split("@"); // Dividir en nombre y dominio
             if (partes.length > 1) {
                 emailInput.value = partes[0] + "@" + partes[1].toLowerCase(); // Convertir solo el dominio a minúsculas
@@ -390,15 +412,18 @@
         var error = document.getElementById('mensaje-error');
         var enviar = document.getElementById('enviar');
         var ok = document.getElementById('mensaje-ok');
+        var nulo = document.getElementById('mensaje-nulo');
         if (mensaje === "") {
             error.style.display = 'inline';
                 enviar.disabled = true;        // Deshabilitar el botón
                 ok.style.display = 'none';     // Deshabilitar el botón
+                nulo.style.display = 'inline';    
         } else {
             ok.style.display = 'inline';
                 ok.style.display = true;
                 error.style.display = 'none';  // Ocultar mensaje de error
                 enviar.disabled = false;       // Habilitar el botón
+                nulo.style.display = 'none';    
         }
     }
     document.getElementById('mensaje').addEventListener('input', validarMensaje);
@@ -425,20 +450,45 @@
                 .openPopup();
         });
     </script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#fecha_nacimiento").datepicker({
-                dateFormat: 'dd-mm-yy', // Formato de fecha para XHTML
-                changeMonth: true,
-                changeYear: true,
-                yearRange: "1900:2025" // Rango de años
-            });
-        });
-    </script>
 
-    
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Inicializar el selector de fechas
+        $("#fecha_nacimiento").datepicker({
+            dateFormat: 'dd-mm-yy', // Formato de fecha para XHTML
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "1900:2025", // Rango de años
+            onSelect: function(dateText) { // Evento al seleccionar fecha
+                validarFecha(); // Ejecutar validación
+            }
+        });
+
+        // Validación cuando se cambia el contenido del campo (para mayor compatibilidad)
+        document.getElementById('fecha_nacimiento').addEventListener('change', validarFecha);
+    });
+
+    function validarFecha() {
+        var fecha = document.getElementById('fecha_nacimiento').value.trim(); // Obtener valor del campo
+        var enviar = document.getElementById('enviar'); // Botón enviar
+        var ok = document.getElementById('fecha_nacimiento-ok'); // Indicador OK
+        var nulo = document.getElementById('fecha_nacimiento-nulo'); // Indicador "*Campo obligatorio*"
+
+        // Validar si el campo está vacío
+        if (fecha === "") {
+            ok.style.display = 'none'; // Ocultar "OK"
+            nulo.style.display = 'inline'; // Mostrar "*Campo obligatorio*"
+            enviar.disabled = true; // Deshabilitar botón
+        } else {
+            ok.style.display = 'inline'; // Mostrar "OK"
+            nulo.style.display = 'none'; // Ocultar "*Campo obligatorio*"
+            enviar.disabled = false; // Habilitar botón
+        }
+    }
+</script>
 
     <p class="centered">C/ Escultor Peresejo, 68 BIS 28023 – Madrid </p>
     
