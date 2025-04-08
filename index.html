@@ -14,7 +14,7 @@
             padding: 0;
         }
         .header {
-            background-color: firebrick;
+            background-color: rgb(204, 46, 18);
             color: #fff;
             padding: 1px;
             text-align: center;
@@ -27,7 +27,7 @@
             margin-right: 1%;
         }
         .nav {
-            background-color: #333;
+            background-color: black;
             padding: 10px;
             text-align: center;
         }
@@ -37,18 +37,19 @@
             text-decoration: none;
             font-weight: bold;
         }
+
         .nav a:hover {
             color: #ffcc00;
         }
         .image-left {
             float: left;
-            margin-left: 20px;
-            margin-top: 7px;
+            -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
         }
         .image-right {
             float: right;
-            margin-right: 20px;
-            margin-top: 7px;
+            -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
         }
         .img-centro {
             text-align: center;
@@ -59,13 +60,13 @@
             margin: 20px; /* Margen alrededor del botón */
             border: none; /* Elimina el borde por defecto */
             border-radius: 5px; /* Esquinas redondeadas */
-            background-color: firebrick; /* Color de fondo */
+            background-color: rgb(204, 46, 18); /* Color de fondo */
             color: white; /* Color del texto */
             cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
             transition: background-color 0.3s; /* Suaviza el cambio de color */
         }
         .texto-con-borde {
-            border: 5px solid firebrick; 
+            border: 5px solid rgb(204, 46, 18);
             padding: 1px;             
             margin: 19px;           
             border-radius: 5px;  
@@ -164,7 +165,7 @@
             height: auto;
         }
         .botonVotar:hover {
-            background-color: firebrick;
+            background-color: rgb(204, 46, 18);
         }
         .boton {            
             cursor: pointer;
@@ -183,7 +184,7 @@
             height: auto;
         }
         .boton:hover {
-            background-color: firebrick;
+            background-color: rgb(204, 46, 18);
         }
         #miAlerta {
             display: none;
@@ -225,8 +226,8 @@
 </head>
 <body>
     <div class="header">    
-        <img src="imagenes/formula1.png" alt="Logo formula 1" width="85" height="65" class="image-right" />
-        <img src="imagenes/fia.png" alt="Logo FIA" width="85" height="65" class="image-left" />
+        <img src="imagenes/coche_pico2.png" alt="Logo formula 1" width="290" height="187" class="image-right" />
+        <img src="imagenes/coche_pico.png" alt="Logo FIA" width="290" height="187" class="image-left" />
         
         <div>
         <h1>Fórmula 1</h1><hr />
@@ -286,7 +287,8 @@
                     <p id="contenidoAlerta"></p>
                     <button onclick="cerrarAlerta()">Cerrar</button>
                 </div>
-                <p>Pincha en las Partes del Coche para más información:</p>
+                <hr>
+                <p><b>↓ Pincha en las Partes del Coche para más información: ↓</b></p>
                 <img src="imagenes/cochef1.png" alt="Mapa de Imagen Coche F1 " usemap="#mapa-ejemplo" />
                 <map name="mapa-ejemplo" id="mapa_coche">
                     <area alt="Rear Wing Endplate" title="Rear Wing Endplate" coords="73,260,106,243" shape="rect" href="javascript:void(0);"  onclick="mostrarAlertaFoto('Los Rear Wing Endplates (placas laterales del alerón trasero) en Fórmula 1 son componentes ubicados a ambos lados del alerón trasero. Su función principal es mejorar la aerodinámica del monoplaza al gestionar el flujo de aire de manera eficiente. Contribuyen a reducir la resistencia aerodinámica y optimizar la carga aerodinámica (downforce) generada por el alerón trasero, lo cual mejora la estabilidad y agarre del vehículo, especialmente en curvas rápidas. Además, las endplates ayudan a minimizar la turbulencia creada por las ruedas traseras y dirigen el aire de manera que las vórtices generadas sean menos perjudiciales para el desempeño aerodinámico del coche. En resumen, su diseño y posición son esenciales para maximizar la eficiencia aerodinámica del auto y el rendimiento general del vehículo en pista.')"/>
@@ -327,6 +329,11 @@
                     }
                 </script>
             </div>
+            <hr>
+            <p style="text-align: center;"><b>↓ Pincha en el video para más información: ↓</b></p>
+
+            <iframe style="display: block; margin-left: auto; margin-right: auto;" width="650" height="405" src="https://www.youtube.com/embed/TZjAkz7DIAc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
         <hr />
         <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>NOTICIAS DE INTERÉS<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
         <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/its-been-a-battle-of-the-mind-hamilton-reveals-lessons-he-learned-during.30pf5nXH8mACcvMFFbagiF';"> <img src="imagenes/noticia1.png" alt="Descripción de la imagen" width="400" height="250"/><br /><span class="texto-spam">“It has been a mental battle”: Hamilton's statements</span></button>
