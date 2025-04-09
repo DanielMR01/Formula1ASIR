@@ -30,7 +30,7 @@
             margin-right: 1%;
         }
         .nav {
-            background-color: black;
+            background-color: rgb(22, 22, 22);
             padding: 10px;
             text-align: center;
         }
@@ -102,11 +102,11 @@
 <body>
 
     <div class="header">    
-        <img src="imagenes/coche_pico2.png" alt="Logo formula 1" width="290" height="177" class="image-right" />
-        <img src="imagenes/coche_pico.png" alt="Logo FIA" width="290" height="177" class="image-left" />
+        <img src="imagenes/coche_pico2.png" alt="Logo formula 1" width="290" height="161" class="image-right" />
+        <img src="imagenes/coche_pico.png" alt="Logo FIA" width="290" height="161" class="image-left" />
         
         <div>
-        <h1>Fórmula 1</h1><hr />
+        <h1>Fórmula 1</h1>
         <p style="font-size: 88%;">En la Fórmula 1, la velocidad se encuentra con la ingeniería de vanguardia, creando una experiencia emocionante y única. 
             <br /><br />Cada carrera es un testimonio de la destreza de los pilotos y la precisión de los equipos en la búsqueda de la perfección.</p><br />
         </div>
@@ -200,7 +200,11 @@
         <input type="submit" id="enviar" value="Enviar" disabled="disabled" />
     </form>    
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script type="text/javascript">
+
         function mostrarEmoticono() {
             // Obtener la puntuación seleccionada
             var puntuacion = document.querySelector('input[name="puntuacion"]:checked');  
@@ -235,9 +239,7 @@
             // Mostrar el emoticono
             document.getElementById("emoticono").innerHTML = emoticono;
         }
-    </script>
 
-<script type="text/javascript">
     document.getElementById('correo').addEventListener('input', function() {validarCorreo();});
     function validarCorreo() {
         var correo = document.getElementById('correo').value;
@@ -270,9 +272,7 @@
                 }
             }  
     }
-    </script>
 
-    <script type="text/javascript">
         document.getElementById('nombre').addEventListener('input', function() {validarNombre();});
         function validarNombre() {
             var nombre = document.getElementById('nombre').value;
@@ -302,9 +302,7 @@
             }
             
         }
-    </script>
 
-    <script type="text/javascript">
         document.getElementById('apellidos').addEventListener('input', function() {validarapellidos();});
         function validarapellidos() {
             var apellidos = document.getElementById('apellidos').value;
@@ -332,9 +330,7 @@
                 }
             }
         }
-    </script>
 
-    <script type="text/javascript">
         document.getElementById('localidad').addEventListener('input', function() {validarlocalidad();});
         function validarlocalidad() {
             var localidad = document.getElementById('localidad').value;
@@ -364,9 +360,7 @@
             }
             
         }
-    </script>
 
-    <script type="text/javascript">
         document.getElementById('contraseña').addEventListener('input', function() {validarContraseña();});
         function validarContraseña() {
             var contraseña = document.getElementById('contraseña').value;
@@ -393,9 +387,7 @@
             }
             
         }
-    </script>
     
-    <script type="text/javascript">
         function convertirMinusculas() {
             var emailInput = document.getElementById('correo');
             var email = emailInput.value;
@@ -404,36 +396,28 @@
                 emailInput.value = partes[0] + "@" + partes[1].toLowerCase(); // Convertir solo el dominio a minúsculas
             }
         }
-    </script>
 
-<script type="text/javascript">
-    function validarMensaje() {
-        var mensaje = document.getElementById('mensaje').value.trim();
-        var error = document.getElementById('mensaje-error');
-        var enviar = document.getElementById('enviar');
-        var ok = document.getElementById('mensaje-ok');
-        var nulo = document.getElementById('mensaje-nulo');
-        if (mensaje === "") {
-            error.style.display = 'inline';
-                enviar.disabled = true;        // Deshabilitar el botón
-                ok.style.display = 'none';     // Deshabilitar el botón
-                nulo.style.display = 'inline';    
-        } else {
-            ok.style.display = 'inline';
-                ok.style.display = true;
-                error.style.display = 'none';  // Ocultar mensaje de error
-                enviar.disabled = false;       // Habilitar el botón
-                nulo.style.display = 'none';    
+        function validarMensaje() {
+            var mensaje = document.getElementById('mensaje').value.trim();
+            var error = document.getElementById('mensaje-error');
+            var enviar = document.getElementById('enviar');
+            var ok = document.getElementById('mensaje-ok');
+            var nulo = document.getElementById('mensaje-nulo');
+            if (mensaje === "") {
+                error.style.display = 'inline';
+                    enviar.disabled = true;        // Deshabilitar el botón
+                    ok.style.display = 'none';     // Deshabilitar el botón
+                    nulo.style.display = 'inline';    
+            } else {
+                ok.style.display = 'inline';
+                    ok.style.display = true;
+                    error.style.display = 'none';  // Ocultar mensaje de error
+                    enviar.disabled = false;       // Habilitar el botón
+                    nulo.style.display = 'none';    
+            }
         }
-    }
-    document.getElementById('mensaje').addEventListener('input', validarMensaje);
-    </script>
+        document.getElementById('mensaje').addEventListener('input', validarMensaje);
 
-    <hr />
-    <h2 class="centered">Nuestras Oficinas:</h2>
-    <div id="map"></div>
-    <script type="text/javascript" src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             // Crear un mapa centrado en la ubicación del Instituto Gregorio Prieto
             var map = L.map('map').setView([40.4539601, -3.7922764], 15); // Coordenadas del Instituto
@@ -449,46 +433,119 @@
                 .bindPopup('Federación Internacional de Automobilismo')
                 .openPopup();
         });
-    </script>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        // Inicializar el selector de fechas
-        $("#fecha_nacimiento").datepicker({
-            dateFormat: 'dd-mm-yy', // Formato de fecha para XHTML
-            changeMonth: true,
-            changeYear: true,
-            yearRange: "1900:2025", // Rango de años
-            onSelect: function(dateText) { // Evento al seleccionar fecha
-                validarFecha(); // Ejecutar validación
-            }
-        });
-
-        // Validación cuando se cambia el contenido del campo (para mayor compatibilidad)
-        document.getElementById('fecha_nacimiento').addEventListener('change', validarFecha);
+        $(document).ready(function() {
+    // Obtener la fecha del sistema (actual)
+    var fechaSistema = new Date();
+    
+    // Inicializar el selector de fechas
+    $("#fecha_nacimiento").datepicker({
+        dateFormat: 'dd-mm-yy', // Formato de fecha para XHTML
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "1900:2025", // Rango de años
+        maxDate: fechaSistema, // No permitir fechas futuras
+        onSelect: function(dateText) { // Evento al seleccionar fecha
+            validarFecha(); // Ejecutar validación
+        }
     });
 
-    function validarFecha() {
-        var fecha = document.getElementById('fecha_nacimiento').value.trim(); // Obtener valor del campo
-        var enviar = document.getElementById('enviar'); // Botón enviar
-        var ok = document.getElementById('fecha_nacimiento-ok'); // Indicador OK
-        var nulo = document.getElementById('fecha_nacimiento-nulo'); // Indicador "*Campo obligatorio*"
+    // Validación cuando se cambia el contenido del campo (para mayor compatibilidad)
+    document.getElementById('fecha_nacimiento').addEventListener('change', validarFecha);
+});
 
-        // Validar si el campo está vacío
-        if (fecha === "") {
-            ok.style.display = 'none'; // Ocultar "OK"
-            nulo.style.display = 'inline'; // Mostrar "*Campo obligatorio*"
-            enviar.disabled = true; // Deshabilitar botón
-        } else {
-            ok.style.display = 'inline'; // Mostrar "OK"
-            nulo.style.display = 'none'; // Ocultar "*Campo obligatorio*"
-            enviar.disabled = false; // Habilitar botón
-        }
+    document.getElementById('fecha_nacimiento').addEventListener('change', validarFecha);
+
+    function validarFecha() {
+    var fecha = document.getElementById('fecha_nacimiento').value.trim(); // Obtener valor del campo
+    var enviar = document.getElementById('enviar'); // Botón enviar
+    var ok = document.getElementById('fecha_nacimiento-ok'); // Indicador OK
+    var nulo = document.getElementById('fecha_nacimiento-nulo'); // Indicador "*Campo obligatorio*"
+
+    // Validar si el campo está vacío
+    if (fecha === "") {
+        ok.style.display = 'none'; // Ocultar "OK"
+        nulo.style.display = 'inline'; // Mostrar "*Campo obligatorio*"
+    } else {
+        ok.style.display = 'inline'; // Mostrar "OK"
+        nulo.style.display = 'none'; // Ocultar "*Campo obligatorio*"
     }
-</script>
+
+    validarNulos();  // Llamar a validarNulos después de validar la fecha
+}
+
+   // Función para verificar si hay campos nulos y actualizar el estado del botón de enviar
+function validarNulos() {
+    var nulos = document.querySelectorAll('[id$="-nulo"]:not([style*="display: none"])');  // Obtener todos los indicadores visibles "*Campo obligatorio*"
+    var enviar = document.getElementById('enviar');  // Obtener el botón de enviar
+
+    // Si hay al menos un indicador visible de "*Campo obligatorio*"
+    if (nulos.length > 0) {
+        enviar.disabled = true;  // Deshabilitar el botón si hay algún campo obligatorio no completado
+    } else {
+        enviar.disabled = false;  // Habilitar el botón si todos los campos obligatorios están completados
+    }
+}
+
+// Función para validar si un campo está vacío y mostrar u ocultar el mensaje correspondiente
+function validarNulo(campoId, spanNuloId, valor) {
+    var spanNulo = document.getElementById(spanNuloId);
+
+    if (valor === "") {
+        // Si el campo está vacío, mostrar el mensaje "nulo"
+        spanNulo.style.display = 'inline';
+    } else {
+        // Si el campo tiene valor, ocultar el mensaje "nulo"
+        spanNulo.style.display = 'none';
+    }
+
+    validarNulos();  // Llamar a validarNulos cada vez que se valide un campo
+}
+
+// Añadir los eventos para cada campo
+document.getElementById('nombre').addEventListener('input', function() { 
+    var nombre = document.getElementById('nombre').value.trim();
+    validarNulo('nombre', 'nombre-nulo', nombre); // Validar el campo nombre
+});
+
+document.getElementById('apellidos').addEventListener('input', function() { 
+    var apellidos = document.getElementById('apellidos').value.trim();
+    validarNulo('apellidos', 'apellidos-nulo', apellidos); // Validar el campo apellidos
+});
+
+document.getElementById('localidad').addEventListener('input', function() { 
+    var localidad = document.getElementById('localidad').value.trim();
+    validarNulo('localidad', 'localidad-nulo', localidad); // Validar el campo localidad
+});
+
+document.getElementById('fecha_nacimiento').addEventListener('input', function() { 
+    var fecha_nacimiento = document.getElementById('fecha_nacimiento').value.trim();
+    validarNulo('fecha_nacimiento', 'fecha_nacimiento_nulo', fecha_nacimiento); // Validar el campo fecha de nacimiento
+});
+
+document.getElementById('correo').addEventListener('input', function() { 
+    var correo = document.getElementById('correo').value.trim();
+    validarNulo('correo', 'correo-nulo', correo); // Validar el campo correo
+});
+
+document.getElementById('contraseña').addEventListener('input', function() { 
+    var contraseña = document.getElementById('contraseña').value.trim();
+    validarNulo('contraseña', 'contraseña-nulo', contraseña); // Validar el campo contraseña
+});
+
+document.getElementById('mensaje').addEventListener('input', function() { 
+    var mensaje = document.getElementById('mensaje').value.trim();
+    validarNulo('mensaje', 'mensaje-nulo', mensaje); // Validar el campo mensaje
+});
+
+
+    </script>
+
+    <hr />
+    <h2 class="centered">Nuestras Oficinas:</h2>
+    <div id="map"></div>
+    
+    </script>
 
     <p class="centered">C/ Escultor Peresejo, 68 BIS 28023 – Madrid </p>
     
