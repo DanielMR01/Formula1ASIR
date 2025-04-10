@@ -14,13 +14,14 @@
             padding: 0;
         }
         .header {
-            background-color: rgb(204, 46, 18);
+            background-color: #ca2c19;
             color: #fff;
-            padding: 1px;
             text-align: center;
+            padding: 0.1px;
         }
         h1 {
             text-align: center;
+            padding: 8px;
         }
         p {
             margin-left: 1%;
@@ -37,18 +38,19 @@
             text-decoration: none;
             font-weight: bold;
         }
+
         .nav a:hover {
             color: #ffcc00;
         }
         .image-left {
             float: left;
             -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
-            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%); 
         }
         .image-right {
             float: right;
             -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
-            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);           
         }
         .boton-sin-bordes {
             background-color: transparent;
@@ -109,8 +111,8 @@
 <body>
 
     <div class="header">    
-        <img src="imagenes/coche_pico2.png" alt="Logo formula 1" width="290" height="161" class="image-right" />
-        <img src="imagenes/coche_pico.png" alt="Logo FIA" width="290" height="161" class="image-left" />
+        <img src="imagenes/coche_pico2.png" alt="Logo formula 1" width="290" height="176" class="image-right" />
+        <img src="imagenes/coche_pico.png" alt="Logo FIA" width="290" height="176" class="image-left" />
         
         <div>
         <h1>Fórmula 1</h1>
@@ -168,7 +170,6 @@
         <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('LANDO NORRIS es un piloto británico, nacido el 13/10/1999. Debutó en la F1 en 2019 con McLaren, donde rápidamente se destacó por su velocidad y consistencia. Norris ha logrado varios podios y es considerado uno de los jóvenes talentos más prometedores de la F1, con un enfoque técnico y una capacidad excepcional para maximizar el rendimiento del coche.', 'imagenes/norrisfoto2.png')" ><img src="imagenes/norris.png" alt="Logo FIA" width="250" height="35"/></button>
         <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('GEORGE RUSSELL es un piloto británico, nacido el 15/02/1998. Debutó en 2019 con Williams y, tras mostrar su talento, se unió a Mercedes en 2022. Russell ha demostrado ser uno de los pilotos más consistentes y rápidos de su generación, logrando su primera victoria con Mercedes en 2022. Es conocido por su enfoque metódico y sus habilidades en clasificación.', 'imagenes/russelfoto2.PNG')" ><img src="imagenes/russel.png" alt="Logo FIA" width="250" height="35"/></button>
         <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('ZHOU GUANYU es un piloto chino, nacido el 30/05/1999. Debutó en 2022 con Alfa Romeo, convirtiéndose en el primer piloto chino en competir en la F1. Zhou ha mostrado un gran talento desde sus primeras carreras y ha sido constante en su rendimiento, destacándose como una promesa emergente en la categoría.', 'imagenes/zhoufoto2.png')" ><img src="imagenes/zhou.png" alt="Logo FIA" width="250" height="35"/></button>
-    <hr/>
     </div>
 
     <script type="text/javascript">
@@ -186,13 +187,20 @@
         }
     </script>
     <div>
-        <hr />
-        <p style="margin: 0; text-align: center;">&copy; 2024 Fórmula 1. Todos los derechos reservados.</p>
+    <br></br><hr style="margin-bottom: 1.5%;"></hr>
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <p style="margin-left: 10%;margin-top: 0.9%;"><a href="https://validator.w3.org/markup/check?uri=referer"><img src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="40" width="100" /></a></p>
-                <a href="noticias.xml" target="_blank" style="margin-top: 1%; margin-right: 10%; display: inline-block; text-align: center;"><img src="imagenes/logo_rrs.png" alt="Descripción de la imagen" width="40" height="40"/><p style="font-size: 75%; margin: 0;">Subscríbete a nuestro RSS</p></a>
-                <a href="atom.xml" target="_blank" style="margin-right: 10%; display: inline-block; text-align: center;"><img src="imagenes/atom.png" alt="Descripción de la imagen" width="40" height="40"/><p style="font-size: 75%; margin: 0;">Subscríbete a nuestro Atom</p></a>
+                <p style="margin-left: 10%;"><a href="https://validator.w3.org/markup/check?uri=referer"><img src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="40" width="100" /></a></p>
+                <a href="noticias.xml" target="_blank" style="display: inline-block; text-align: center;">
+                    <img src="imagenes/logo_rrs.png" alt="Descripción de la imagen" width="40" height="40"/>
+                    <span style="font-size: 75%; display: block; margin: 0;">Subscríbete a nuestro RSS</span>
+                  </a>
+                  <a href="atom.xml" target="_blank" style="margin-right: 10%; display: inline-block; text-align: center;">
+                    <img src="imagenes/atom.png" alt="Descripción de la imagen" width="40" height="40"/>
+                    <span style="font-size: 75%; display: block; margin: 0;">Subscríbete a nuestro Atom</span>
+                  </a>
             </div>
+        <hr style="margin-top: 1.5%; margin-bottom: 2%;"></hr>
+        <p style="margin: 0; text-align: center; margin-bottom: 2%;">&copy; 2025 Fórmula 1. Todos los derechos reservados.</p>
     </div>
 </body>
 </html>

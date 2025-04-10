@@ -13,13 +13,14 @@
             padding: 0;
         }
         .header {
-            background-color: rgb(204, 46, 18);
+            background-color: #ca2c19;
             color: #fff;
-            padding: 1px;
             text-align: center;
+            padding: 0.1px;
         }
         h1 {
             text-align: center;
+            padding: 8px;
         }
         p {
             margin-left: 1%;
@@ -36,18 +37,19 @@
             text-decoration: none;
             font-weight: bold;
         }
+
         .nav a:hover {
             color: #ffcc00;
         }
         .image-left {
             float: left;
             -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
-            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%); 
         }
         .image-right {
             float: right;
             -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
-            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);           
         }
         .boton-sin-bordes {            
             cursor: pointer;
@@ -67,7 +69,7 @@
             width: 240px;
         }
         .boton-sin-bordes:hover {
-            box-shadow: 0 0 0 5px rgb(204, 46, 18);
+            box-shadow: 0 0 0 5px #ca2c19;
         }
         #botonredbull1, #botonredbull2 {
             background-image: url('imagenes/fondo.png'); 
@@ -144,8 +146,8 @@
 <body>
 
     <div class="header">    
-        <img src="imagenes/coche_pico2.png" alt="Logo formula 1" width="290" height="161" class="image-right" />
-        <img src="imagenes/coche_pico.png" alt="Logo FIA" width="290" height="161" class="image-left" />
+        <img src="imagenes/coche_pico2.png" alt="Logo formula 1" width="290" height="176" class="image-right" />
+        <img src="imagenes/coche_pico.png" alt="Logo FIA" width="290" height="176" class="image-left" />
         
         <div>
         <h1>Fórmula 1</h1>
@@ -223,13 +225,20 @@
         }
     </script>
     <div>
-        <hr />
-        <p style="margin: 0; text-align: center;">&copy; 2024 Fórmula 1. Todos los derechos reservados.</p>
+    <br></br><hr style="margin-bottom: 1.5%;"></hr>
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <p style="margin-left: 10%;margin-top: 0.9%;"><a href="https://validator.w3.org/markup/check?uri=referer"><img src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="40" width="100" /></a></p>
-                <a href="noticias.xml" target="_blank" style="margin-top: 1%; margin-right: 10%; display: inline-block; text-align: center;"><img src="imagenes/logo_rrs.png" alt="Descripción de la imagen" width="40" height="40"/><p style="font-size: 75%; margin: 0;">Subscríbete a nuestro RSS</p></a>
-                <a href="atom.xml" target="_blank" style="margin-right: 10%; display: inline-block; text-align: center;"><img src="imagenes/atom.png" alt="Descripción de la imagen" width="40" height="40"/><p style="font-size: 75%; margin: 0;">Subscríbete a nuestro Atom</p></a>
+                <p style="margin-left: 10%;"><a href="https://validator.w3.org/markup/check?uri=referer"><img src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="40" width="100" /></a></p>
+                <a href="noticias.xml" target="_blank" style="display: inline-block; text-align: center;">
+                    <img src="imagenes/logo_rrs.png" alt="Descripción de la imagen" width="40" height="40"/>
+                    <span style="font-size: 75%; display: block; margin: 0;">Subscríbete a nuestro RSS</span>
+                  </a>
+                  <a href="atom.xml" target="_blank" style="margin-right: 10%; display: inline-block; text-align: center;">
+                    <img src="imagenes/atom.png" alt="Descripción de la imagen" width="40" height="40"/>
+                    <span style="font-size: 75%; display: block; margin: 0;">Subscríbete a nuestro Atom</span>
+                  </a>
             </div>
+        <hr style="margin-top: 1.5%; margin-bottom: 2%;"></hr>
+        <p style="margin: 0; text-align: center; margin-bottom: 2%;">&copy; 2025 Fórmula 1. Todos los derechos reservados.</p>
     </div>
 </body>
 </html>
