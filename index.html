@@ -83,27 +83,27 @@
             margin-bottom: 20px;
             text-align: center;
         }
-        input[type="text"], input[type="email"] {
-            width: 200px; /* Ajusta el ancho según tus preferencias */
-            padding: 8px; /* Espaciado interno */
-            margin: 5px 0; /* Margen superior e inferior */
-            border: 1px solid #ccc; /* Borde */
-            border-radius: 4px; /* Bordes redondeados */
-            text-align: center;
-        }
         .bar {
-            width: 300px;
+            width: 320px;
             background-color: #f3f3f3;
-            margin: 15px 0;
+            margin: 10px 0;
             position: relative;
         }
+        .barultimo {
+            width: 320px;
+            background-color: #f3f3f3;
+            margin: 10px 0;
+            position: relative;
+            margin-bottom: 8%;
+        }
         .bar2 {
-            width: 300px;
+            width: 320px;
             height: 16.1px;
             background-color: #f3f3f3;
             margin: 11px 0;
             position: relative;
         }
+        
         .progress {
             height: 20px;
         }
@@ -120,7 +120,7 @@
             background-color: rgb(46, 176, 90); 
         }
         #barSauber .progress, #barBottas .progress, #barZhou .progress {
-            background-color: green;
+            background-color: rgb(4, 250, 4);
         }
         #barRb .progress, #barTsunoda .progress, #barRicciardo .progress {
             background-color: grey; 
@@ -129,7 +129,7 @@
             background-color: red; 
         }
         #barMclaren .progress, #barNorris .progress, #barPiastri .progress {
-            background-color: orangered; 
+            background-color: #ffa103;; 
         }
         #barHaas .progress, #barKevin .progress, #barNico .progress {
             background-color: black; 
@@ -139,8 +139,6 @@
         }
         .bar span, .bar2 span {
             position: absolute;
-            right: 10px;
-            top: 5px;
         }
         .resultado {
             text-align: center;
@@ -166,25 +164,6 @@
             height: auto;
         }
         .botonVotar:hover {
-            background-color: #ca2c19;
-        }
-        .boton {            
-            cursor: pointer;
-            text-align: center; 
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 5%;
-            border-radius: 5px;
-            background-size: cover; /* Ajusta el tamaño de la imagen al botón */
-            background-position: center; /* Centra la imagen */           
-            color: black; /* Color del texto */
-            font-size: 23px; /* Tamaño de fuente */
-            cursor: pointer; /* Cambia el cursor al pasar por encima */
-            font-weight: bold;
-            width: auto; 
-            height: auto;
-        }
-        .boton:hover {
             background-color: #ca2c19;
         }
         #miAlerta {
@@ -362,20 +341,20 @@
         <tr>
             <th>
                 <div class="resultado" id="results">
-                    <div class="bar" id="barAlpine">Alpine: <span class="percentage" id="percentageAlpine">0%</span> <div class="progress" id="progressAlpine" style="width: 0%;"></div></div>
-                    <div class="bar" id="barHaas">Haas: <span class="percentage" id="percentageHaas">0%</span> <div class="progress" id="progressHaas" style="width: 0%;"></div></div>
-                    <div class="bar" id="barMercedes">Mercedes: <span class="percentage" id="percentageMercedes">0%</span> <div class="progress" id="progressMercedes" style="width: 0%;"></div></div>
-                    <div class="bar" id="barWilliams">Williams: <span class="percentage" id="percentageWilliams">0%</span> <div class="progress" id="progressWilliams" style="width: 0%;"></div></div>
-                    <div class="bar" id="barAstonMartin">Aston Martin: <span class="percentage" id="percentageAstonMartin">0%</span> <div class="progress" id="progressAstonMartin" style="width: 0%;"></div></div>
-                    <div class="bar" id="barSauber">Sauber: <span class="percentage" id="percentageSauber">0%</span> <div class="progress" id="progressSauber" style="width: 0%;"></div></div>
-                    <div class="bar" id="barRb">RB: <span class="percentage" id="percentageRB">0%</span> <div class="progress" id="progressRB" style="width: 0%;"></div></div>
-                    <div class="bar" id="barFerrari">Ferrari: <span class="percentage" id="percentageFerrari">0%</span> <div class="progress" id="progressFerrari" style="width: 0%;"></div></div>
-                    <div class="bar" id="barRedbull">Red Bull: <span class="percentage" id="percentageRedBull">100%</span> <div class="progress" id="progressRedBull" style="width: 100%;"></div></div>
-                    <div class="bar" id="barMclaren">Mclaren: <span class="percentage" id="percentageMclaren">0%</span> <div class="progress" id="progressMclaren" style="width: 0%;"></div></div>
+                    <div class="bar" id="barAlpine">Alpine<span class="percentage" id="percentageAlpine">0%</span> <div class="progress" id="progressAlpine" style="width: 0%;"></div></div>
+                    <div class="bar" id="barSauber">Sauber<span class="percentage" id="percentageSauber">0%</span> <div class="progress" id="progressSauber" style="width: 0%;"></div></div>
+                    <div class="bar" id="barHaas">Haas<span class="percentage" id="percentageHaas">0%</span> <div class="progress" id="progressHaas" style="width: 0%;"></div></div>
+                    <div class="bar" id="barMercedes">Mercedes<span class="percentage" id="percentageMercedes">0%</span> <div class="progress" id="progressMercedes" style="width: 0%;"></div></div>
+                    <div class="bar" id="barWilliams">Williams<span class="percentage" id="percentageWilliams">0%</span> <div class="progress" id="progressWilliams" style="width: 0%;"></div></div>
+                    <div class="bar" id="barAstonMartin">Aston Martin<span class="percentage" id="percentageAstonMartin">0%</span> <div class="progress" id="progressAstonMartin" style="width: 0%;"></div></div>
+                    <div class="bar" id="barRb">RB<span class="percentage" id="percentageRB">0%</span> <div class="progress" id="progressRB" style="width: 0%;"></div></div>
+                    <div class="bar" id="barFerrari">Ferrari<span class="percentage" id="percentageFerrari">0%</span> <div class="progress" id="progressFerrari" style="width: 0%;"></div></div>
+                    <div class="bar" id="barRedbull">Red Bull<span class="percentage" id="percentageRedBull">100%</span> <div class="progress" id="progressRedBull" style="width: 100%;"></div></div>
+                    <div class="barultimo" id="barMclaren">Mclaren<span class="percentage" id="percentageMclaren">0%</span> <div class="progress" id="progressMclaren" style="width: 0%;"></div></div>
                 </div>
                 
                 <form id="voteForm" action="">
-                    <label for="team">Elige tu equipo favorito:<br /></label>
+                    <label for="team">Elige tu equipo favorito:</label>
                     <select id="team">
                         <option value="Alpine">Alpine</option>
                         <option value="Haas">Haas</option>
@@ -394,8 +373,8 @@
                 <script type="text/javascript">
                     // Inicializa los resultados con 1 voto para Red Bull
                     const results = {
-                        Alpine: 0, Haas: 0, Mercedes: 0, Williams: 0, "Aston Martin": 0, 
-                        Sauber: 0, RB: 0, Ferrari: 0, "Red Bull": 0, Mclaren: 1
+                        Alpine: 2, Haas: 3, Mercedes: 7, Williams: 4, "Aston Martin": 6, 
+                        Sauber: 2, RB: 3, Ferrari: 7, "Red Bull": 8, Mclaren: 9
                     };
                 
                     const voteForm = document.getElementById('voteForm');
@@ -417,7 +396,7 @@
                             const progress = document.getElementById('progress' + teamFormatted);
                             if (progress) {
                                 progress.style.width = percentage + '%';
-                                document.getElementById('percentage' + teamFormatted).innerText = percentage + '%';
+                                document.getElementById('percentage' + teamFormatted).innerText = ": →  "+percentage + ' %';
                             }
                         }
                     }
@@ -428,30 +407,30 @@
             </th>
             <th>
                 <div class="resultado" id="results2">
-                    <div class="bar2" id="barOcon">Ocon: <span class="percentage" id="percentageOcon">0%</span> <div class="progress" id="progressOcon" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barGasly">Gasly: <span class="percentage" id="percentageGasly">0%</span> <div class="progress" id="progressGasly" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barKevin">Kevin: <span class="percentage" id="percentageKevin">0%</span> <div class="progress" id="progressKevin" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barNico">Nico: <span class="percentage" id="percentageNico">0%</span> <div class="progress" id="progressNico" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barHamilton">Hamilton: <span class="percentage" id="percentageHamilton">0%</span> <div class="progress" id="progressHamilton" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barRussell">Russell: <span class="percentage" id="percentageRussell">0%</span> <div class="progress" id="progressRussell" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barColapinto">Colapinto: <span class="percentage" id="percentageColapinto">0%</span> <div class="progress" id="progressColapinto" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barAlbon">Albon: <span class="percentage" id="percentageAlbon">0%</span> <div class="progress" id="progressAlbon" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barBottas">Bottas: <span class="percentage" id="percentageBottas">0%</span> <div class="progress" id="progressBottas" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barZhou">Zhou: <span class="percentage" id="percentageZhou">0%</span> <div class="progress" id="progressZhou" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barFernando">Fernando: <span class="percentage" id="percentageFernando">100%</span> <div class="progress" id="progressFernando" style="width: 100%;"></div></div>
-                    <div class="bar2" id="barStroll">Stroll: <span class="percentage" id="percentageStroll">0%</span> <div class="progress" id="progressStroll" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barTsunoda">Tsunoda: <span class="percentage" id="percentageTsunoda">0%</span> <div class="progress" id="progressTsunoda" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barRicciardo">Ricciardo: <span class="percentage" id="percentageRicciardo">0%</span> <div class="progress" id="progressRicciardo" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barLeclerc">Leclerc: <span class="percentage" id="percentageLeclerc">0%</span> <div class="progress" id="progressLeclerc" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barSainz">Sainz: <span class="percentage" id="percentageSainz">0%</span> <div class="progress" id="progressSainz" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barVerstappen">Verstappen: <span class="percentage" id="percentageVerstappen">0%</span> <div class="progress" id="progressVerstappen" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barCheco">Checo: <span class="percentage" id="percentageCheco">0%</span> <div class="progress" id="progressCheco" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barNorris">Norris: <span class="percentage" id="percentageNorris">0%</span> <div class="progress" id="progressNorris" style="width: 0%;"></div></div>
-                    <div class="bar2" id="barPiastri">Piastri: <span class="percentage" id="percentagePiastri">0%</span> <div class="progress" id="progressPiastri" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barOcon">Ocon<span class="percentage" id="percentageOcon">0%</span> <div class="progress" id="progressOcon" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barGasly">Gasly<span class="percentage" id="percentageGasly">0%</span> <div class="progress" id="progressGasly" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barBottas">Bottas<span class="percentage" id="percentageBottas">0%</span> <div class="progress" id="progressBottas" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barZhou">Zhou<span class="percentage" id="percentageZhou">0%</span> <div class="progress" id="progressZhou" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barKevin">Kevin<span class="percentage" id="percentageKevin">0%</span> <div class="progress" id="progressKevin" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barNico">Nico<span class="percentage" id="percentageNico">0%</span> <div class="progress" id="progressNico" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barHamilton">Hamilton<span class="percentage" id="percentageHamilton">0%</span> <div class="progress" id="progressHamilton" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barRussell">Russell<span class="percentage" id="percentageRussell">0%</span> <div class="progress" id="progressRussell" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barColapinto">Colapinto<span class="percentage" id="percentageColapinto">0%</span> <div class="progress" id="progressColapinto" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barAlbon">Albon<span class="percentage" id="percentageAlbon">0%</span> <div class="progress" id="progressAlbon" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barFernando">Fernando<span class="percentage" id="percentageFernando">100%</span> <div class="progress" id="progressFernando" style="width: 100%;"></div></div>
+                    <div class="bar2" id="barStroll">Stroll<span class="percentage" id="percentageStroll">0%</span> <div class="progress" id="progressStroll" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barTsunoda">Tsunoda<span class="percentage" id="percentageTsunoda">0%</span> <div class="progress" id="progressTsunoda" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barRicciardo">Ricciardo<span class="percentage" id="percentageRicciardo">0%</span> <div class="progress" id="progressRicciardo" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barLeclerc">Leclerc<span class="percentage" id="percentageLeclerc">0%</span> <div class="progress" id="progressLeclerc" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barSainz">Sainz<span class="percentage" id="percentageSainz">0%</span> <div class="progress" id="progressSainz" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barVerstappen">Verstappen<span class="percentage" id="percentageVerstappen">0%</span> <div class="progress" id="progressVerstappen" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barCheco">Checo<span class="percentage" id="percentageCheco">0%</span> <div class="progress" id="progressCheco" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barNorris">Norris<span class="percentage" id="percentageNorris">0%</span> <div class="progress" id="progressNorris" style="width: 0%;"></div></div>
+                    <div class="bar2" id="barPiastri">Piastri<span class="percentage" id="percentagePiastri">0%</span> <div class="progress" id="progressPiastri" style="width: 0%;"></div></div>
                     <div class="bar2"></div>              
                 </div>
                 <form id="voteForm2" action="">
-                    <label for="pilot">Elige tu piloto favorito:<br /></label>
+                    <label for="pilot">Elige tu piloto favorito:</label>
                     <select id="pilot">
                         <option value="Ocon">Ocon</option>
                         <option value="Gasly">Gasly</option>
@@ -480,10 +459,10 @@
                 <script type="text/javascript">
                     // Inicializa los resultados con 1 voto para Fernando
                     const results2 = {
-                        Ocon: 0, Gasly: 0, Kevin: 0, Nico: 0, Hamilton: 0, Russell: 0, 
-                        Colapinto: 0, Albon: 0, Bottas: 0, Zhou: 0, Fernando: 1, 
-                        Stroll: 0, Tsunoda: 0, Ricciardo: 0, Leclerc: 0, Sainz: 0, 
-                        Verstappen: 0, Checo: 0, Norris: 0, Piastri: 0
+                        Ocon: 5, Gasly: 6, Kevin: 4, Nico: 5, Hamilton: 7, Russell: 8, 
+                        Colapinto: 5, Albon: 6, Bottas: 4, Zhou: 3, Fernando: 9, 
+                        Stroll: 6, Tsunoda: 5, Ricciardo: 5, Leclerc: 8, Sainz: 8, 
+                        Verstappen: 10, Checo: 5, Norris: 7, Piastri: 8
                     };
                 
                     const voteForm2 = document.getElementById('voteForm2');
@@ -505,7 +484,7 @@
                             const progress = document.getElementById('progress' + pilotFormatted);
                             if (progress) {
                                 progress.style.width = percentage2 + '%';
-                                document.getElementById('percentage' + pilotFormatted).innerText = percentage2 + '%';
+                                document.getElementById('percentage' + pilotFormatted).innerText =": → "+ percentage2 + ' %';
                             }
                         }
                     }
