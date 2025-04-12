@@ -61,15 +61,20 @@
             margin: 1%; /* Margen alrededor del botón */
             border: none; /* Elimina el borde por defecto */
             border-radius: 5px; /* Esquinas redondeadas */
-            background-color: #ca2c19; /* Color de fondo */
-            color: white; /* Color del texto */
+            color: black; /* Color del texto */
             cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-            transition: background-color 0.3s; /* Suaviza el cambio de color */
+            width: "380px";
+            height: "240px";
+            border: 2px solid #000;   
+
+        }
+        .btn-grande:hover{
+            background-color: #ca2c19;
         }
         .texto-con-borde {
             border: 5px solid #ca2c19;
             padding: 1px;             
-            margin: 1%;           
+            margin: 1%;        
             border-radius: 5px;  
             margin-left: 1.5%;  
             margin-right: 1.5%;
@@ -89,13 +94,7 @@
             margin: 10px 0;
             position: relative;
         }
-        .barultimo {
-            width: 320px;
-            background-color: #f3f3f3;
-            margin: 10px 0;
-            position: relative;
-            margin-bottom: 8%;
-        }
+
         .bar2 {
             width: 320px;
             height: 16.1px;
@@ -270,7 +269,7 @@
                 <hr></hr>
 
                 <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>🏎️Pincha en las Partes del Coche para más información:<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
-                <img src="imagenes/cochef1.png" alt="Mapa de Imagen Coche F1 " usemap="#mapa-ejemplo" />
+                <img src="imagenes/cochef1.png" alt="Mapa de Imagen Coche F1 " usemap="#mapa-ejemplo" style="box-shadow: 0 0 10px 2px rgb(252, 252, 252);"/>
                 <map name="mapa-ejemplo" id="mapa_coche">
                     <area alt="Rear Wing Endplate" title="Rear Wing Endplate" coords="73,260,106,243" shape="rect" href="javascript:void(0);"  onclick="mostrarAlertaFoto('Los Rear Wing Endplates (placas laterales del alerón trasero) en Fórmula 1 son componentes ubicados a ambos lados del alerón trasero. Su función principal es mejorar la aerodinámica del monoplaza al gestionar el flujo de aire de manera eficiente. Contribuyen a reducir la resistencia aerodinámica y optimizar la carga aerodinámica (downforce) generada por el alerón trasero, lo cual mejora la estabilidad y agarre del vehículo, especialmente en curvas rápidas. Además, las endplates ayudan a minimizar la turbulencia creada por las ruedas traseras y dirigen el aire de manera que las vórtices generadas sean menos perjudiciales para el desempeño aerodinámico del coche. En resumen, su diseño y posición son esenciales para maximizar la eficiencia aerodinámica del auto y el rendimiento general del vehículo en pista.','imagenes/RearWingEndplate.png')"/>
                     <area alt="Rear Crash" title="Rear Crash" coords="59,182,114,153" shape="rect" href="javascript:void(0);"  onclick="mostrarAlertaFoto('Las Rear Crash Structures en Fórmula 1 son componentes de seguridad ubicados en la parte trasera del monoplaza. Su función principal es absorber el impacto en caso de colisiones por detrás, reduciendo la fuerza transmitida al piloto. Están diseñadas para cumplir con las estrictas normativas de seguridad de la FIA, garantizando la integridad del chasis y la protección del piloto. Su diseño es crucial para mejorar la seguridad en la competición.', 'imagenes/RearCrash.png')"/>
@@ -325,15 +324,15 @@
             
         <hr />
         <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>📣Noticias de última hora<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
-        <button style="margin-left: 5%;" class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/its-been-a-battle-of-the-mind-hamilton-reveals-lessons-he-learned-during.30pf5nXH8mACcvMFFbagiF';"> <img src="imagenes/noticia1.png" alt="Descripción de la imagen" width="380" height="240"/><br /><span class="texto-spam">“It has been a mental battle”: Hamilton's statements</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/bottas-confident-hes-driving-better-than-at-mercedes-as-he-aims-to-seal.5DnxmeFS4vTVpgulu5puS6';"><img src="imagenes/noticia2.png" alt="Descripción de la imagen" width="380" height="240"/><br /><span class="texto-spam">Bottas confident he’s ‘driving better than at Mercedes’</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/horner-hopes-to-keep-brilliant-character-ricciardo-in-red-bull-family-as-he.35V3EQeLJzy5aYtsQHAEpA';"><img src="imagenes/noticia3.png" alt="Descripción de la imagen" width="380" height="240"/><br /><span class="texto-spam">Horner hopes to keep ‘brilliant character’ Ricciardo in Red Bull</span></button>
-        <button style="margin-left: 5%;" class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/from-fangio-to-hamilton-who-are-the-oldest-world-champions-in-the-history-of.5GOBodkkPk5NmobPhJXvzd';"><img src="imagenes/noticia4.png" alt="Descripción de la imagen" width="380" height="240"/><br /><span class="texto-spam">Who are the oldest world champions in the history of Formula 1?</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/its-at-the-top-of-my-list-sainz-sets-out-final-goal-as-a-ferrari-driver.2wutS1xjAB19A7UyObDT9Y';"><img src="imagenes/noticia5.png" alt="Descripción de la imagen" width="380" height="240"/><br /><span class="texto-spam">‘It’s at the top of my list’–Sainz sets out final goal with Ferrari</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/mick-schumacher-back-behind-the-wheel-of-an-f1-car-at-pirelli-tyre-test.4xrZ1DlFphcguA6lmabrIE';"><img src="imagenes/noticia6.png" alt="Descripción de la imagen" width="380" height="240"/><br /><span class="texto-spam">Mick Schumacher back behind the wheel of an F1 car</span></button>
-        <button style="margin-left: 5%;" class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/from-march-to-red-bull-how-long-did-it-take-newey-to-make-an-impact-at-his.43RfJvEohosX9iwbgiMmbq';"><img src="imagenes/noticia7.png" alt="Descripción de la imagen" width="380" height="240"/><br /><span class="texto-spam">How long did it take Newey to make an impact?</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/analysis-what-next-for-alpine-after-renault-announce-the-end-of-f1-works.5eyvaNFBO9qk70mbXuUMIE';"><img src="imagenes/noticia8.png" alt="Descripción de la imagen" width="380" height="240"/><br /><span class="texto-spam">What next for Alpine after Renault announce?</span></button>
-        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/f1-commission-rules-out-rookie-race-for-this-year-but-concept-will-be.1F5s28Ey1TtL7vxavXF1vc';"><img src="imagenes/noticia9.png" alt="Descripción de la imagen" width="380" height="240"/><br /><span class="texto-spam">F1 Commission rules out ‘rookie race’ for this year</span></button>
+        <button style="margin-left: 5%;" class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/its-been-a-battle-of-the-mind-hamilton-reveals-lessons-he-learned-during.30pf5nXH8mACcvMFFbagiF';"> <img src="imagenes/noticia1.png" alt="Descripción de la imagen" width="375" height="230"/><br /><hr></hr><span class="texto-spam"><b>“It has been a mental battle”: Hamilton's statements</b></span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/bottas-confident-hes-driving-better-than-at-mercedes-as-he-aims-to-seal.5DnxmeFS4vTVpgulu5puS6';"><img src="imagenes/noticia2.png" alt="Descripción de la imagen" width="375" height="230"/><br /><span class="texto-spam"><hr></hr><b>Bottas confident he’s ‘driving better than at Mercedes’</b></span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/horner-hopes-to-keep-brilliant-character-ricciardo-in-red-bull-family-as-he.35V3EQeLJzy5aYtsQHAEpA';"><img src="imagenes/noticia3.png" alt="Descripción de la imagen" width="375" height="230"/><br /><span class="texto-spam"><hr></hr><b>Horner hopes to keep ‘brilliant character’ Ricciardo in RB</b></span></button>
+        <button style="margin-left: 5%;" class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/from-fangio-to-hamilton-who-are-the-oldest-world-champions-in-the-history-of.5GOBodkkPk5NmobPhJXvzd';"><img src="imagenes/noticia4.png" alt="Descripción de la imagen" width="375" height="230"/><br /><span class="texto-spam"><hr></hr><b>Who are the oldest world champions of Formula 1?</b></span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/its-at-the-top-of-my-list-sainz-sets-out-final-goal-as-a-ferrari-driver.2wutS1xjAB19A7UyObDT9Y';"><img src="imagenes/noticia5.png" alt="Descripción de la imagen" width="375" height="230"/><br /><span class="texto-spam"><hr></hr><b>‘It’s at the top of my list’–Sainz sets out final goal in Ferrari</b></span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/mick-schumacher-back-behind-the-wheel-of-an-f1-car-at-pirelli-tyre-test.4xrZ1DlFphcguA6lmabrIE';"><img src="imagenes/noticia6.png" alt="Descripción de la imagen" width="375" height="230"/><br /><span class="texto-spam"><hr></hr><b>Mick Schumacher back behind the wheel of an F1 car</b></span></button>
+        <button style="margin-left: 5%;" class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/from-march-to-red-bull-how-long-did-it-take-newey-to-make-an-impact-at-his.43RfJvEohosX9iwbgiMmbq';"><img src="imagenes/noticia7.png" alt="Descripción de la imagen" width="375" height="230"/><br /><span class="texto-spam"><hr></hr><b>How long did it take Newey to make an impact?</b></span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/analysis-what-next-for-alpine-after-renault-announce-the-end-of-f1-works.5eyvaNFBO9qk70mbXuUMIE';"><img src="imagenes/noticia8.png" alt="Descripción de la imagen" width="375" height="230"/><br /><span class="texto-spam"><hr></hr><b>What next for Alpine after Renault announce?</b></span></button>
+        <button class="btn-grande" onclick="location.href='https://www.formula1.com/en/latest/article/f1-commission-rules-out-rookie-race-for-this-year-but-concept-will-be.1F5s28Ey1TtL7vxavXF1vc';"><img src="imagenes/noticia9.png" alt="Descripción de la imagen" width="375" height="230"/><br /><span class="texto-spam"><hr></hr><b>F1 Commission rules out ‘rookie race’ for this year</b></span></button>
     </div>
     <hr />
     <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>💬Déjanos tu opinión<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
@@ -350,10 +349,10 @@
                     <div class="bar" id="barRb">RB<span class="percentage" id="percentageRB">0%</span> <div class="progress" id="progressRB" style="width: 0%;"></div></div>
                     <div class="bar" id="barFerrari">Ferrari<span class="percentage" id="percentageFerrari">0%</span> <div class="progress" id="progressFerrari" style="width: 0%;"></div></div>
                     <div class="bar" id="barRedbull">Red Bull<span class="percentage" id="percentageRedBull">100%</span> <div class="progress" id="progressRedBull" style="width: 100%;"></div></div>
-                    <div class="barultimo" id="barMclaren">Mclaren<span class="percentage" id="percentageMclaren">0%</span> <div class="progress" id="progressMclaren" style="width: 0%;"></div></div>
+                    <div class="bar" id="barMclaren">Mclaren<span class="percentage" id="percentageMclaren">0%</span> <div class="progress" id="progressMclaren" style="width: 0%;"></div></div>
                 </div>
                 
-                <form id="voteForm" action="">
+                <form id="voteForm" action="" style="margin-top: 8%;">
                     <label for="team">Elige tu equipo favorito:</label>
                     <select id="team">
                         <option value="Alpine">Alpine</option>
@@ -373,8 +372,8 @@
                 <script type="text/javascript">
                     // Inicializa los resultados con 1 voto para Red Bull
                     const results = {
-                        Alpine: 2, Haas: 3, Mercedes: 7, Williams: 4, "Aston Martin": 6, 
-                        Sauber: 2, RB: 3, Ferrari: 7, "Red Bull": 8, Mclaren: 9
+                        Alpine: 2, Haas: 3, Mercedes: 7, Williams: 5, "Aston Martin": 6, 
+                        Sauber: 1, RB: 4, Ferrari: 8, "Red Bull": 9, Mclaren: 10
                     };
                 
                     const voteForm = document.getElementById('voteForm');
@@ -459,10 +458,10 @@
                 <script type="text/javascript">
                     // Inicializa los resultados con 1 voto para Fernando
                     const results2 = {
-                        Ocon: 5, Gasly: 6, Kevin: 4, Nico: 5, Hamilton: 7, Russell: 8, 
-                        Colapinto: 5, Albon: 6, Bottas: 4, Zhou: 3, Fernando: 9, 
-                        Stroll: 6, Tsunoda: 5, Ricciardo: 5, Leclerc: 8, Sainz: 8, 
-                        Verstappen: 10, Checo: 5, Norris: 7, Piastri: 8
+                        Ocon: 3.5, Gasly: 5.5, Kevin: 2.5, Nico: 5.75, Hamilton: 7.5, Russell: 8, 
+                        Colapinto: 1, Albon: 2, Bottas: 0.5, Zhou: 1.25, Fernando: 6, 
+                        Stroll: 2.25, Tsunoda: 3, Ricciardo: 0.5, Leclerc: 9, Sainz: 8.5, 
+                        Verstappen: 10, Checo: 6.5, Norris: 9.5, Piastri: 8.75
                     };
                 
                     const voteForm2 = document.getElementById('voteForm2');
