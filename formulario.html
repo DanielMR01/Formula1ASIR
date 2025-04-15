@@ -138,19 +138,19 @@
         <h2>Rellena el Formulario</h2>
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre"/>
-        <span id="nombre-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Campo obligatorio*</span>
+        <span id="nombre-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Nombre obligatorio*</span>
         <span id="nombre-error" style="color: red; display: none;">El Nombre no debe tener números</span>
         <span id="nombre-ok" style="color: green; display: none;">OK</span>
 
         <label for="apellidos">Apellidos:</label>
         <input type="text" id="apellidos" name="apellidos"/>
         <span id="apellidos-error" style="color: red; display: none;">El Apellido no debe tener números</span>
-        <span id="apellidos-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Campo obligatorio*</span>
+        <span id="apellidos-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Apellidos obligatorios*</span>
         <span id="apellidos-ok" style="color: green; display: none;">OK</span>
 
         <label for="localidad">Localidad:</label>
         <input type="text" id="localidad" name="localidad"/>
-        <span id="localidad-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Campo obligatorio*</span>
+        <span id="localidad-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Localidad obligatoria*</span>
         <span id="localidad-error" style="color: red; display: none; text-align: left;">La Localidad no debe tener números</span>
         <span id="localidad-ok" style="color: green; display: none;">OK</span>
 
@@ -162,25 +162,28 @@
 
         <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
         <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" readonly="readonly"/>
-        <span id="fecha_nacimiento-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Campo obligatorio*</span>
+        <span id="fecha_nacimiento-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Fecha de nacimiento obligatoria*</span>
         <span id="fecha_nacimiento-ok" style="color: green; display: none;">OK</span>
 
         <label for="correo">Correo Electrónico:</label><input type="text" id="correo" name="correo" onkeyup="convertirMinusculas(this)"/>
         <span id="correo-error" style="color: red; display: none;">El correo debe tener @gmail.com o @gmail.es</span>
         <span id="correo-ok" style="color: green; display: none;">OK</span>
-        <span id="correo-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Campo obligatorio*</span>
+        <span id="correo-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Correo electrónico obligatorio*</span>
 
         <label for="contraseña">Contraseña:</label> 
         <input type="password" id="contraseña" name="contraseña" style="width: 489px; height: 30px;"/><br></br>
         <span id="contraseña-error" style="color: red; display: none;">Debe contener minimo 6 caracteres</span>
         <span id="contraseña-ok" style="color: green; display: none;">OK</span>
-        <span id="contraseña-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Campo obligatorio*</span>
+        <span id="contraseña-nulo" style="color: black; font-size: 75%; float: right;margin-right: 1%;">*Contraseña obligatoria*</span>
 
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
         <span id="mensaje-error" style="color: red; display: none;">El Mensaje no debe estar vacio</span>
         <span id="mensaje-ok" style="color: green; display: none;">OK</span>
-        <span id="mensaje-nulo" style="color: black; font-size: 75%; float: right; margin-right: 1%;">*Campo obligatorio*</span>
+        <span id="mensaje-nulo" style="color: black; font-size: 75%; float: right; margin-right: 1%;">*Mensaje obligatorio*</span>
+
+        <label for="imagen" style="margin-top: 3%;">Archivo que acompañe al mensaje: (opcional):</label>
+        <input type="file" name="imagen" id="imagen" /><br /><br />
 
         <label>¿Cómo puntuarías esta web?</label>
         <div style="text-align: center;">
