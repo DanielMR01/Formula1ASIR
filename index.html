@@ -65,7 +65,7 @@
             cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
             width: "380px";
             height: "240px";
-            border: 2px solid #000;   
+            border: 3px solid #ca2c19;   
 
         }
         .btn-grande:hover{
@@ -87,6 +87,7 @@
         form {
             margin-bottom: 20px;
             text-align: center;
+            
         }
         .bar {
             width: 320px;
@@ -141,11 +142,14 @@
         }
         .resultado {
             text-align: center;
+            
         }
 
         .tabla {
             text-align: center; 
             margin: auto;
+            border: 3px solid #ca2c19; /* Color azul como ejemplo */
+            border-radius: 10px; /* Bordes redondeados opcionales */
         }
         .botonVotar {            
             cursor: pointer;
@@ -269,7 +273,8 @@
                 <hr></hr>
 
                 <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>🏎️Pincha en las Partes del Coche para más información:<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
-                <img src="imagenes/cochef1.png" alt="Mapa de Imagen Coche F1 " usemap="#mapa-ejemplo" style="box-shadow: 0 0 10px 2px rgb(252, 252, 252);"/>
+                <img src="imagenes/cochef1.png" alt="Mapa de Imagen Coche F1 " usemap="#mapa-ejemplo" style="border: 3px solid #ca2c19;
+            border-radius: 10px; /* Bordes redondeados opcionales */" />
                 <map name="mapa-ejemplo" id="mapa_coche">
                     <area alt="Rear Wing Endplate" title="Rear Wing Endplate" coords="73,260,106,243" shape="rect" href="javascript:void(0);"  onclick="mostrarAlertaFoto('Los Rear Wing Endplates (placas laterales del alerón trasero) en Fórmula 1 son componentes ubicados a ambos lados del alerón trasero. Su función principal es mejorar la aerodinámica del monoplaza al gestionar el flujo de aire de manera eficiente. Contribuyen a reducir la resistencia aerodinámica y optimizar la carga aerodinámica (downforce) generada por el alerón trasero, lo cual mejora la estabilidad y agarre del vehículo, especialmente en curvas rápidas. Además, las endplates ayudan a minimizar la turbulencia creada por las ruedas traseras y dirigen el aire de manera que las vórtices generadas sean menos perjudiciales para el desempeño aerodinámico del coche. En resumen, su diseño y posición son esenciales para maximizar la eficiencia aerodinámica del auto y el rendimiento general del vehículo en pista.','imagenes/RearWingEndplate.png')"/>
                     <area alt="Rear Crash" title="Rear Crash" coords="59,182,114,153" shape="rect" href="javascript:void(0);"  onclick="mostrarAlertaFoto('Las Rear Crash Structures en Fórmula 1 son componentes de seguridad ubicados en la parte trasera del monoplaza. Su función principal es absorber el impacto en caso de colisiones por detrás, reduciendo la fuerza transmitida al piloto. Están diseñadas para cumplir con las estrictas normativas de seguridad de la FIA, garantizando la integridad del chasis y la protección del piloto. Su diseño es crucial para mejorar la seguridad en la competición.', 'imagenes/RearCrash.png')"/>
@@ -316,7 +321,8 @@
 
             <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>🎥Pincha en el Video para más información:<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
             
-            <iframe style="display: block; margin-left: auto; margin-right: auto; border: none;" 
+            <iframe style="display: block; margin-left: auto; margin-right: auto; border: none; border: 3px solid #ca2c19;
+            border-radius: 10px; /* Bordes redondeados opcionales */" 
                 width="650" 
                 height="405" 
                 src="https://www.youtube.com/embed/TZjAkz7DIAc">
@@ -338,7 +344,7 @@
     <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>💬Déjanos tu opinión<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
     <table class="tabla" border="3">
         <tr>
-            <th>
+            <th class="tabla">
                 <div class="resultado" id="results">
                     <div class="bar" id="barAlpine">Alpine<span class="percentage" id="percentageAlpine">0%</span> <div class="progress" id="progressAlpine" style="width: 0%;"></div></div>
                     <div class="bar" id="barSauber">Sauber<span class="percentage" id="percentageSauber">0%</span> <div class="progress" id="progressSauber" style="width: 0%;"></div></div>
@@ -356,11 +362,11 @@
                     <label for="team">Elige tu equipo favorito:</label>
                     <select id="team">
                         <option value="Alpine">Alpine</option>
+                        <option value="Sauber">Sauber</option>
                         <option value="Haas">Haas</option>
                         <option value="Mercedes">Mercedes</option>
                         <option value="Williams">Williams</option>
                         <option value="Aston Martin">Aston Martin</option>
-                        <option value="Sauber">Sauber</option>
                         <option value="RB">RB</option>
                         <option value="Ferrari">Ferrari</option>
                         <option value="Red Bull">Red Bull</option>
@@ -404,7 +410,7 @@
                     updateResults();
                 </script>
             </th>
-            <th>
+            <th class="tabla">
                 <div class="resultado" id="results2">
                     <div class="bar2" id="barOcon">Ocon<span class="percentage" id="percentageOcon">0%</span> <div class="progress" id="progressOcon" style="width: 0%;"></div></div>
                     <div class="bar2" id="barGasly">Gasly<span class="percentage" id="percentageGasly">0%</span> <div class="progress" id="progressGasly" style="width: 0%;"></div></div>
@@ -433,14 +439,14 @@
                     <select id="pilot">
                         <option value="Ocon">Ocon</option>
                         <option value="Gasly">Gasly</option>
+                        <option value="Bottas">Valtteri Bottas</option>
+                        <option value="Zhou">Guanyu Zhou</option>
                         <option value="Kevin">Kevin Magnussen</option>
                         <option value="Nico">Nico Hülkenberg</option>
                         <option value="Hamilton">Lewis Hamilton</option>
                         <option value="Russell">George Russell</option>
                         <option value="Colapinto">Franco Colapinto</option>
                         <option value="Albon">Alexander Albon</option>
-                        <option value="Bottas">Valtteri Bottas</option>
-                        <option value="Zhou">Guanyu Zhou</option>
                         <option value="Fernando" selected="selected">Fernando Alonso</option>
                         <option value="Stroll">Lance Stroll</option>
                         <option value="Tsunoda">Yuki Tsunoda</option>
