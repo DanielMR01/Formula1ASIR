@@ -56,15 +56,16 @@
             border: none;
             cursor: pointer;
             text-align: center; 
-            margin-left: 4%;
+            margin-left: 3%;
             margin-top: 1%;
             border-radius: 5px;
-            width: 255px;
-            height: 50px;
+            width: 212px;
+            height: 213px;
         }
         .boton-sin-bordes:hover {
             background-color: #ca2c19;
         }
+
         #miAlerta {
             display: none;
             position: fixed;
@@ -134,37 +135,28 @@
     </div>
 
     <div>
-        <p><b>LOS JEFES DE EQUIPO DE LA F1 </b> gestionan todos los aspectos de una escudería. 
-            Dirigen la estrategia de carrera, tomando decisiones sobre paradas en boxes, selección de 
-            neumáticos y ajustando tácticas en tiempo real. Supervisan al personal, desde ingenieros 
-            hasta pilotos, y aseguran que todos trabajen de manera coordinada. Mantienen una buena relación
-            con los pilotos, resolviendo conflictos y alineando intereses. Además, toman decisiones 
-            clave sobre el desarrollo técnico del coche y la inversión en áreas clave. También gestionan 
-            las relaciones con patrocinadores y medios, representando al equipo y asegurando su 
-            atractivo para inversores. Supervisan el desarrollo del monoplaza durante la temporada para 
-            asegurar que sea competitivo.</p>
+        <p><b>LOS NEUMÁTICOS DE LA F1 </b> son clave en el rendimiento y la estrategia de carrera.
+            Determinan el agarre, la velocidad y el desgaste del monoplaza en cada circuito.
+            Pirelli, proveedor único, ofrece compuestos de seco (duro, medio y blando) y de lluvia (intermedios y extremos), cada uno con características específicas.
+            Elegir el neumático correcto en el momento adecuado puede marcar la diferencia entre ganar o perder posiciones.
+            Su gestión adecuada durante el fin de semana es vital para mantener el ritmo, evitar paradas innecesarias y maximizar el rendimiento del coche.</p>
         <hr />
     </div>
 
     <div id="miOverlay"></div>
     <div id="miAlerta">
-        <img id="imagenAlerta" src="" alt="Imagen de alerta" style="width: 400px; height: 300px; display: none;" />
+        <img id="imagenAlerta" src="" alt="Imagen de alerta" style="width: 450px; height: 300px; display: none;" />
         <p id="contenidoAlerta"></p>
         <button onclick="cerrarAlerta()">Cerrar</button>
     </div>
 
     <div>
-        <p>Pincha en los Jefes de Equipo para más información:</p>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('OLIVER OAKES es un ex piloto británico de automovilismo y actual empresario. Tras una exitosa carrera en karting, donde ganó el Campeonato Mundial en 2005, compitió en categorías como la Fórmula BMW y Fórmula 3. Posteriormente, fundó el equipo Hitech GP en 2015, que ha competido en Fórmula 2, Fórmula 3 y otras categorías. Oakes ha sido clave en el desarrollo de jóvenes talentos en el automovilismo.', 'imagenes/alpinejefefoto.png')" ><img src="imagenes/alpinejefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('TOTO WOLFF es un empresario y ex piloto austriaco, actualmente director ejecutivo y accionista del equipo Mercedes-AMG Petronas de Fórmula 1. Tras competir en automovilismo, se dedicó a los negocios y en 2013 asumió el liderazgo de Mercedes. Bajo su dirección, el equipo ha dominado la Fórmula 1, ganando múltiples campeonatos. Wolff es reconocido por su gestión exitosa y su enfoque en la excelencia.', 'imagenes/mercedesjefefoto.png')" ><img src="imagenes/mercedesjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('AYAO KOMATSU es un ingeniero japonés y actual director de rendimiento del equipo Haas F1 Team. Con una carrera en la Fórmula 1 que incluye trabajos en Renault y Lotus, Komatsu ha sido clave en el desarrollo técnico y estratégico de Haas desde su fundación en 2016. Es reconocido por su experiencia en aerodinámica y análisis de datos, así como por su habilidad para optimizar el rendimiento del equipo en la pista.', 'imagenes/haasjefefoto.png')" ><img src="imagenes/haasjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('JAMES VOWLES es un ingeniero británico y actual jefe de equipo de Williams Racing en Fórmula 1. Antes de unirse a Williams en 2023, fue estratega principal en Mercedes, donde ayudó a ganar varios campeonatos. Su objetivo en Williams es revitalizar el equipo y aplicar su experiencia en estrategia para mejorar su rendimiento.', 'imagenes/williamsjefefoto.png')" ><img src="imagenes/williamsjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('MIKE KRACK es un ingeniero luxemburgués y jefe del equipo Aston Martin en Fórmula 1 desde 2022. Con experiencia en BMW Motorsport y Sauber, Krack tiene un sólido historial en roles técnicos y de gestión. Su objetivo en Aston Martin es impulsar el equipo hacia un rendimiento competitivo en el campeonato.', 'imagenes/astonmartinjefefoto.png')" ><img src="imagenes/astonmartinjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('ALESSANDRO BRAVI es el director general del equipo Alfa Romeo F1 Team Stake, con una amplia experiencia en la gestión y representación en el automovilismo. Ha trabajado como asesor y representante de pilotos, y actualmente lidera la escudería en su transición hacia convertirse en parte del equipo Audi en 2026.', 'imagenes/sauberjefefoto.png')" ><img src="imagenes/sauberjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('LAURENT MEKIES es el director técnico de Scuderia Ferrari en Fórmula 1 desde 2022. Anteriormente, trabajó en Toro Rosso y se unió a Ferrari en 2018. Mekies es clave en el desarrollo del rendimiento del coche y la optimización de estrategias de carrera para el equipo.', 'imagenes/rbjefefoto.png')" ><img src="imagenes/rbjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('FRÉDÉRIC VASSEUR es un ingeniero francés y director de equipos en Fórmula 1, actualmente jefe de Ferrari desde 2023. Anteriormente, fue jefe de Alfa Romeo F1 y cofundador del equipo ART Grand Prix. Vasseur es conocido por su gestión de talento y su enfoque estratégico en el automovilismo.', 'imagenes/ferrarijefefoto.png')" ><img src="imagenes/ferrarijefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('ANDREA STELLA es el jefe de equipo de McLaren Racing en Fórmula 1 desde 2023. Con experiencia en McLaren y Ferrari, ha trabajado en el desarrollo de vehículos y gestión de rendimiento. Su objetivo en McLaren es mejorar el rendimiento del equipo y desarrollar un coche competitivo.', 'imagenes/mclarenjefefoto.png')" ><img src="imagenes/mclarenjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('CHRISTIAN HORNER es el jefe del equipo Red Bull Racing en Fórmula 1 desde 2005. Bajo su liderazgo, el equipo ha ganado múltiples campeonatos de constructores y pilotos. Reconocido por su capacidad de gestión y decisiones estratégicas, Horner ha desempeñado un papel clave en establecer a Red Bull como un equipo dominante en el deporte.', 'imagenes/redbulljefefoto.png')" ><img src="imagenes/redbulljefe.png" alt="Logo FIA" width="245" height="40"/></button>
+        <p>Pincha en los Neumáticos para más información:</p>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('🔴 BLANDO (Soft): Es el neumático con mayor agarre de todos los compuestos de seco. Permite tiempos de vuelta muy rápidos, lo que lo convierte en la elección principal para la clasificación y momentos clave de carrera donde se necesita máxima velocidad. Sin embargo, su durabilidad es limitada, por lo que se desgasta rápidamente, especialmente en circuitos con muchas curvas o altas temperaturas. Ideal para stints cortos y para aprovechar un coche ligero o relanzamientos tras Safety Car.', 'imagenes/cocheblando.png')" ><img src="imagenes/blando.png" alt="Logo FIA" width="200" height="200"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('🟡 MEDIO (Medium): Es un compuesto intermedio que ofrece un buen compromiso entre rendimiento y durabilidad. Tiene un agarre decente, aunque menor que el blando, y permite rodar durante más vueltas sin perder eficacia. Se usa ampliamente en carrera y es clave en estrategias mixtas o de una sola parada, ya que permite adaptarse a múltiples situaciones en pista.', 'imagenes/cochemedio.png')" ><img src="imagenes/medio.png" alt="Logo FIA" width="200" height="200"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('⚪ DURO (Hard): El más resistente de los neumáticos de seco. Su mayor ventaja es su larga vida útil, lo que lo hace ideal para estrategias de pocas paradas o cuando las condiciones del asfalto son muy abrasivas. Tarda más tiempo en calentarse, por lo que no es útil en todas las condiciones. Su agarre es más bajo, lo que lo hace menos competitivo en ritmo puro, pero valioso en tandas largas.', 'imagenes/cocheduro.png')" ><img src="imagenes/duro.png" alt="Logo FIA" width="200" height="200"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('🟢 INTERMEDIO (Intermediate): Diseñado para condiciones mixtas, cuando la pista está húmeda pero no completamente empapada. Tiene canales más pequeños que los de lluvia extrema y puede adaptarse a situaciones cambiantes, como lloviznas o zonas secas y mojadas. Ideal para evitar perder tiempo cambiando a slicks o full wets constantemente. Proporciona buen agarre en agua, pero puede sobrecalentarse rápidamente si la pista se seca.', 'imagenes/cocheinter.png')" ><img src="imagenes/inter.png" alt="Logo FIA" width="200" height="200"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('🔵 LLUVIA EXTREMA (Wet / Full Wet): Es el único neumático diseñado para condiciones de lluvia intensa. Sus canales profundos están diseñados para evacuar grandes cantidades de agua (hasta 85 litros por segundo a 300 km/h), reduciendo el riesgo de aquaplaning. Necesita mucha agua en pista para funcionar correctamente. En condiciones más secas, pierde temperatura y agarre rápidamente. Se utiliza con menor frecuencia debido a la tendencia de neutralizar carreras en lluvia intensa.', 'imagenes/cochewet.png')" ><img src="imagenes/wet.png" alt="Logo FIA" width="200" height="200"/></button>
     </div>
 
     <script type="text/javascript">

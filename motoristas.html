@@ -56,11 +56,11 @@
             border: none;
             cursor: pointer;
             text-align: center; 
-            margin-left: 4%;
+            margin-left: 7%;
             margin-top: 1%;
             border-radius: 5px;
-            width: 255px;
-            height: 50px;
+            width: 212px;
+            height: 213px;
         }
         .boton-sin-bordes:hover {
             background-color: #ca2c19;
@@ -134,37 +134,27 @@
     </div>
 
     <div>
-        <p><b>LOS JEFES DE EQUIPO DE LA F1 </b> gestionan todos los aspectos de una escudería. 
-            Dirigen la estrategia de carrera, tomando decisiones sobre paradas en boxes, selección de 
-            neumáticos y ajustando tácticas en tiempo real. Supervisan al personal, desde ingenieros 
-            hasta pilotos, y aseguran que todos trabajen de manera coordinada. Mantienen una buena relación
-            con los pilotos, resolviendo conflictos y alineando intereses. Además, toman decisiones 
-            clave sobre el desarrollo técnico del coche y la inversión en áreas clave. También gestionan 
-            las relaciones con patrocinadores y medios, representando al equipo y asegurando su 
-            atractivo para inversores. Supervisan el desarrollo del monoplaza durante la temporada para 
-            asegurar que sea competitivo.</p>
+        <p><b>LOS MOTORISTAS DE LA F1 </b> son los responsables de diseñar y suministrar las unidades de potencia que impulsan los monoplazas.
+            Estas combinan motor de combustión y sistemas híbridos, y su rendimiento es clave para la velocidad, la eficiencia y la fiabilidad del coche.
+            Colaboran estrechamente con los equipos para asegurar una integración perfecta con el chasis y adaptarse a cada circuito.
+            Su papel es fundamental tanto en el desarrollo técnico como en la competitividad general.
+            Motoristas como Mercedes, Ferrari, Honda y Renault no solo impulsan a sus propios equipos, sino que también marcan el rendimiento de varias escuderías cliente en la parrilla.</p>
         <hr />
     </div>
 
     <div id="miOverlay"></div>
     <div id="miAlerta">
-        <img id="imagenAlerta" src="" alt="Imagen de alerta" style="width: 400px; height: 300px; display: none;" />
+        <img id="imagenAlerta" src="" alt="Imagen de alerta" style="width: 450px; height: 300px; display: none;" />
         <p id="contenidoAlerta"></p>
         <button onclick="cerrarAlerta()">Cerrar</button>
     </div>
 
     <div>
-        <p>Pincha en los Jefes de Equipo para más información:</p>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('OLIVER OAKES es un ex piloto británico de automovilismo y actual empresario. Tras una exitosa carrera en karting, donde ganó el Campeonato Mundial en 2005, compitió en categorías como la Fórmula BMW y Fórmula 3. Posteriormente, fundó el equipo Hitech GP en 2015, que ha competido en Fórmula 2, Fórmula 3 y otras categorías. Oakes ha sido clave en el desarrollo de jóvenes talentos en el automovilismo.', 'imagenes/alpinejefefoto.png')" ><img src="imagenes/alpinejefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('TOTO WOLFF es un empresario y ex piloto austriaco, actualmente director ejecutivo y accionista del equipo Mercedes-AMG Petronas de Fórmula 1. Tras competir en automovilismo, se dedicó a los negocios y en 2013 asumió el liderazgo de Mercedes. Bajo su dirección, el equipo ha dominado la Fórmula 1, ganando múltiples campeonatos. Wolff es reconocido por su gestión exitosa y su enfoque en la excelencia.', 'imagenes/mercedesjefefoto.png')" ><img src="imagenes/mercedesjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('AYAO KOMATSU es un ingeniero japonés y actual director de rendimiento del equipo Haas F1 Team. Con una carrera en la Fórmula 1 que incluye trabajos en Renault y Lotus, Komatsu ha sido clave en el desarrollo técnico y estratégico de Haas desde su fundación en 2016. Es reconocido por su experiencia en aerodinámica y análisis de datos, así como por su habilidad para optimizar el rendimiento del equipo en la pista.', 'imagenes/haasjefefoto.png')" ><img src="imagenes/haasjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('JAMES VOWLES es un ingeniero británico y actual jefe de equipo de Williams Racing en Fórmula 1. Antes de unirse a Williams en 2023, fue estratega principal en Mercedes, donde ayudó a ganar varios campeonatos. Su objetivo en Williams es revitalizar el equipo y aplicar su experiencia en estrategia para mejorar su rendimiento.', 'imagenes/williamsjefefoto.png')" ><img src="imagenes/williamsjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('MIKE KRACK es un ingeniero luxemburgués y jefe del equipo Aston Martin en Fórmula 1 desde 2022. Con experiencia en BMW Motorsport y Sauber, Krack tiene un sólido historial en roles técnicos y de gestión. Su objetivo en Aston Martin es impulsar el equipo hacia un rendimiento competitivo en el campeonato.', 'imagenes/astonmartinjefefoto.png')" ><img src="imagenes/astonmartinjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('ALESSANDRO BRAVI es el director general del equipo Alfa Romeo F1 Team Stake, con una amplia experiencia en la gestión y representación en el automovilismo. Ha trabajado como asesor y representante de pilotos, y actualmente lidera la escudería en su transición hacia convertirse en parte del equipo Audi en 2026.', 'imagenes/sauberjefefoto.png')" ><img src="imagenes/sauberjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('LAURENT MEKIES es el director técnico de Scuderia Ferrari en Fórmula 1 desde 2022. Anteriormente, trabajó en Toro Rosso y se unió a Ferrari en 2018. Mekies es clave en el desarrollo del rendimiento del coche y la optimización de estrategias de carrera para el equipo.', 'imagenes/rbjefefoto.png')" ><img src="imagenes/rbjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('FRÉDÉRIC VASSEUR es un ingeniero francés y director de equipos en Fórmula 1, actualmente jefe de Ferrari desde 2023. Anteriormente, fue jefe de Alfa Romeo F1 y cofundador del equipo ART Grand Prix. Vasseur es conocido por su gestión de talento y su enfoque estratégico en el automovilismo.', 'imagenes/ferrarijefefoto.png')" ><img src="imagenes/ferrarijefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('ANDREA STELLA es el jefe de equipo de McLaren Racing en Fórmula 1 desde 2023. Con experiencia en McLaren y Ferrari, ha trabajado en el desarrollo de vehículos y gestión de rendimiento. Su objetivo en McLaren es mejorar el rendimiento del equipo y desarrollar un coche competitivo.', 'imagenes/mclarenjefefoto.png')" ><img src="imagenes/mclarenjefe.png" alt="Logo FIA" width="245" height="40"/></button>
-        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('CHRISTIAN HORNER es el jefe del equipo Red Bull Racing en Fórmula 1 desde 2005. Bajo su liderazgo, el equipo ha ganado múltiples campeonatos de constructores y pilotos. Reconocido por su capacidad de gestión y decisiones estratégicas, Horner ha desempeñado un papel clave en establecer a Red Bull como un equipo dominante en el deporte.', 'imagenes/redbulljefefoto.png')" ><img src="imagenes/redbulljefe.png" alt="Logo FIA" width="245" height="40"/></button>
+        <p>Pincha en los Motoristas para más información:</p>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('HONDA hizo su regreso a la F1 en 2015 y, a pesar de varios altibajos, alcanzó el éxito con Red Bull Racing en 2019. Sus motores son conocidos por ser potentes, aunque a veces no tan eficientes como los de Mercedes. En 2022, Honda dejó de ser oficialmente el proveedor, pero continúa proporcionando motores bajo el nombre -Red Bull Powertrains-, gestionando el desarrollo de la unidad de potencia. Aporta motores a equipos como Red Bull Racing y RB', 'imagenes/hondamotor.png')" ><img src="imagenes/hondamotorlogo.png" alt="Logo FIA" width="200" height="200"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('MERCEDES ha sido uno de los principales dominadores de la Fórmula 1 desde la introducción de la era híbrida en 2014. Sus motores han sido conocidos por su fiabilidad, potencia y eficiencia, lo que les ha permitido lograr múltiples campeonatos de pilotos y constructores. La unidad de potencia de Mercedes es un motor V6 turboalimentado híbrido, que combina un motor de combustión interna con un sistema de recuperación de energía (ERS). Aporta motores a equipos como: Mercedes (equipo propio), McLaren, Aston Martin, Williams', 'imagenes/mercedesmotor.png')" ><img src="imagenes/mercedesmotorlogo.png" alt="Logo FIA" width="200" height="200"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('FERRARI ha sido uno de los fabricantes de motores más exitosos en la historia de la Fórmula 1. Sus motores V6 turboalimentados híbridos han mostrado un buen nivel de potencia, aunque han luchado con la eficiencia de combustible y la fiabilidad en algunas temporadas. Ferrari sigue siendo una de las unidades de potencia más competitivas, pero no siempre ha estado a la altura de Mercedes y Honda en los últimos años. Aporta motores a equipos como: Ferrari (equipo propio), Sauber y Haas ', 'imagenes/ferrarimotor.png')" ><img src="imagenes/ferrarimotorlogo.png" alt="Logo FIA" width="200" height="200"/></button>
+        <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('RENAULT (actualmente ALPINE) ha estado involucrado en la Fórmula 1 desde 1977 y, aunque no es tan dominante como Mercedes o Honda en la era híbrida, sigue siendo un competidor importante. El motor V6 turboalimentado híbrido de Renault ha sido bastante fiable, pero su rendimiento no ha estado a la par con los mejores en términos de potencia. A pesar de eso, ha sido clave para Alpine, su equipo, que sigue luchando en la zona media de la parrilla. Aporta motores a equipos como: Alpine (equipo propio)', 'imagenes/alpinemotor.png')" ><img src="imagenes/alpinemotorlogo.png" alt="Logo FIA" width="200" height="200"/></button>  
     </div>
 
     <script type="text/javascript">
