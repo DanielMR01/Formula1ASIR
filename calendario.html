@@ -56,12 +56,13 @@
             border: none;
             cursor: pointer;
             text-align: center; 
-            margin-left: 2.5%;
+            margin-left: 2.3%;
             margin-top: 15px;
             margin-bottom: 15px;
             border-radius: 5px;
             width: 400px; /* Ancho del botón */
             height: 400px;
+            border: 3px solid #ca2c19;  
         }
         .boton-sin-bordes:hover {
             background-color: #ca2c19;
@@ -153,24 +154,25 @@
                 <button onclick="cerrarAlerta()">Cerrar</button>
             </div>
             <p>Pincha en los Circuitos para más información:</p>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/bareinexpl.png')" ><img src="imagenes/barein.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/australiaexpl.png')" ><img src="imagenes/australia.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/japonexpl.png')" ><img src="imagenes/japon.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/chinaexpl.png')" ><img src="imagenes/china.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/miamiexpl.png')" ><img src="imagenes/miami.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/imolaexpl.png')" ><img src="imagenes/imola.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/monacoexpl.png')" ><img src="imagenes/monaco.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/canadaexpl.png')" ><img src="imagenes/canada.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/españaexpl.png')" ><img src="imagenes/españa.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/austriaexpl.png')" ><img src="imagenes/austria.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/hungriaexpl.png')" ><img src="imagenes/hungria.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/belgicaexpl.png')" ><img src="imagenes/belgica.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/holandaexpl.png')" ><img src="imagenes/holanda.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/italiaexpl.png')" ><img src="imagenes/italia.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/mexicoexpl.png')" ><img src="imagenes/mexico.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/catarexpl.png')" ><img src="imagenes/catar.png" alt="Logo FIA" width="385" height="385"/></button>
-            <button class="boton-sin-bordes" type="button" onclick="mostrarAlertaFoto('imagenes/eeuuexpl.png')" ><img src="imagenes/eeuu.png" alt="Logo FIA" width="385" height="385"/></button>
-            
+            <div style="display: flex; flex-wrap: wrap; justify-content: left; gap: 1%;">
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/bareinexpl.png')" ><img src="imagenes/barein.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/australiaexpl.png')" ><img src="imagenes/australia.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/japonexpl.png')" ><img src="imagenes/japon.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/chinaexpl.png')" ><img src="imagenes/china.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/miamiexpl.png')" ><img src="imagenes/miami.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/imolaexpl.png')" ><img src="imagenes/imola.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/monacoexpl.png')" ><img src="imagenes/monaco.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/canadaexpl.png')" ><img src="imagenes/canada.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/españaexpl.png')" ><img src="imagenes/españa.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/austriaexpl.png')" ><img src="imagenes/austria.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/hungriaexpl.png')" ><img src="imagenes/hungria.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/belgicaexpl.png')" ><img src="imagenes/belgica.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/holandaexpl.png')" ><img src="imagenes/holanda.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/italiaexpl.png')" ><img src="imagenes/italia.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/mexicoexpl.png')" ><img src="imagenes/mexico.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/catarexpl.png')" ><img src="imagenes/catar.png" alt="Logo FIA" width="389" height="387"/></button>
+                <button class="boton-sin-bordes" style="display: flex; justify-content: center; align-items: center;" type="button" onclick="mostrarAlertaFoto('imagenes/eeuuexpl.png')" ><img src="imagenes/eeuu.png" alt="Logo FIA" width="389" height="387"/></button>
+            </div>
             <script type="text/javascript">
                 function mostrarAlertaFoto(rutaImagen) {
                     var alerta = document.getElementById('miAlerta');
