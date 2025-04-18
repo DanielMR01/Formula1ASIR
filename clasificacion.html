@@ -16,8 +16,9 @@
         .header {
             background-color: #ca2c19;
             color: #fff;
-            text-align: center;
-            padding: 0.1px;
+            height: 200px;
+            overflow: hidden;
+            padding: 0;
         }
         h1 {
             text-align: center;
@@ -42,20 +43,20 @@
         .nav a:hover {
             color: #ffcc00;
         }
+        .image-left, .image-right {
+            height: 100%;
+        }
+
         .image-left {
             float: left;
-            flex-wrap: wrap;
-            object-fit: contain;
             -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
-            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%); 
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
         }
 
         .image-right {
             float: right;
-            flex-wrap: wrap;
-            object-fit: contain;
             -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
-            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);      
+            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
         }
         .tabla {          
             text-align: center; 
@@ -98,13 +99,13 @@
 <body>
 
     <div class="header">    
-        <img src="imagenes/coche_pico.png" alt="Logo FIA" class="image-left" width="292.25" height="195" />
-        <img src="imagenes/coche_pico2.png" alt="Logo Formula 1" class="image-right" width="292.25" height="195" />
+        <img src="imagenes/coche_pico.png" alt="Logo FIA" class="image-left" width="292.25"/>
+        <img src="imagenes/coche_pico2.png" alt="Logo Formula 1" class="image-right" width="292.25"/>
         
         <div>
         <h1><img src="imagenes/f1.png" alt="Logo formula 1" width="200" height="65"/></h1>
-        <p style="font-size: 88%; margin-bottom: 1.7%;">En la Fórmula 1, la velocidad se encuentra con la ingeniería de vanguardia, creando una experiencia emocionante y única. 
-            <br /><br />Cada carrera es un testimonio de la destreza de los pilotos y la precisión de los equipos en la búsqueda de la perfección.</p>
+        <p style="font-size: 88%; margin-bottom: 1.7%; text-align: center;" >En la Fórmula 1, la velocidad se encuentra con la ingeniería de vanguardia, creando una experiencia emocionante y única. 
+            <br /><br />   Cada carrera es un testimonio de la destreza de los pilotos y la precisión de los equipos en la búsqueda de la perfección.</p>
         </div>
     </div>
 
