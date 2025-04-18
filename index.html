@@ -210,14 +210,35 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 999;
         }
+
+        .borde_video{
+            display: block; 
+            margin-left: auto; 
+            margin-right: auto; 
+            border: none; 
+            border: 3px solid #ca2c19;
+            border-radius: 10px; /* Bordes redondeados opcionales */
+        }
+
+        .borde_video:hover{
+            border: 5px solid #ca2c19;
+        }
+
+        .mapa_imagen{
+            border: 3px solid #ca2c19; 
+            border-radius: 10px; /* Bordes redondeados opcionales */
+        }
+
+        .mapa_imagen:hover{
+            border: 5px solid #ca2c19;
+        }
     </style>
 
 </head>
 <body>
     <div class="header">    
-        <img src="imagenes/coche_pico2.png" alt="Logo formula 1" class="image-right" />
-        <img src="imagenes/coche_pico.png" alt="Logo FIA" class="image-left" />
-        
+            <img src="imagenes/coche_pico2.png" alt="Logo formula 1" class="image-right" />
+            <img src="imagenes/coche_pico.png" alt="Logo FIA" class="image-left" />
         <div>
         <h1><img src="imagenes/f1.png" alt="Logo formula 1" width="200" height="65"/></h1>
         <p style="font-size: 88%; margin-bottom: 1.7%;">En la Fórmula 1, la velocidad se encuentra con la ingeniería de vanguardia, creando una experiencia emocionante y única. 
@@ -280,8 +301,7 @@
                 <hr></hr>
 
                 <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>🏎️Pincha en las Partes del Coche para más información:<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
-                <img src="imagenes/cochef1.png" alt="Mapa de Imagen Coche F1 " usemap="#mapa-ejemplo" style="border: 3px solid #ca2c19;
-            border-radius: 10px; /* Bordes redondeados opcionales */" />
+                <img src="imagenes/cochef1.png" alt="Mapa de Imagen Coche F1 " usemap="#mapa-ejemplo" class="mapa_imagen"/>
                 <map name="mapa-ejemplo" id="mapa_coche">
                     <area alt="Rear Wing Endplate" title="Rear Wing Endplate" coords="  31,297,65,296,66,331,32,331" shape="poly" href="javascript:void(0);"  onclick="mostrarAlertaFoto('Los Rear Wing Endplates (placas laterales del alerón trasero) en Fórmula 1 son componentes ubicados a ambos lados del alerón trasero. Su función principal es mejorar la aerodinámica del monoplaza al gestionar el flujo de aire de manera eficiente. Contribuyen a reducir la resistencia aerodinámica y optimizar la carga aerodinámica (downforce) generada por el alerón trasero, lo cual mejora la estabilidad y agarre del vehículo, especialmente en curvas rápidas. Además, las endplates ayudan a minimizar la turbulencia creada por las ruedas traseras y dirigen el aire de manera que las vórtices generadas sean menos perjudiciales para el desempeño aerodinámico del coche. En resumen, su diseño y posición son esenciales para maximizar la eficiencia aerodinámica del auto y el rendimiento general del vehículo en pista.','imagenes/RearWingEndplate.png')"/>
                     <area alt="Rear Crash" title="Rear Crash" coords="31,226,31,258,67,257,66,228" shape="poly" href="javascript:void(0);"  onclick="mostrarAlertaFoto('Las Rear Crash Structures en Fórmula 1 son componentes de seguridad ubicados en la parte trasera del monoplaza. Su función principal es absorber el impacto en caso de colisiones por detrás, reduciendo la fuerza transmitida al piloto. Están diseñadas para cumplir con las estrictas normativas de seguridad de la FIA, garantizando la integridad del chasis y la protección del piloto. Su diseño es crucial para mejorar la seguridad en la competición.', 'imagenes/RearCrash.png')"/>
@@ -328,12 +348,7 @@
 
             <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>🎥Pincha en el Video para más información:<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
             
-            <iframe style="display: block; margin-left: auto; margin-right: auto; border: none; border: 3px solid #ca2c19;
-            border-radius: 10px; /* Bordes redondeados opcionales */" 
-                width="650" 
-                height="405" 
-                src="https://www.youtube.com/embed/TZjAkz7DIAc">
-            </iframe>
+            <iframe width="650" height="405" src="https://www.youtube.com/embed/TZjAkz7DIAc" class="borde_video"> </iframe>
             
         <hr />
         <p class="texto-con-borde" style="text-align: center;"><b><img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/>📣Noticias de última hora<img src="imagenes/flecha.gif" alt="Descripción de la imagen" width="50" height="40"/></b></p>
